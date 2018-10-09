@@ -1,4 +1,9 @@
-# PrivateShowcase
+![Code Coverage](https://sonarcloud.io/api/project_badges/measure?project=com.bewizyu.formation.project.private.showcase&metric=coverage)
+![Code Coverage](https://sonarcloud.io/api/project_badges/measure?project=com.bewizyu.formation.project.private.showcase&metric=duplicated_lines_density)
+![Code Coverage](https://sonarcloud.io/api/project_badges/measure?project=com.bewizyu.formation.project.private.showcase&metric=security_rating)
+![Code Coverage](https://sonarcloud.io/api/project_badges/measure?project=com.bewizyu.formation.project.private.showcase&metric=code_smells)
+
+# PrivateShowcase 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
 
