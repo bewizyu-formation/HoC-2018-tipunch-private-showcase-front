@@ -1,0 +1,15 @@
+.upload__container__background {
+  background-image: url('../assets/upload-icon.png');
+  height: 100%;
+  width: 100%;
+}
+
+.upload__container {
+  height: 200px;
+  width: 200px;
+}
+
+.upload__preview {
+  height: 200px;
+  width: 200px;
+}
