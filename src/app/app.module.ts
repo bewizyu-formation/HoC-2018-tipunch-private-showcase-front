@@ -16,6 +16,7 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
+import { HomeCardComponent } from './home-card/home-card.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ROUTES } from './app.routes';
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    SubscribeComponent
+    SubscribeComponent,
+    HomeCardComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +33,7 @@ import { ROUTES } from './app.routes';
     BrowserAnimationsModule,
     MatButtonModule,
     MatToolbarModule,
+    MatCardModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [

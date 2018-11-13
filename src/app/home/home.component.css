@@ -1,0 +1,9 @@
+mat-card {
+    display: flex;
+}
+
+img-container {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}

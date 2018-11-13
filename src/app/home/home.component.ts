@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  title = 'Private ShowCase';
+  datas : object;
+  homeDescription : string;
+  homeIntroduction : string;
+  homeCards : object;
+  
+  constructor(private http: HttpClient) {
+
+    
+    this.datas = this.http.get('http://localhost:4200/assets/jsondatas.json')
+      .subscribe(data => {
+        this.datas = data;
+        this.homeCards = this.datas['home']['cards'];
+        this.homeDescription = this.datas['home'].description;
+        this.homeIntroduction = this.datas['home'].introduction;
+      });
+      
+  }
 
   ngOnInit() {
   }
