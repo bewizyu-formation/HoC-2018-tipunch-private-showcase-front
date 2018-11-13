@@ -11,11 +11,13 @@ import {CommonHeadersInterceptorService} from './services/interceptors/common-he
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatButtonModule, MatToolbarModule, MatCardModule, MatListModule} from '@angular/material/';
+
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
+
 import { HomeCardComponent } from './home-card/home-card.component';
 
 
@@ -34,6 +36,7 @@ import { HomeCardComponent } from './home-card/home-card.component';
     MatButtonModule,
     MatToolbarModule,
     MatCardModule,
+    MatListModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [

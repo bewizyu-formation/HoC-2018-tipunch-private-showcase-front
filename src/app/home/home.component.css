@@ -1,9 +1,40 @@
-mat-card {
+section,
+mat-list {
     display: flex;
 }
 
-img-container {
-    height: 100px;
-    width: 100px;
+section{
+    flex-direction: column;
+    padding: 0 200px ;
+}
+h3{
+    width: 100%;
+}
+.mat-list{
+    align-self: center;
+}
+.mat-list-item{
+    height: auto !important;
+
+}
+.mat-card{
+    text-align: center;
+    background-color: #939292;
+
+}
+.mat-card-header{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+.img-container{
+    display: flex;
     border-radius: 50%;
+    overflow: hidden;
+    background: red;
+}
+img{
+    margin: 0!important;
+    width: 100%;
 }
