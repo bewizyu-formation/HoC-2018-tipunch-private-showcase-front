@@ -1,6 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-
+import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {APP_BASE_HREF} from '@angular/common';
 import {AppComponent} from './app.component';
 import {environment} from '../environments/environment';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
@@ -34,12 +34,13 @@ import { ROUTES } from './app.routes';
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
+    {provide: APP_BASE_HREF, useValue: '/'},
     {provide: APP_CONFIG, useValue: environment},
     {provide : HTTP_INTERCEPTORS, useClass : CommonHeadersInterceptorService, multi: true},
     {provide : HTTP_INTERCEPTORS, useClass : TokenInterceptorService, multi: true},
     {provide : HTTP_INTERCEPTORS, useClass : ErrorInterceptorService, multi: true},
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
 }

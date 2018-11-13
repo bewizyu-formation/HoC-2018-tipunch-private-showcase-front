@@ -9,7 +9,6 @@ import {HttpErrorResponse} from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'private-showcase';
   token: string;
 
   selecetdFile: File;
