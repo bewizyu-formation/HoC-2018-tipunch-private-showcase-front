@@ -1,17 +1,18 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit, AfterViewChecked } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit, AfterViewChecked {
+export class HomeComponent implements OnInit {
 
   title = 'Private ShowCase';
-  datas : Object;
-  homeDescription :string;
-  homeIntroduction :string;
+  datas : object;
+  homeDescription : string;
+  homeIntroduction : string;
+  homeCards : object;
   
   constructor(private http: HttpClient) {
 
@@ -19,7 +20,7 @@ export class HomeComponent implements OnInit, AfterViewChecked {
     this.datas = this.http.get('http://localhost:4200/assets/jsondatas.json')
       .subscribe(data => {
         this.datas = data;
-        
+        this.homeCards = this.datas['home']['cards'];
         this.homeDescription = this.datas['home'].description;
         this.homeIntroduction = this.datas['home'].introduction;
       });
@@ -27,13 +28,6 @@ export class HomeComponent implements OnInit, AfterViewChecked {
   }
 
   ngOnInit() {
-   
-
-  }
-
-
-  ngAfterViewChecked() {
-   // console.table(this.datas);
   }
 
 }
