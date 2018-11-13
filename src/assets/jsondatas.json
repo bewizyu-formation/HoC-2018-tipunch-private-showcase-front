@@ -1,24 +1,23 @@
 {
-	"home":{
+	"home": {
 		"introduction":"est une plateforme de partage permettant la mise en relation de musiciens avec des particuliers qui souhaitent orgniser des concerts chez eux",
-		"desciption":"Les spectateurs son direcetements invités par l'organisateur, une participation pourra être demandée pour le cachet des artistes",
+		"description":"Les spectateurs son direcetements invités par l'organisateur, une participation pourra être demandée pour le cachet des artistes",
 		"cards":{
+			"0":{
+				"img": "https://via.placeholder.com/200",
+				"title":"Musiciens",
+				"description": "Proposez des concerts privés"
+			},
 			"1":{
 				"img": "https://via.placeholder.com/200",
-				"title":"musiciens",
-				"description": "Proposez des concerts privés"
+				"title":"Spectateur",
+				"description": "Vivez une experience unique"
 			},
 			"2":{
 				"img": "https://via.placeholder.com/200",
-				"title":"Spectateur",
-				"description": "Vivez une experienc eunique"
-			},
-			"3":{
-				"img": "https://via.placeholder.com/200",
-				"title":"Organisateur",
+				"title":"Organisateurs",
 				"description": "Partagez vos coups de coeur"
 			}
 		}
 	}
-
 }
