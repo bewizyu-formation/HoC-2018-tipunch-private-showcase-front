@@ -13,21 +13,27 @@ export class HomeComponent implements OnInit {
   homeDescription : string;
   homeIntroduction : string;
   homeCards : object;
-  
-  constructor(private http: HttpClient) {
+  jsonDatas = 'http://localhost:4200/assets/jsondatas.json';
 
-    
-    this.datas = this.http.get('http://localhost:4200/assets/jsondatas.json')
-      .subscribe(data => {
-        this.datas = data;
-        this.homeCards = this.datas['home']['cards'];
-        this.homeDescription = this.datas['home'].description;
-        this.homeIntroduction = this.datas['home'].introduction;
-      });
-      
-  }
+  constructor(private http: HttpClient) {}
+
+    private getJson(datas){
+        return this.http.get(datas);
+    }
+
+    private getHomeDatas(datas) {
+       this.getJson(datas)
+           .subscribe(data => {
+               this.datas = data;
+               this.homeCards = this.datas['home']['cards'];
+               this.homeDescription = this.datas['home'].description;
+               this.homeIntroduction = this.datas['home'].introduction;
+       });
+   }
 
   ngOnInit() {
+      this.getHomeDatas(this.jsonDatas);
   }
+
 
 }

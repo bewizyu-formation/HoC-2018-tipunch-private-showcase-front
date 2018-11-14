@@ -1,0 +1,23 @@
+<mat-toolbar>
+  <app-side-menu routerLink="/" routerLinkActive="active"></app-side-menu>
+  <span class="fill-remaining-space"></span>
+  <app-back-button></app-back-button>
+  <span class="fill-remaining-space"></span>
+  
+  <a  href=""
+    routerLink="/"
+    routerLinkActive="selected">
+    <h1> {{ title }} </h1>
+  </a>
+  
+  <span class="fill-remaining-space"></span>
+
+  <span id="connectSubscribe">
+    <button mat-button routerLink="/connexion" routerLinkActive="selected">Se connecter</button> | 
+    <button mat-button (click)="navigateToSubscribe()">S'inscrire</button>
+  </span>
+
+  <span class="fill-remaining-space"></span>
+  
+  <app-personal-menu></app-personal-menu>
+</mat-toolbar>

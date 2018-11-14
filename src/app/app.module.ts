@@ -10,16 +10,18 @@ import {ErrorInterceptorService} from './services/interceptors/error-interceptor
 import {CommonHeadersInterceptorService} from './services/interceptors/common-headers-interceptor.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatButtonModule, MatToolbarModule, MatCardModule, MatListModule, MatInputModule,MatFormFieldModule,MatSelectModule,MatCheckboxModule} from '@angular/material/';
+import { RouterModule } from '@angular/router';
+
+import {MaterialsModule} from './materials/materials.module';
 
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { HomeComponent } from './home/home.component';
-import { HeaderComponent } from './header/header.component';
-import { RouterModule } from '@angular/router';
+import { HeaderComponent } from './headerbar/header/header.component';
 import { ROUTES } from './app.routes';
 
 import { HomeCardComponent } from './home-card/home-card.component';
 import { HomeFormComponent } from './home-form/home-form.component';
+import { DialogConfirmSuscribeComponent } from './subscribe/dialog-confirm-suscribe/dialog-confirm-suscribe.component';
 
 @NgModule({
   declarations: [
@@ -28,23 +30,16 @@ import { HomeFormComponent } from './home-form/home-form.component';
     HomeComponent,
     SubscribeComponent,
     HomeCardComponent,
-    HomeFormComponent
+    HomeFormComponent,
+    DialogConfirmSuscribeComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
-
-      FormsModule,
-      ReactiveFormsModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatCardModule,
-    MatListModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatCheckboxModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MaterialsModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
