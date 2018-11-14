@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { PATH_SUBSCRIBE } from '../app.routes.constantes';
+import { PATH_CONNEXION } from '../app.routes.constantes';
+import { $ } from 'protractor';
 
 @Component({
   selector: 'app-header',
@@ -9,9 +13,15 @@ export class HeaderComponent implements OnInit {
 
   title = 'Private Showcase';
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+  navigateToSubscribe() {
+    this.router.navigate([PATH_SUBSCRIBE]);
+  }
+  navigateToConnexion() {
+    this.router.navigate([PATH_CONNEXION]);
   }
 
 }
