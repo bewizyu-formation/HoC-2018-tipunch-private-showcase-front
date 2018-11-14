@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HomeFormComponent} from '../home-form/home-form.component'
 
 @Component({
   selector: 'app-subscribe',

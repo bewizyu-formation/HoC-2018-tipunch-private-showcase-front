@@ -4,17 +4,17 @@
 		"description":"Les spectateurs sont directements invités par l'organisateur, une participation pourra être demandée pour le cachet des artistes.",
 		"cards":[
 			{
-				"img": "https://via.placeholder.com/200",
+				"img": "../assets/img/musician.jpg",
 				"title":"Musiciens",
 				"description": "Proposez des concerts privés"
 			},
 			{
-				"img": "https://via.placeholder.com/200",
+				"img": "../assets/img/spectator.jpg",
 				"title":"Spectateur",
 				"description": "Vivez une expérience unique"
 			},
 			{
-				"img": "https://via.placeholder.com/200",
+				"img": "../assets/img/organisator.jpg",
 				"title":"Organisateurs",
 				"description": "Partagez vos coups de coeurs"
 			}

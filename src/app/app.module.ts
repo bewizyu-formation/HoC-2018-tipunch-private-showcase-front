@@ -9,8 +9,8 @@ import {TokenInterceptorService} from './services/interceptors/token-interceptor
 import {ErrorInterceptorService} from './services/interceptors/error-interceptor.service';
 import {CommonHeadersInterceptorService} from './services/interceptors/common-headers-interceptor.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import {MatButtonModule, MatToolbarModule, MatCardModule, MatListModule} from '@angular/material/';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatButtonModule, MatToolbarModule, MatCardModule, MatListModule, MatInputModule,MatFormFieldModule,MatSelectModule,MatCheckboxModule} from '@angular/material/';
 
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { HomeComponent } from './home/home.component';
@@ -19,7 +19,7 @@ import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
 
 import { HomeCardComponent } from './home-card/home-card.component';
-
+import { HomeFormComponent } from './home-form/home-form.component';
 
 @NgModule({
   declarations: [
@@ -27,16 +27,24 @@ import { HomeCardComponent } from './home-card/home-card.component';
     HeaderComponent,
     HomeComponent,
     SubscribeComponent,
-    HomeCardComponent
+    HomeCardComponent,
+    HomeFormComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
+
+      FormsModule,
+      ReactiveFormsModule,
     MatButtonModule,
     MatToolbarModule,
     MatCardModule,
     MatListModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatCheckboxModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
