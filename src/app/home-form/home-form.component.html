@@ -2,42 +2,83 @@
   <img src="../../assets/img/header_bjork.jpg">
 </header>
 <section>
-  <form class="form-container">
-    {{test}}
+  <form class="form-container" (ngSubmit)="register()" [formGroup]="userForm">
     <h3 class="form-title">{{formTitle}}</h3>
 
     <mat-form-field>
-      <input matInput placeholder="Username">
+      <input matInput
+             placeholder="Nom d'utilsateur"
+             name="username"
+             [formControl]="usernameControl"
+             required>
+      <mat-error *ngIf="userForm.get('usernameCtrl').hasError('required')">
+        le nom d'utilisateur <strong>est requis</strong>
+      </mat-error>
+      <mat-error *ngIf="userForm.get('usernameCtrl').hasError('minLenght')">
+        nom trop court
+      </mat-error>
+    </mat-form-field>
+
+
+    <mat-form-field>
+      <input matInput
+             placeholder="Password"
+             type="password"
+             name="password"
+             required>
+      <mat-error *ngIf="userForm.get('passwordCtrl').hasError('required')">
+      le password est requis <strong>est requis</strong>
+    </mat-error>
+      <mat-error *ngIf="userForm.get('passwordCtrl').hasError('minLength')">
+       mot de passe trop court
+    </mat-error>
     </mat-form-field>
 
     <mat-form-field>
-      <input matInput placeholder="Password">
+      <input matInput
+             placeholder="Confirm Password"
+             required>
+      <mat-error *ngIf="userForm.get('passwordConfirmCtrl').hasError('required')"></mat-error>
     </mat-form-field>
 
     <mat-form-field>
-      <input matInput placeholder="Confirm Password">
-    </mat-form-field>
-<!--
-    <mat-form-field>
-      <input matInput type="email"  name="name" placeholder="Email" formControl="email" required>
-      <mat-error *ngIf="email.invalid">{{ getErroMsg()}}</mat-error>
-    </mat-form-field>
-    -->
-<!--
-    <fieldset>
-      <mat-select placeholder="Town">
-        <mat-form-field>
-          <input matInput type="text" name="town"  [formControl]="myControl" [matAutocomplete]="auto">
-        </mat-form-field>
-      </mat-select>
+      <input matInput
+             type="email"
+             name="email"
+             placeholder="Email"
+             [formControl]="emailControl"
+             required>
+      <mat-error *ngIf="userForm.get('emailCtrl').hasError('required')">Veuillez renseigner votre email</mat-error>
+      <mat-error *ngIf="userForm.get('emailCtrl').hasError('email')">Email invalid ( <strong>monemail@servermail.extension</strong>)</mat-error>
 
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput
+                 type="text"
+                 name="commune"
+                 placeholder="commune"
+                 [matAutocomplete]="auto"
+                 [formControl]="townControl">
       <mat-autocomplete #auto="matAutocomplete">
-        <mat-option *ngFor="let town of towns" [value]="town">
-          {{town}}
+        <mat-option *ngFor="let commune of datas" name="commune" [value]="commune.nom" required>
+              {{commune.nom}}
         </mat-option>
       </mat-autocomplete>
-    </fieldset>
--->
+    </mat-form-field>
+<!--
+    <mat-form-field>
+      <mat-checkbox
+              class="example-margin"
+              name="isartist"
+              [(ngModel)]="checked"
+              [formControl]="isArtistControl"
+              [disabled]="disabled">
+        Checked
+      </mat-checkbox>
+      <mat-error></mat-error>
+    </mat-form-field>
+    -->
 <!--
     <fieldset>
       <mat-checkbox [(ngModel)]="checked" disabled="disabled">Êtes vous un artiste dproposant des prestations privées</mat-checkbox>
@@ -45,17 +86,34 @@
 -->
 
     <mat-form-field>
-      <input matInput placeholder="Artist name">
+      <input matInput
+             placeholder="Artist name"
+             name="artisname"
+             [formControl]="artistNameControl"
+             required>
+
+      <mat-error *ngIf="artistForm.get('artistNameCtrl').hasError('required')">
+        le nom du regroup est requis <strong>est requis</strong>
+      </mat-error>
+      <mat-error *ngIf="artistForm.get('artistNameCtrl').hasError('minLenght')">
+        nom trop court
+      </mat-error>
     </mat-form-field>
 
 
     <mat-form-field>
-      <textarea matInput class="form-long-description" placeholder="Votre description"></textarea>
+      <textarea matInput
+                class="form-long-description"
+                placeholder="Votre description">
+      </textarea>
     </mat-form-field>
 
     <div class="confirm-container">
-      <button mat-button class="cancel">Basic</button>
-      <button mat-button class="confirm">Primary</button>
+      <button mat-button class="cancel"
+              (click)="reset()">Annuler</button>
+      <button mat-button class="confirm"
+              type="submit"
+              [disabled]="userForm.invalid" (click)="openPopupConfirm()">Valider</button>
     </div>
 
   </form>

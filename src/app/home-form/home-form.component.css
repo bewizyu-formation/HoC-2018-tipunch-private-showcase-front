@@ -9,15 +9,16 @@ header {
 
 section{
     flex-direction: column;
-    padding: 60px 290px ;
+    padding: 60px 20%;
 }
+
 
 .form-container {
     display: flex;
     flex-direction: column;
     background-color: #b9b8b8;
     border-radius: 20px;
-    padding: 60px 145px;
+    padding: 60px 10%;
     color: #616161;
 }
 

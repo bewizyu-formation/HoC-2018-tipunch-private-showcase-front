@@ -10,18 +10,22 @@ import {ErrorInterceptorService} from './services/interceptors/error-interceptor
 import {CommonHeadersInterceptorService} from './services/interceptors/common-headers-interceptor.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { RouterModule } from '@angular/router';
 
 import {MaterialsModule} from './materials/materials.module';
 
-import { SubscribeComponent } from './subscribe/subscribe.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './headerbar/header/header.component';
+import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
 
 import { HomeCardComponent } from './home-card/home-card.component';
+import { SideMenuComponent } from './headerbar/side-menu/side-menu.component';
+import { PersonalMenuComponent } from './headerbar/personal-menu/personal-menu.component';
+import { BackButtonComponent } from './headerbar/back-button/back-button.component';
 import { HomeFormComponent } from './home-form/home-form.component';
-import { DialogConfirmSuscribeComponent } from './subscribe/dialog-confirm-suscribe/dialog-confirm-suscribe.component';
+import { DialogConfirmSuscribeComponent} from './subscribe/dialog-confirm-suscribe/dialog-confirm-suscribe.component';
+import { SubscribeComponent } from './subscribe/subscribe.component';
+
 
 @NgModule({
   declarations: [
@@ -30,8 +34,14 @@ import { DialogConfirmSuscribeComponent } from './subscribe/dialog-confirm-suscr
     HomeComponent,
     SubscribeComponent,
     HomeCardComponent,
+    SideMenuComponent,
+    PersonalMenuComponent,
+    BackButtonComponent,
     HomeFormComponent,
-    DialogConfirmSuscribeComponent
+    DialogConfirmSuscribeComponent,
+  ],
+  entryComponents: [
+    DialogConfirmSuscribeComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +50,7 @@ import { DialogConfirmSuscribeComponent } from './subscribe/dialog-confirm-suscr
     FormsModule,
     ReactiveFormsModule,
     MaterialsModule,
+
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
