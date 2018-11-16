@@ -53,14 +53,17 @@ export class HomeFormComponent implements OnInit {
     artistShortDescControl: FormControl;
     artistLongDescControl: FormControl;
 
-
+    checkedBoxModel = false;
+    markedCheck = false;
+    markedView = false;
 
   constructor(
       private http: HttpClient,
       public dialogPopup: MatDialog,
       subsCribeForm: FormBuilder
   ) {
-      this.usernameControl = subsCribeForm.control('', [Validators.required, Validators.pattern('[a-zA-Z0-9\-]*'), Validators.minLength(3)]);
+      this.usernameControl = subsCribeForm.control('',
+        [Validators.required, Validators.pattern('[a-zA-Z0-9\-]*'), Validators.minLength(3)]);
       this.emailControl = subsCribeForm.control('', [Validators.required, Validators.email]);
       this.passwordControl = subsCribeForm.control('', [Validators.required, Validators.minLength(8)]);
 
@@ -86,8 +89,6 @@ export class HomeFormComponent implements OnInit {
           artistLongDesCtrl: this.artistLongDescControl
       });
       const control = new FormControl('ng', Validators.minLength(3));
-
-      console.log(control.errors);
   }
 
   reset() {
@@ -146,9 +147,7 @@ export class HomeFormComponent implements OnInit {
         else
             console.log( 'Show');
     }*/
-    checkedBoxModel = false;
-    markedCheck = false;
-    markedView = false;
+
     toggleChecked(e) {
             this.markedCheck  = !this.markedCheck ;
     }
@@ -213,11 +212,7 @@ export class HomeFormComponent implements OnInit {
                 });
         },
     );
-      console.log(this.jsonTest);
-
   }
 }
 
 export const TownTestURL = 'https://geo.api.gouv.fr/communes?nom=';
-
-

@@ -18,7 +18,6 @@ import { HeaderComponent } from './headerbar/header/header.component';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
 
-import { HomeCardComponent } from './home-card/home-card.component';
 import { SideMenuComponent } from './headerbar/side-menu/side-menu.component';
 import { PersonalMenuComponent } from './headerbar/personal-menu/personal-menu.component';
 import { BackButtonComponent } from './headerbar/back-button/back-button.component';
@@ -34,7 +33,6 @@ import { LoginFormComponent } from './login-form/login-form.component';
     HeaderComponent,
     HomeComponent,
     SubscribeComponent,
-    HomeCardComponent,
     SideMenuComponent,
     PersonalMenuComponent,
     BackButtonComponent,

@@ -22,8 +22,3 @@ mat-toolbar {
     color: white;
     box-shadow: 0px 2px 12px #555;
 }
-
-.selected {
-    color: red;
-    /* visibility: hidden; */
-}

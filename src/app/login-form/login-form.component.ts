@@ -1,3 +1,4 @@
+import { ActivatedRoute, UrlSegment } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {HttpClient} from '@angular/common/http';
@@ -10,7 +11,6 @@ import {MatDialog} from '@angular/material';
 })
 export class LoginFormComponent implements OnInit {
 
-
   formTitle = 'Formulaire de connexion';
   datas: any;
 
@@ -19,9 +19,11 @@ export class LoginFormComponent implements OnInit {
   emailControl: FormControl;
   usernameControl: FormControl;
   passwordControl: FormControl;
+  routeName: string;
 
   constructor(
       private http: HttpClient,
+      private activRoute: ActivatedRoute,
       public dialogPopup: MatDialog,
       subsCribeForm: FormBuilder
   ) {
@@ -45,8 +47,7 @@ export class LoginFormComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.userForm.value);
-
+    // console.log(this.userForm.value);
   }
 
 }

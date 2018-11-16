@@ -7,5 +7,4 @@ export const ROUTES: Routes = [
   { path: '', component: HomeComponent},
   { path: 'inscription', component: SubscribeComponent },
   { path: 'connexion', component: LoginFormComponent }
-
 ];
