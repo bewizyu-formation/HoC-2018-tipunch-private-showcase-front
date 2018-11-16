@@ -14,12 +14,11 @@ export class SideMenuComponent implements OnInit {
   ngOnInit() {
   }
 
-  switchIcon(){
-    if (this.iconName == "menu") {
+  switchIcon() {
+    if (this.iconName === 'menu') {
       this.iconName = 'close';
-    }
-    else {
-      this.iconName = "menu"
+    } else {
+      this.iconName = 'menu';
     }
   }
 }

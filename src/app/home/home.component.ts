@@ -9,15 +9,15 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   title = 'Private ShowCase';
-  datas : object;
-  homeDescription : string;
-  homeIntroduction : string;
-  homeCards : object;
+  datas: object;
+  homeDescription: string;
+  homeIntroduction: string;
+  homeCards: object;
   jsonDatas = 'http://localhost:4200/assets/jsondatas.json';
 
   constructor(private http: HttpClient) {}
 
-    private getJson(datas){
+    private getJson(datas) {
         return this.http.get(datas);
     }
 

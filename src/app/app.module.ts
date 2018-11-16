@@ -25,6 +25,7 @@ import { BackButtonComponent } from './headerbar/back-button/back-button.compone
 import { HomeFormComponent } from './home-form/home-form.component';
 import { DialogConfirmSuscribeComponent} from './subscribe/dialog-confirm-suscribe/dialog-confirm-suscribe.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
     BackButtonComponent,
     HomeFormComponent,
     DialogConfirmSuscribeComponent,
+    LoginFormComponent,
   ],
   entryComponents: [
     DialogConfirmSuscribeComponent,

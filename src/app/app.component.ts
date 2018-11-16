@@ -28,14 +28,14 @@ export class AppComponent {
   handleCheckUserRole() {
     this.hello.testApiWithUserRole()
       .subscribe(
-        response => console.log('Check USER ROLE : ', response.message),
+        response => console.log('Check USER ROLE: ', response.message),
       );
   }
 
   handleCheckAdminRole() {
     this.hello.testApiWithAdminRole()
       .subscribe(
-        response => console.log('Check ADMIN ROLE : ', response.message),
+        response => console.log('Check ADMIN ROLE: ', response.message),
         error => console.log('ERROR ', error)
       );
   }
