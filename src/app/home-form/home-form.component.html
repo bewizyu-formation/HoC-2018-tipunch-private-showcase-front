@@ -22,25 +22,23 @@
       </mat-error>
 
     </mat-form-field>
-<!--
-    <mat-checkbox
-            data-md-icheck
-            type="checkbox"
-            name="viewpassword"
-            [(ngModel)]="theCheckbox"
-            (change)="togglePassword($event)">
-      <span>voir le mot de passe</span>
-    </mat-checkbox>
--->
-    <mat-form-field *ngIf="markedView">
+
+    <mat-form-field >
       <input matInput
              placeholder="Password"
-             type="password"
              name="password"
+             [type]="hidePassword ?  'password' : 'text'"
              required>
+
+      <mat-icon matSuffix
+                (click)="hidePassword = !hidePassword">
+        {{hidePassword ? 'visibility_hoff' : 'visibility'}}
+      </mat-icon>
+
       <mat-error *ngIf="userForm.get('passwordCtrl').hasError('minLength')">
         mot de passe trop court
       </mat-error>
+
       <mat-error *ngIf="userForm.get('passwordCtrl').hasError('required')">
       le password est requis <strong>est requis</strong>
       </mat-error>
@@ -52,7 +50,14 @@
              placeholder="Confirm Password"
              type="password"
              name="comfirmpassword"
+             [type]="hidePassword ?  'password' : 'text'"
              required>
+
+      <mat-icon matSuffix
+                (click)="hidePassword = !hidePassword">
+        {{hidePassword ? 'visibility_hoff' : 'visibility'}}
+      </mat-icon>
+
       <mat-error *ngIf="userForm.get('passwordConfirmCtrl').hasError('required')"></mat-error>
     </mat-form-field>
 
@@ -90,7 +95,7 @@
             type="checkbox"
               name="isartist"
               formControlName="isArtistCtrl"
-             [(ngModel)]="theCheckbox"
+             [(ngModel)]="checkedBoxModel"
              (change)="toggleChecked($event)">
       <span>Vous êtes artistes / groupes</span>
     </mat-checkbox>
