@@ -1,7 +1,7 @@
 import { MaterialsModule } from './materials.module';
 
 describe('MarterialsModule', () => {
-  let materialsModule: MaterialsModule;
+  const materialsModule: MaterialsModule;
 
   beforeEach(() => {
     marterialsModule = new MaterialsModule();

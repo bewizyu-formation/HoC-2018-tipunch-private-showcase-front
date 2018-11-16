@@ -115,7 +115,7 @@ export class HomeFormComponent implements OnInit {
        //     });
   }
 
-  private townFilter(value: string): string[]{
+  private townFilter(value: string): string[] {
         const filterValue = value['nom'].toLowerCase();
         return this.setTownName().filter(commune => commune.toLowerCase().includes(filterValue));
   }
@@ -140,11 +140,11 @@ export class HomeFormComponent implements OnInit {
   private  getErroMsg() {
 
         return this.emailControl.hasError('required') ? 'Veuillez renseigner votre email'
-           : this.emailControl.hasError('email') ? 'Mauvais format d\'email': '';
+           : this.emailControl.hasError('email') ? 'Mauvais format d\'email' : '';
   }
 
 
-  openPopupConfirm(): void{
+  openPopupConfirm(): void {
       const dialConfirmRef = this.dialogPopup.open(DialogConfirmSuscribeComponent, {
           width: '300px',
           height: '300px',
