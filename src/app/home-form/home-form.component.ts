@@ -6,6 +6,8 @@ import { DialogConfirmSuscribeComponent } from '../subscribe/dialog-confirm-susc
 import {Observable} from 'rxjs/index';
 import {startWith, map} from 'rxjs/operators';
 
+export const TownTestURL = 'https://geo.api.gouv.fr/communes?nom=';
+
 @Component({
   selector: 'app-home-form',
   templateUrl: './home-form.component.html',
@@ -22,22 +24,14 @@ export class HomeFormComponent implements OnInit {
     dialConfirm: true;
     dialContent: 'Vous recevrez un email de confirmation pour pouvoir vous connecter';
 
+    pathMatchCtrl: string;
+    checkedBoxModel = false;
+    markedCheck = false;
+    hidePassword = true;
 
-    /**
-     * DATAS URL
-     * @type {string}
-     */
     jsonTowns = 'http://localhost:8080/public/communes?nom=';
+    jsonTest = TownTestURL;
 
-    /**
-     *
-     * @type {FormControl}
-     *
-    emailControl = new FormControl('', [Validators.required, Validators.email]);
-    usernameControl = new FormControl('', [Validators.required, Validators.pattern('[a-zA-Z0-9]')]);
-    passwordControl = new FormControl('', [Validators.required, Validators.minLength(8)]);
-    townControl = new FormControl('', [Validators.required,Validators.minLength(3)]);
-*/
 
     /**partie user*/
     userForm: FormGroup;
@@ -53,16 +47,13 @@ export class HomeFormComponent implements OnInit {
     artistShortDescControl: FormControl;
     artistLongDescControl: FormControl;
 
-    checkedBoxModel = false;
-    markedCheck = false;
-    markedView = false;
-
   constructor(
       private http: HttpClient,
       public dialogPopup: MatDialog,
       subsCribeForm: FormBuilder
   ) {
       this.usernameControl = subsCribeForm.control('',
+
         [Validators.required, Validators.pattern('[a-zA-Z0-9\-]*'), Validators.minLength(3)]);
       this.emailControl = subsCribeForm.control('', [Validators.required, Validators.email]);
       this.passwordControl = subsCribeForm.control('', [Validators.required, Validators.minLength(8)]);
@@ -70,6 +61,7 @@ export class HomeFormComponent implements OnInit {
       this.passwordConfirmControl = subsCribeForm.control('', Validators.required);
 
       this.townControl = subsCribeForm.control('', [Validators.required, Validators.minLength(3)]);
+
       this.isArtistControl = subsCribeForm.control(true);
       this.userForm = subsCribeForm.group({
           usernameCtrl: this.usernameControl,
@@ -80,9 +72,12 @@ export class HomeFormComponent implements OnInit {
           isArtistCtrl: this.isArtistControl
       });
 
-      this.artistNameControl  = subsCribeForm.control('', [Validators.required, Validators.pattern('[a-zA-Z0-9\-]*')]);
-      this.artistShortDescControl  = subsCribeForm.control('', [Validators.required, Validators.minLength(20)]);
-      this.artistLongDescControl  = subsCribeForm.control('', [Validators.required, Validators.minLength(150)]);
+      this.artistNameControl  = subsCribeForm.control('',
+          [Validators.required, Validators.pattern('[a-zA-Z0-9\-]*')]);
+      this.artistShortDescControl  = subsCribeForm.control('',
+          [Validators.required, Validators.minLength(20)]);
+      this.artistLongDescControl  = subsCribeForm.control('',
+          [Validators.required, Validators.minLength(150)]);
       this.artistForm = subsCribeForm.group({
           artistNameCtrl: this.artistNameControl,
           ShortDescCtrl: this.artistShortDescControl,
@@ -101,20 +96,12 @@ export class HomeFormComponent implements OnInit {
       this.artistShortDescControl .setValue('');
       this.artistLongDescControl .setValue('');
   }
-    /**
-     * Request datas
-     * @param datas
-     * @returns {Observable<Object>}
-     */
-    private getJson(datas) {
+
+  private getJson(datas) {
         return this.http.get(datas);
   }
 
-  /**
-     * Validator Towns
-     * @param datas dfds
-   * */
-  private setTownName():any {
+  private setTownName(): any {
       // this.datasFilters = this.townControl.valueChanges
       //     .pipe(
       //         startWith(''),
@@ -128,57 +115,40 @@ export class HomeFormComponent implements OnInit {
        //     });
   }
 
-    /**
-     *
-     * @param value
-     */
-  private townFilter(value:string):string[]{
+  private townFilter(value: string): string[]{
         const filterValue = value['nom'].toLowerCase();
         return this.setTownName().filter(commune => commune.toLowerCase().includes(filterValue));
   }
-/*
-    show = false;
-    toggle() {
-        this.show = !this.show;
 
-        // CHANGE THE NAME OF THE BUTTON.
-        if(this.show)
-            console.log( 'Hide');
-        else
-            console.log( 'Show');
-    }*/
-
-    toggleChecked(e) {
-            this.markedCheck  = !this.markedCheck ;
+  toggleChecked() {
+      this.markedCheck  = !this.markedCheck ;
+  }
+  /*
+    hidePasswordModel = false;
+    typePassword = 'password';
+    passswordValue : string;
+    togglePassword() {
+        this.hidePassword = !this.hidePassword;
+        this.hidePassword ? 'visibility_hoff' : 'visibility';
+        this.hidePassword ? 'password' : 'texte';
     }
+  */
+  private getPasswordPath(pathCompare: string) {
+      return pathCompare;
+  }
 
-    togglePassword(){
-        this.markedView = !this.markedView;
-        if (this.markedView){
-            /** todo recupérer le input type */
-           // this.input.changeType("text");
-        }
-    }
-    /**
-     * gestion des errors
-     * @returns {string|string|string}
-     *
   private  getErroMsg() {
 
         return this.emailControl.hasError('required') ? 'Veuillez renseigner votre email'
            : this.emailControl.hasError('email') ? 'Mauvais format d\'email': '';
+  }
 
-  }*/
 
-    /**
-     * On confirm button get Pop up from
-     */
-    openPopupConfirm(): void{
+  openPopupConfirm(): void{
       const dialConfirmRef = this.dialogPopup.open(DialogConfirmSuscribeComponent, {
           width: '300px',
           height: '300px',
-          data: {title: this.dialTitle, content: this.dialContent , confirm: this.dialConfirm}
-      });
+          data: {title: this.dialTitle, content: this.dialContent, confirm: this.dialConfirm}});
 
       dialConfirmRef.afterClosed()
           .subscribe(res => {
@@ -186,19 +156,14 @@ export class HomeFormComponent implements OnInit {
               console.log(this.dialConfirm);
           });
   }
-
-    /**
-     *
-     */
   register() {
-        console.log(this.userForm.value);
-        console.log(this.artistForm.value);
+      console.log(this.userForm.value);
+      console.log(this.artistForm.value);
   }
 
     /**
      *
      */
-    jsonTest = TownTestURL;
 
   ngOnInit() {
     this.townControl.valueChanges.subscribe(
@@ -214,5 +179,3 @@ export class HomeFormComponent implements OnInit {
     );
   }
 }
-
-export const TownTestURL = 'https://geo.api.gouv.fr/communes?nom=';

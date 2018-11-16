@@ -15,7 +15,6 @@ export class HeaderComponent implements OnInit {
   isHomePage: boolean;
   isConnectPage: boolean;
   isSubscribePage: boolean;
-  showSideMenu: boolean;
 
   constructor(private router: Router) {
   }
@@ -42,7 +41,8 @@ export class HeaderComponent implements OnInit {
     this.isHomePage = this.currentUrl === '/' ?  false : true;
     this.isConnectPage = this.currentUrl === '/connexion' ?  false : true;
     this.isSubscribePage = this.currentUrl === '/inscription' ?  false : true;
-    if (this.isSubscribePage) {}
-    console.log(this.isHomePage);
+    console.log('Is Home Page ? ' + this.isHomePage);
+    console.log('Is Connection Page ? ' + this.isConnectPage);
+    console.log('Is Subscribe Page ? ' + this.isSubscribePage);
   }
 }

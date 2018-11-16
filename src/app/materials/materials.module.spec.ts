@@ -4,7 +4,7 @@ describe('MarterialsModule', () => {
   let materialsModule: MaterialsModule;
 
   beforeEach(() => {
-    marteialsModule = new MaterialsModule();
+    marterialsModule = new MaterialsModule();
   });
 
   it('should create an instance', () => {
