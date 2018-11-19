@@ -38,9 +38,10 @@ export class HeaderComponent implements OnInit {
   }
 
   checkPages() {
-    this.isHomePage = this.currentUrl === '/' ?  false : true;
-    this.isConnectPage = this.currentUrl === '/connexion' ?  false : true;
-    this.isSubscribePage = this.currentUrl === '/inscription' ?  false : true;
+    this.isHomePage = this.currentUrl !== '/';
+    this.isConnectPage = this.currentUrl !== '/connexion';
+    this.isSubscribePage = this.currentUrl !== '/inscription';
+
     console.log('Is Home Page ? ' + this.isHomePage);
     console.log('Is Connection Page ? ' + this.isConnectPage);
     console.log('Is Subscribe Page ? ' + this.isSubscribePage);

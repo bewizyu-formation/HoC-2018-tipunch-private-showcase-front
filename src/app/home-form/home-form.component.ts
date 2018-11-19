@@ -1,12 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {FormControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {MatDialog, MatInput} from '@angular/material';
+import {FormControl, FormBuilder, FormGroup, Validators, FormGroupDirective, NgForm} from '@angular/forms';
+import {ErrorStateMatcher, MatDialog} from '@angular/material';
 import { DialogConfirmSuscribeComponent } from '../subscribe/dialog-confirm-suscribe/dialog-confirm-suscribe.component';
 import {Observable} from 'rxjs/index';
+
 import {startWith, map} from 'rxjs/operators';
+import {isUndefined} from 'util';
 
 export const TownTestURL = 'https://geo.api.gouv.fr/communes?nom=';
+export  const ConfirmPasswordTestUrl = 'minou2018';
+
+
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+    isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+        const isSubmitted = form && form.submitted;
+
+        return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+    }
+}
 
 @Component({
   selector: 'app-home-form',
@@ -24,7 +36,7 @@ export class HomeFormComponent implements OnInit {
     dialConfirm: true;
     dialContent: 'Vous recevrez un email de confirmation pour pouvoir vous connecter';
 
-    pathMatchCtrl: string;
+
     checkedBoxModel = false;
     markedCheck = false;
     hidePassword = true;
@@ -32,11 +44,13 @@ export class HomeFormComponent implements OnInit {
     jsonTowns = 'http://localhost:8080/public/communes?nom=';
     jsonTest = TownTestURL;
 
+    userMatcher = new MyErrorStateMatcher();
 
     /**partie user*/
     userForm: FormGroup;
     emailControl: FormControl;
     usernameControl: FormControl;
+    passForm:  FormGroup;
     passwordControl: FormControl;
     passwordConfirmControl: FormControl;
     townControl: FormControl;
@@ -50,41 +64,36 @@ export class HomeFormComponent implements OnInit {
   constructor(
       private http: HttpClient,
       public dialogPopup: MatDialog,
-      subsCribeForm: FormBuilder
+      fb: FormBuilder
   ) {
-      this.usernameControl = subsCribeForm.control('',
+      this.usernameControl = fb.control('', [Validators.required, Validators.pattern('[a-zA-Z0-9\-]*'), Validators.minLength(3)]);
+      this.emailControl = fb.control('', [Validators.required, Validators.email]);
+      this.passwordControl = fb.control('', [Validators.required, Validators.minLength(8)]);
+      this.passwordConfirmControl = fb.control('', Validators.required);
+      this.townControl = fb.control('', [Validators.required, Validators.minLength(3)]);
+      this.isArtistControl = fb.control(true);
+      this.artistNameControl  = fb.control('', [Validators.required, Validators.pattern('[a-zA-Z0-9\-]*')]);
+      this.artistShortDescControl  = fb.control('', [Validators.required, Validators.minLength(20)]);
+      this.artistLongDescControl  = fb.control('', [Validators.required, Validators.minLength(150)]);
 
-        [Validators.required, Validators.pattern('[a-zA-Z0-9\-]*'), Validators.minLength(3)]);
-      this.emailControl = subsCribeForm.control('', [Validators.required, Validators.email]);
-      this.passwordControl = subsCribeForm.control('', [Validators.required, Validators.minLength(8)]);
-
-      this.passwordConfirmControl = subsCribeForm.control('', Validators.required);
-
-      this.townControl = subsCribeForm.control('', [Validators.required, Validators.minLength(3)]);
-
-      this.isArtistControl = subsCribeForm.control(true);
-      this.userForm = subsCribeForm.group({
+      this.userForm = fb.group({
           usernameCtrl: this.usernameControl,
           emailCtrl: this.emailControl,
-          passwordCtrl: this.passwordControl,
-          passwordConfirmCtrl: this.passwordConfirmControl,
           townCtrl: this.townControl,
           isArtistCtrl: this.isArtistControl
       });
-
-      this.artistNameControl  = subsCribeForm.control('',
-          [Validators.required, Validators.pattern('[a-zA-Z0-9\-]*')]);
-      this.artistShortDescControl  = subsCribeForm.control('',
-          [Validators.required, Validators.minLength(20)]);
-      this.artistLongDescControl  = subsCribeForm.control('',
-          [Validators.required, Validators.minLength(150)]);
-      this.artistForm = subsCribeForm.group({
+      this.passForm = fb.group({
+          passwordCtrl: this.passwordControl,
+          passwordConfirmCtrl: this.passwordConfirmControl,
+      })
+      this.artistForm = fb.group({
           artistNameCtrl: this.artistNameControl,
           ShortDescCtrl: this.artistShortDescControl,
           artistLongDesCtrl: this.artistLongDescControl
       });
       const control = new FormControl('ng', Validators.minLength(3));
   }
+
 
   reset() {
       this.emailControl.setValue('');
@@ -102,20 +111,21 @@ export class HomeFormComponent implements OnInit {
   }
 
   private setTownName(): any {
-      // this.datasFilters = this.townControl.valueChanges
-      //     .pipe(
-      //         startWith(''),
-      //         map(value => this.townFilter(value))
-      //     );
-
-       // console.log( this.datasFilters);
-       // this.getJson(this.jsonTowns + this.datasFilters)
-       //     .subscribe(data =>{
-       //         this.datas = data;
-       //     });
+      this.townControl.valueChanges.subscribe(
+          (value) => {
+              this.getJson(`${this.jsonTowns}${value}`)
+                  .subscribe((data: any[]) => {
+                      if (value.length >= 1) {
+                          data.length = 10;
+                          this.datas = data;
+                          this.datas.length = data.length;
+                      }
+                  });
+          },
+      );
   }
 
-  private townFilter(value: string): string[]{
+  private townFilter(value: string): string[] {
         const filterValue = value['nom'].toLowerCase();
         return this.setTownName().filter(commune => commune.toLowerCase().includes(filterValue));
   }
@@ -137,14 +147,7 @@ export class HomeFormComponent implements OnInit {
       return pathCompare;
   }
 
-  private  getErroMsg() {
-
-        return this.emailControl.hasError('required') ? 'Veuillez renseigner votre email'
-           : this.emailControl.hasError('email') ? 'Mauvais format d\'email': '';
-  }
-
-
-  openPopupConfirm(): void{
+  openPopupConfirm(): void {
       const dialConfirmRef = this.dialogPopup.open(DialogConfirmSuscribeComponent, {
           width: '300px',
           height: '300px',
@@ -157,25 +160,31 @@ export class HomeFormComponent implements OnInit {
           });
   }
   register() {
+ uri =
+      'users/add?username=' + this.usernameControl +
+      '&password=' +  this.passwordControl +
+      '&email=' + this.emailControl +
+      '&cityName=lyon' + this.townControl +
+      '&cityCode=69001' + this.cityCode
       console.log(this.userForm.value);
+      console.log(this.passForm.value);
+      console.log(this.artistForm.value);
+
+      console.log(this.emailControl.value);
+      console.log(this.townControl.value);
+      console.log(this.artistNameControl.value);
+      console.log(this.isArtistControl.value);
       console.log(this.artistForm.value);
   }
+  /* 'users/add?username=roger&password=army&email=roger@r.tc&cityName=lyon&cityCode=69001&deptCode=69'
 
-    /**
-     *
-     */
+    uriUsers = '/users/add?';
+  uriUsers  += 'username=' + this.usernameCtrl;
+  uriUsers  += '&password='+ this.passwordControl;*/
+
+
 
   ngOnInit() {
-    this.townControl.valueChanges.subscribe(
-        (value) => {
-            /*this.getJson(${this.jsonTowns}${value}`)*/
-            this.getJson(`${this.jsonTest}${value}`)
-                .subscribe(data => {
-                    console.log(value);
-                    this.datas = data;
-                    console.log(this.datas);
-                });
-        },
-    );
+    this.setTownName();
   }
 }

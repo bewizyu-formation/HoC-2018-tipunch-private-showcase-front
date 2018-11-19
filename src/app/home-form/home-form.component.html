@@ -10,6 +10,7 @@
              placeholder="Nom d'utilsateur"
              name="username"
              formControlName="usernameCtrl"
+             [errorStateMatcher]="userMatcher"
              required>
       <mat-error *ngIf="userForm.get('usernameCtrl').hasError('minLenght')">
         nom trop court
@@ -23,26 +24,24 @@
 
     </mat-form-field>
 
+
     <mat-form-field >
       <input matInput
              placeholder="Password"
              name="password"
              [type]="hidePassword ?  'password' : 'text'"
              required>
-
       <mat-icon matSuffix
                 (click)="hidePassword = !hidePassword">
         {{hidePassword ? 'visibility_hoff' : 'visibility'}}
       </mat-icon>
 
-      <mat-error *ngIf="userForm.get('passwordCtrl').hasError('minLength')">
+      <mat-error *ngIf="passForm.get('passwordCtrl').hasError('minLength')">
         mot de passe trop court
       </mat-error>
-
-      <mat-error *ngIf="userForm.get('passwordCtrl').hasError('required')">
+      <mat-error *ngIf="passForm.get('passwordCtrl').hasError('required')">
       le password est requis <strong>est requis</strong>
       </mat-error>
-
     </mat-form-field>
 
     <mat-form-field>
@@ -52,13 +51,11 @@
              name="comfirmpassword"
              [type]="hidePassword ?  'password' : 'text'"
              required>
-
       <mat-icon matSuffix
                 (click)="hidePassword = !hidePassword">
         {{hidePassword ? 'visibility_hoff' : 'visibility'}}
       </mat-icon>
-
-      <mat-error *ngIf="userForm.get('passwordConfirmCtrl').hasError('required')"></mat-error>
+      <mat-error *ngIf="passForm.get('passwordConfirmCtrl').hasError('required')"></mat-error>
     </mat-form-field>
 
     <mat-form-field>
@@ -66,10 +63,10 @@
              type="email"
              name="email"
              placeholder="Email"
-             [formControl]="emailControl"
+             formControlName="emailCtrl"
              required>
-      <mat-error *ngIf="userForm.get('emailCtrl').hasError('required')">Veuillez renseigner votre email</mat-error>
-      <mat-error *ngIf="userForm.get('emailCtrl').hasError('email')">Email invalid ( <strong>monemail@servermail.extension</strong>)</mat-error>
+      <mat-error *ngIf="emailControl.hasError('required')">Veuillez renseigner votre email</mat-error>
+      <mat-error *ngIf="emailControl.hasError('email')">Email invalid ( <strong>monemail@servermail.extension</strong>)</mat-error>
 
     </mat-form-field>
 
@@ -79,16 +76,14 @@
                  name="commune"
                  placeholder="commune"
                  [matAutocomplete]="auto"
-                 [formControl]="townControl">
+                 formControlName="townCtrl">
       <mat-autocomplete #auto="matAutocomplete">
-        <mat-option *ngFor="let commune of datas" name="commune" [value]="commune.nom" required>
-              {{commune.nom}}
+        <mat-option *ngFor="let commune of datas" name="commune" [value]="commune?.nom +' '+ commune?.codesPostaux[0]" required>
+              {{commune?.nom}}
+              {{commune?.codesPostaux[0]}}
         </mat-option>
       </mat-autocomplete>
     </mat-form-field>
-
-
-
 
     <mat-checkbox
             data-md-icheck
@@ -96,18 +91,15 @@
               name="isartist"
               formControlName="isArtistCtrl"
              [(ngModel)]="checkedBoxModel"
-             (change)="toggleChecked($event)">
+             (change)="toggleChecked()">
       <span>Vous êtes artistes / groupes</span>
     </mat-checkbox>
-
-
-
 
     <mat-form-field *ngIf="markedCheck">
       <input matInput
              placeholder="Artist name"
              name="artisname"
-             [formControl]="artistNameControl"
+             formControlName="artistNameControl"
              required>
 
       <mat-error *ngIf="artistForm.get('artistNameCtrl').hasError('required')">

@@ -1,4 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
+import {MaterialsModule} from './materials/materials.module';
 import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {APP_BASE_HREF} from '@angular/common';
 import {AppComponent} from './app.component';
@@ -10,8 +11,6 @@ import {ErrorInterceptorService} from './services/interceptors/error-interceptor
 import {CommonHeadersInterceptorService} from './services/interceptors/common-headers-interceptor.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-
-import {MaterialsModule} from './materials/materials.module';
 
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './headerbar/header/header.component';
@@ -53,6 +52,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
 
     RouterModule.forRoot(ROUTES)
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
     {provide: APP_BASE_HREF, useValue: '/'},
     {provide: APP_CONFIG, useValue: environment},
