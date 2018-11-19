@@ -25,6 +25,8 @@ import { HomeFormComponent } from './home-form/home-form.component';
 import { DialogConfirmSuscribeComponent} from './subscribe/dialog-confirm-suscribe/dialog-confirm-suscribe.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { HomeToolbarComponent } from './home-toolbar/home-toolbar.component';
+import { HomebackToolbarComponent } from './homeback-toolbar/homeback-toolbar.component';
 
 
 @NgModule({
@@ -39,6 +41,8 @@ import { LoginFormComponent } from './login-form/login-form.component';
     HomeFormComponent,
     DialogConfirmSuscribeComponent,
     LoginFormComponent,
+    HomeToolbarComponent,
+    HomebackToolbarComponent,
   ],
   entryComponents: [
     DialogConfirmSuscribeComponent,

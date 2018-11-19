@@ -1,4 +1,6 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { PATH_HOME } from '../../app.routes.constantes';
 
 @Component({
   selector: 'app-back-button',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BackButtonComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  navigateToHome() {
+    this.router.navigate([PATH_HOME]);
+  }
 
   ngOnInit() {
   }

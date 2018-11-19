@@ -1,10 +1,10 @@
 import { MaterialsModule } from './materials.module';
 
 describe('MarterialsModule', () => {
-  const materialsModule: MaterialsModule;
+  let materialsModule: MaterialsModule;
 
   beforeEach(() => {
-    marterialsModule = new MaterialsModule();
+    materialsModule = new MaterialsModule();
   });
 
   it('should create an instance', () => {
