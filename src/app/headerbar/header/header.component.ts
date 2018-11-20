@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterContentInit } from '@angular/core';
+import { Component, OnInit, AfterContentInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd , UrlSegment, ParamMap } from '@angular/router';
 import { PATH_SUBSCRIBE } from '../../app.routes.constantes';
 import { PATH_CONNEXION } from '../../app.routes.constantes';

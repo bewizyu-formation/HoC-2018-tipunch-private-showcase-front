@@ -1,0 +1,2646 @@
+
+> private-showcase@0.0.0 ci:test C:\wamp\www\vagrant\httpdoc\tipunch\front-showcase
+> ng test --code-coverage --watch=false
+
+[32m20 11 2018 19:00:10.165:INFO [karma]: [39mKarma v3.0.0 server started at http://0.0.0.0:9876/
+[32m20 11 2018 19:00:10.180:INFO [launcher]: [39mLaunching browser ChromeHeadless with unlimited concurrency
+[32m20 11 2018 19:00:10.200:INFO [launcher]: [39mStarting browser ChromeHeadless
+[32m20 11 2018 19:00:22.065:INFO [HeadlessChrome 0.0.0 (Windows 10 0.0.0)]: [39mConnected on socket MmCrKbpPSEeuf3PUAAAA with id 29348614
+HeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 0 of 26 SUCCESS (0 secs / 0 secs)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 1 of 26 SUCCESS (0 secs / 0.878 secs)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0) BackButtonComponent  should create FAILED
+
+=======================================>
+
+
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("<button mat-button (click)="navigateToHome()">
+	    [ERROR ->]<mat-icon>arrow_back</mat-icon>
+	</button>"): ng:///DynamicTestModule/BackButtonComponent.html@1:4
+	Error: Template parse errors:
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Error: Template parse errors:
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("<button mat-button (click)="navigateToHome()">
+	    [ERROR ->]<mat-icon>arrow_back</mat-icon>
+	</button>"): ng:///DynamicTestModule/BackButtonComponent.html@1:4
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Expected undefined to be truthy.
+	    at UserContext.eval (./src/app/headerbar/back-button/back-button.component.spec.ts?:21:27)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:387:26)
+	    at ProxyZoneSpec.onInvoke (./node_modules/zone.js/dist/zone-testing.js?:287:39)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:386:32)
+HeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 2 of 26 (1 FAILED) (0 secs / 0.9 secs)
+HeadlessChrome 0.0.0 (Windows 10 0.0.0) BackButtonComponent  should create FAILED
+
+=======================================>
+
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("<button mat-button (click)="navigateToHome()">
+	    [ERROR ->]<mat-icon>arrow_back</mat-icon>
+	</button>"): ng:///DynamicTestModule/BackButtonComponent.html@1:4
+	Error: Template parse errors:
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Error: Template parse errors:
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("<button mat-button (click)="navigateToHome()">
+	    [ERROR ->]<mat-icon>arrow_back</mat-icon>
+	</button>"): ng:///DynamicTestModule/BackButtonComponent.html@1:4
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Expected undefined to be truthy.
+	    at UserContext.eval (./src/app/headerbar/back-button/back-button.component.spec.ts?:21:27)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:387:26)
+	    at ProxyZoneSpec.onInvoke (./node_modules/zone.js/dist/zone-testing.js?:287:39)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:386:32)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0) HeaderComponent  should create FAILED
+
+=======================================>
+
+	'app-side-menu' is not a known element:
+	1. If 'app-side-menu' is an Angular component, then verify that it is part of this module.
+	2. If 'app-side-menu' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("<mat-toolbar>
+	  [ERROR ->]<app-side-menu *ngIf="isHomePage"></app-side-menu>
+	  
+	  <span class="fill-remaining-space"
+	"): ng:///DynamicTestModule/HeaderComponent.html@1:2
+	'app-back-button' is not a known element:
+	1. If 'app-back-button' is an Angular component, then verify that it is part of this module.
+	2. If 'app-back-button' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  </span>
+	
+	  [ERROR ->]<app-back-button *ngIf="isHomePage"></app-back-button>
+	  
+	  <span class="fill-remaining-space"></sp"): ng:///DynamicTestModule/HeaderComponent.html@7:2
+	'app-personal-menu' is not a known element:
+	1. If 'app-personal-menu' is an Angular component, then verify that it is part of this module.
+	2. If 'app-personal-menu' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  <span class="fill-remaining-space" *ngIf="isHomePage"></span>
+	  
+	  [ERROR ->]<app-personal-menu *ngIf="isHomePage"></app-personal-menu>
+	
+	</mat-toolbar>"): ng:///DynamicTestModule/HeaderComponent.html@27:2
+	Error: Template parse errors:
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Error: Template parse errors:
+	'app-side-menu' is not a known element:
+	1. If 'app-side-menu' is an Angular component, then verify that it is part of this module.
+	2. If 'app-side-menu' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("<mat-toolbar>
+	  [ERROR ->]<app-side-menu *ngIf="isHomePage"></app-side-menu>
+	  
+	  <span class="fill-remaining-space"
+	"): ng:///DynamicTestModule/HeaderComponent.html@1:2
+	'app-back-button' is not a known element:
+	1. If 'app-back-button' is an Angular component, then verify that it is part of this module.
+	2. If 'app-back-button' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  </span>
+	
+	  [ERROR ->]<app-back-button *ngIf="isHomePage"></app-back-button>
+	  
+	  <span class="fill-remaining-space"></sp"): ng:///DynamicTestModule/HeaderComponent.html@7:2
+	'app-personal-menu' is not a known element:
+	1. If 'app-personal-menu' is an Angular component, then verify that it is part of this module.
+	2. If 'app-personal-menu' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  <span class="fill-remaining-space" *ngIf="isHomePage"></span>
+	  
+	  [ERROR ->]<app-personal-menu *ngIf="isHomePage"></app-personal-menu>
+	
+	</mat-toolbar>"): ng:///DynamicTestModule/HeaderComponent.html@27:2
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Expected undefined to be truthy.
+	    at UserContext.eval (./src/app/headerbar/header/header.component.spec.ts?:27:27)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:387:26)
+	    at ProxyZoneSpec.onInvoke (./node_modules/zone.js/dist/zone-testing.js?:287:39)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:386:32)
+HeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 3 of 26 (2 FAILED) (0 secs / 0.941 secs)
+HeadlessChrome 0.0.0 (Windows 10 0.0.0) HeaderComponent  should create FAILED
+
+=======================================>
+
+	'app-side-menu' is not a known element:
+	1. If 'app-side-menu' is an Angular component, then verify that it is part of this module.
+	2. If 'app-side-menu' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("<mat-toolbar>
+	  [ERROR ->]<app-side-menu *ngIf="isHomePage"></app-side-menu>
+	  
+	  <span class="fill-remaining-space"
+	"): ng:///DynamicTestModule/HeaderComponent.html@1:2
+	'app-back-button' is not a known element:
+	1. If 'app-back-button' is an Angular component, then verify that it is part of this module.
+	2. If 'app-back-button' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  </span>
+	
+	  [ERROR ->]<app-back-button *ngIf="isHomePage"></app-back-button>
+	  
+	  <span class="fill-remaining-space"></sp"): ng:///DynamicTestModule/HeaderComponent.html@7:2
+	'app-personal-menu' is not a known element:
+	1. If 'app-personal-menu' is an Angular component, then verify that it is part of this module.
+	2. If 'app-personal-menu' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  <span class="fill-remaining-space" *ngIf="isHomePage"></span>
+	  
+	  [ERROR ->]<app-personal-menu *ngIf="isHomePage"></app-personal-menu>
+	
+	</mat-toolbar>"): ng:///DynamicTestModule/HeaderComponent.html@27:2
+	Error: Template parse errors:
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Error: Template parse errors:
+	'app-side-menu' is not a known element:
+	1. If 'app-side-menu' is an Angular component, then verify that it is part of this module.
+	2. If 'app-side-menu' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("<mat-toolbar>
+	  [ERROR ->]<app-side-menu *ngIf="isHomePage"></app-side-menu>
+	  
+	  <span class="fill-remaining-space"
+	"): ng:///DynamicTestModule/HeaderComponent.html@1:2
+	'app-back-button' is not a known element:
+	1. If 'app-back-button' is an Angular component, then verify that it is part of this module.
+	2. If 'app-back-button' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  </span>
+	
+	  [ERROR ->]<app-back-button *ngIf="isHomePage"></app-back-button>
+	  
+	  <span class="fill-remaining-space"></sp"): ng:///DynamicTestModule/HeaderComponent.html@7:2
+	'app-personal-menu' is not a known element:
+	1. If 'app-personal-menu' is an Angular component, then verify that it is part of this module.
+	2. If 'app-personal-menu' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  <span class="fill-remaining-space" *ngIf="isHomePage"></span>
+	  
+	  [ERROR ->]<app-personal-menu *ngIf="isHomePage"></app-personal-menu>
+	
+	</mat-toolbar>"): ng:///DynamicTestModule/HeaderComponent.html@27:2
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Expected undefined to be truthy.
+	    at UserContext.eval (./src/app/headerbar/header/header.component.spec.ts?:27:27)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:387:26)
+	    at ProxyZoneSpec.onInvoke (./node_modules/zone.js/dist/zone-testing.js?:287:39)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:386:32)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0) PersonalMenuComponent  should create FAILED
+
+=======================================>
+
+	Can't bind to 'matMenuTriggerFor' since it isn't a known property of 'button'. ("<button mat-button [ERROR ->][matMenuTriggerFor]="menu">
+	    <mat-icon>more_vert</mat-icon>
+	</button>
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@0:19
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("<button mat-button [matMenuTriggerFor]="menu">
+	    [ERROR ->]<mat-icon>more_vert</mat-icon>
+	</button>
+	<mat-menu #menu="matMenu">
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@1:4
+	There is no directive with "exportAs" set to "matMenu" ("
+	    <mat-icon>more_vert</mat-icon>
+	</button>
+	<mat-menu [ERROR ->]#menu="matMenu">
+	  <button mat-menu-item>
+	    <mat-icon>music_note</mat-icon>
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@3:10
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	<mat-menu #menu="matMenu">
+	  <button mat-menu-item>
+	    [ERROR ->]<mat-icon>music_note</mat-icon>
+	    Artiste
+	  </button>
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@5:4
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  </button>
+	  <button mat-menu-item>
+	  [ERROR ->]<mat-icon>settings</mat-icon>
+	    Profil
+	  </button>
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@9:2
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  </button>
+	  <button mat-menu-item>
+	  [ERROR ->]<mat-icon>exit_to_app</mat-icon>
+	    Déconnexion
+	  </button>
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@13:2
+	'mat-menu' is not a known element:
+	1. If 'mat-menu' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-menu' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    <mat-icon>more_vert</mat-icon>
+	</button>
+	[ERROR ->]<mat-menu #menu="matMenu">
+	  <button mat-menu-item>
+	    <mat-icon>music_note</mat-icon>
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@3:0
+	Error: Template parse errors:
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Error: Template parse errors:
+	Can't bind to 'matMenuTriggerFor' since it isn't a known property of 'button'. ("<button mat-button [ERROR ->][matMenuTriggerFor]="menu">
+	    <mat-icon>more_vert</mat-icon>
+	</button>
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@0:19
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("<button mat-button [matMenuTriggerFor]="menu">
+	    [ERROR ->]<mat-icon>more_vert</mat-icon>
+	</button>
+	<mat-menu #menu="matMenu">
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@1:4
+	There is no directive with "exportAs" set to "matMenu" ("
+	    <mat-icon>more_vert</mat-icon>
+	</button>
+	<mat-menu [ERROR ->]#menu="matMenu">
+	  <button mat-menu-item>
+	    <mat-icon>music_note</mat-icon>
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@3:10
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	<mat-menu #menu="matMenu">
+	  <button mat-menu-item>
+	    [ERROR ->]<mat-icon>music_note</mat-icon>
+	    Artiste
+	  </button>
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@5:4
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  </button>
+	  <button mat-menu-item>
+	  [ERROR ->]<mat-icon>settings</mat-icon>
+	    Profil
+	  </button>
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@9:2
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  </button>
+	  <button mat-menu-item>
+	  [ERROR ->]<mat-icon>exit_to_app</mat-icon>
+	    Déconnexion
+	  </button>
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@13:2
+	'mat-menu' is not a known element:
+	1. If 'mat-menu' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-menu' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    <mat-icon>more_vert</mat-icon>
+	</button>
+	[ERROR ->]<mat-menu #menu="matMenu">
+	  <button mat-menu-item>
+	    <mat-icon>music_note</mat-icon>
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@3:0
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Expected undefined to be truthy.
+	    at UserContext.eval (./src/app/headerbar/personal-menu/personal-menu.component.spec.ts?:21:27)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:387:26)
+	    at ProxyZoneSpec.onInvoke (./node_modules/zone.js/dist/zone-testing.js?:287:39)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:386:32)
+HeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 4 of 26 (3 FAILED) (0 secs / 0.952 secs)
+HeadlessChrome 0.0.0 (Windows 10 0.0.0) PersonalMenuComponent  should create FAILED
+
+=======================================>
+
+	Can't bind to 'matMenuTriggerFor' since it isn't a known property of 'button'. ("<button mat-button [ERROR ->][matMenuTriggerFor]="menu">
+	    <mat-icon>more_vert</mat-icon>
+	</button>
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@0:19
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("<button mat-button [matMenuTriggerFor]="menu">
+	    [ERROR ->]<mat-icon>more_vert</mat-icon>
+	</button>
+	<mat-menu #menu="matMenu">
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@1:4
+	There is no directive with "exportAs" set to "matMenu" ("
+	    <mat-icon>more_vert</mat-icon>
+	</button>
+	<mat-menu [ERROR ->]#menu="matMenu">
+	  <button mat-menu-item>
+	    <mat-icon>music_note</mat-icon>
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@3:10
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	<mat-menu #menu="matMenu">
+	  <button mat-menu-item>
+	    [ERROR ->]<mat-icon>music_note</mat-icon>
+	    Artiste
+	  </button>
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@5:4
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  </button>
+	  <button mat-menu-item>
+	  [ERROR ->]<mat-icon>settings</mat-icon>
+	    Profil
+	  </button>
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@9:2
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  </button>
+	  <button mat-menu-item>
+	  [ERROR ->]<mat-icon>exit_to_app</mat-icon>
+	    Déconnexion
+	  </button>
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@13:2
+	'mat-menu' is not a known element:
+	1. If 'mat-menu' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-menu' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    <mat-icon>more_vert</mat-icon>
+	</button>
+	[ERROR ->]<mat-menu #menu="matMenu">
+	  <button mat-menu-item>
+	    <mat-icon>music_note</mat-icon>
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@3:0
+	Error: Template parse errors:
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Error: Template parse errors:
+	Can't bind to 'matMenuTriggerFor' since it isn't a known property of 'button'. ("<button mat-button [ERROR ->][matMenuTriggerFor]="menu">
+	    <mat-icon>more_vert</mat-icon>
+	</button>
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@0:19
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("<button mat-button [matMenuTriggerFor]="menu">
+	    [ERROR ->]<mat-icon>more_vert</mat-icon>
+	</button>
+	<mat-menu #menu="matMenu">
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@1:4
+	There is no directive with "exportAs" set to "matMenu" ("
+	    <mat-icon>more_vert</mat-icon>
+	</button>
+	<mat-menu [ERROR ->]#menu="matMenu">
+	  <button mat-menu-item>
+	    <mat-icon>music_note</mat-icon>
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@3:10
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	<mat-menu #menu="matMenu">
+	  <button mat-menu-item>
+	    [ERROR ->]<mat-icon>music_note</mat-icon>
+	    Artiste
+	  </button>
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@5:4
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  </button>
+	  <button mat-menu-item>
+	  [ERROR ->]<mat-icon>settings</mat-icon>
+	    Profil
+	  </button>
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@9:2
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  </button>
+	  <button mat-menu-item>
+	  [ERROR ->]<mat-icon>exit_to_app</mat-icon>
+	    Déconnexion
+	  </button>
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@13:2
+	'mat-menu' is not a known element:
+	1. If 'mat-menu' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-menu' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    <mat-icon>more_vert</mat-icon>
+	</button>
+	[ERROR ->]<mat-menu #menu="matMenu">
+	  <button mat-menu-item>
+	    <mat-icon>music_note</mat-icon>
+	"): ng:///DynamicTestModule/PersonalMenuComponent.html@3:0
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Expected undefined to be truthy.
+	    at UserContext.eval (./src/app/headerbar/personal-menu/personal-menu.component.spec.ts?:21:27)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:387:26)
+	    at ProxyZoneSpec.onInvoke (./node_modules/zone.js/dist/zone-testing.js?:287:39)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:386:32)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0) SideMenuComponent  should create FAILED
+
+=======================================>
+
+	Can't bind to 'matMenuTriggerFor' since it isn't a known property of 'button'. ("<button mat-button [ERROR ->][matMenuTriggerFor]="menu" (click)="switchIcon()">
+	  <mat-icon>{{ iconName }}</mat-icon>
+	</button>
+"): ng:///DynamicTestModule/SideMenuComponent.html@0:19
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("<button mat-button [matMenuTriggerFor]="menu" (click)="switchIcon()">
+	  [ERROR ->]<mat-icon>{{ iconName }}</mat-icon>
+	</button>
+	<mat-menu #menu="matMenu" (closed)="switchIcon()">
+	"): ng:///DynamicTestModule/SideMenuComponent.html@1:2
+	There is no directive with "exportAs" set to "matMenu" ("
+	  <mat-icon>{{ iconName }}</mat-icon>
+	</button>
+	<mat-menu [ERROR ->]#menu="matMenu" (closed)="switchIcon()">
+	  <button mat-menu-item>
+	    <mat-icon>home</mat-icon>
+	"): ng:///DynamicTestModule/SideMenuComponent.html@3:10
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	<mat-menu #menu="matMenu" (closed)="switchIcon()">
+	  <button mat-menu-item>
+	    [ERROR ->]<mat-icon>home</mat-icon>
+	    Accueil
+	  </button>
+	"): ng:///DynamicTestModule/SideMenuComponent.html@5:4
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  </button>
+	  <button mat-menu-item>
+	    [ERROR ->]<mat-icon>send</mat-icon>
+	    Évènements
+	  </button>
+	"): ng:///DynamicTestModule/SideMenuComponent.html@9:4
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  </button>
+	  <button mat-menu-item>
+	    [ERROR ->]<mat-icon>people</mat-icon>
+	    Contacts
+	  </button>
+	"): ng:///DynamicTestModule/SideMenuComponent.html@13:4
+	'mat-menu' is not a known element:
+	1. If 'mat-menu' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-menu' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  <mat-icon>{{ iconName }}</mat-icon>
+	</button>
+	[ERROR ->]<mat-menu #menu="matMenu" (closed)="switchIcon()">
+	  <button mat-menu-item>
+	    <mat-icon>home</mat"): ng:///DynamicTestModule/SideMenuComponent.html@3:0
+	Error: Template parse errors:
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Error: Template parse errors:
+	Can't bind to 'matMenuTriggerFor' since it isn't a known property of 'button'. ("<button mat-button [ERROR ->][matMenuTriggerFor]="menu" (click)="switchIcon()">
+	  <mat-icon>{{ iconName }}</mat-icon>
+	</button>
+"): ng:///DynamicTestModule/SideMenuComponent.html@0:19
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("<button mat-button [matMenuTriggerFor]="menu" (click)="switchIcon()">
+	  [ERROR ->]<mat-icon>{{ iconName }}</mat-icon>
+	</button>
+	<mat-menu #menu="matMenu" (closed)="switchIcon()">
+	"): ng:///DynamicTestModule/SideMenuComponent.html@1:2
+	There is no directive with "exportAs" set to "matMenu" ("
+	  <mat-icon>{{ iconName }}</mat-icon>
+	</button>
+	<mat-menu [ERROR ->]#menu="matMenu" (closed)="switchIcon()">
+	  <button mat-menu-item>
+	    <mat-icon>home</mat-icon>
+	"): ng:///DynamicTestModule/SideMenuComponent.html@3:10
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	<mat-menu #menu="matMenu" (closed)="switchIcon()">
+	  <button mat-menu-item>
+	    [ERROR ->]<mat-icon>home</mat-icon>
+	    Accueil
+	  </button>
+	"): ng:///DynamicTestModule/SideMenuComponent.html@5:4
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  </button>
+	  <button mat-menu-item>
+	    [ERROR ->]<mat-icon>send</mat-icon>
+	    Évènements
+	  </button>
+	"): ng:///DynamicTestModule/SideMenuComponent.html@9:4
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  </button>
+	  <button mat-menu-item>
+	    [ERROR ->]<mat-icon>people</mat-icon>
+	    Contacts
+	  </button>
+	"): ng:///DynamicTestModule/SideMenuComponent.html@13:4
+	'mat-menu' is not a known element:
+	1. If 'mat-menu' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-menu' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  <mat-icon>{{ iconName }}</mat-icon>
+	</button>
+	[ERROR ->]<mat-menu #menu="matMenu" (closed)="switchIcon()">
+	  <button mat-menu-item>
+	    <mat-icon>home</mat"): ng:///DynamicTestModule/SideMenuComponent.html@3:0
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Expected undefined to be truthy.
+	    at UserContext.eval (./src/app/headerbar/side-menu/side-menu.component.spec.ts?:21:27)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:387:26)
+	    at ProxyZoneSpec.onInvoke (./node_modules/zone.js/dist/zone-testing.js?:287:39)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:386:32)
+HeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 5 of 26 (4 FAILED) (0 secs / 0.963 secs)
+HeadlessChrome 0.0.0 (Windows 10 0.0.0) SideMenuComponent  should create FAILED
+
+=======================================>
+
+	Can't bind to 'matMenuTriggerFor' since it isn't a known property of 'button'. ("<button mat-button [ERROR ->][matMenuTriggerFor]="menu" (click)="switchIcon()">
+	  <mat-icon>{{ iconName }}</mat-icon>
+	</button>
+"): ng:///DynamicTestModule/SideMenuComponent.html@0:19
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("<button mat-button [matMenuTriggerFor]="menu" (click)="switchIcon()">
+	  [ERROR ->]<mat-icon>{{ iconName }}</mat-icon>
+	</button>
+	<mat-menu #menu="matMenu" (closed)="switchIcon()">
+	"): ng:///DynamicTestModule/SideMenuComponent.html@1:2
+	There is no directive with "exportAs" set to "matMenu" ("
+	  <mat-icon>{{ iconName }}</mat-icon>
+	</button>
+	<mat-menu [ERROR ->]#menu="matMenu" (closed)="switchIcon()">
+	  <button mat-menu-item>
+	    <mat-icon>home</mat-icon>
+	"): ng:///DynamicTestModule/SideMenuComponent.html@3:10
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	<mat-menu #menu="matMenu" (closed)="switchIcon()">
+	  <button mat-menu-item>
+	    [ERROR ->]<mat-icon>home</mat-icon>
+	    Accueil
+	  </button>
+	"): ng:///DynamicTestModule/SideMenuComponent.html@5:4
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  </button>
+	  <button mat-menu-item>
+	    [ERROR ->]<mat-icon>send</mat-icon>
+	    Évènements
+	  </button>
+	"): ng:///DynamicTestModule/SideMenuComponent.html@9:4
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  </button>
+	  <button mat-menu-item>
+	    [ERROR ->]<mat-icon>people</mat-icon>
+	    Contacts
+	  </button>
+	"): ng:///DynamicTestModule/SideMenuComponent.html@13:4
+	'mat-menu' is not a known element:
+	1. If 'mat-menu' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-menu' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  <mat-icon>{{ iconName }}</mat-icon>
+	</button>
+	[ERROR ->]<mat-menu #menu="matMenu" (closed)="switchIcon()">
+	  <button mat-menu-item>
+	    <mat-icon>home</mat"): ng:///DynamicTestModule/SideMenuComponent.html@3:0
+	Error: Template parse errors:
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Error: Template parse errors:
+	Can't bind to 'matMenuTriggerFor' since it isn't a known property of 'button'. ("<button mat-button [ERROR ->][matMenuTriggerFor]="menu" (click)="switchIcon()">
+	  <mat-icon>{{ iconName }}</mat-icon>
+	</button>
+"): ng:///DynamicTestModule/SideMenuComponent.html@0:19
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("<button mat-button [matMenuTriggerFor]="menu" (click)="switchIcon()">
+	  [ERROR ->]<mat-icon>{{ iconName }}</mat-icon>
+	</button>
+	<mat-menu #menu="matMenu" (closed)="switchIcon()">
+	"): ng:///DynamicTestModule/SideMenuComponent.html@1:2
+	There is no directive with "exportAs" set to "matMenu" ("
+	  <mat-icon>{{ iconName }}</mat-icon>
+	</button>
+	<mat-menu [ERROR ->]#menu="matMenu" (closed)="switchIcon()">
+	  <button mat-menu-item>
+	    <mat-icon>home</mat-icon>
+	"): ng:///DynamicTestModule/SideMenuComponent.html@3:10
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	<mat-menu #menu="matMenu" (closed)="switchIcon()">
+	  <button mat-menu-item>
+	    [ERROR ->]<mat-icon>home</mat-icon>
+	    Accueil
+	  </button>
+	"): ng:///DynamicTestModule/SideMenuComponent.html@5:4
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  </button>
+	  <button mat-menu-item>
+	    [ERROR ->]<mat-icon>send</mat-icon>
+	    Évènements
+	  </button>
+	"): ng:///DynamicTestModule/SideMenuComponent.html@9:4
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  </button>
+	  <button mat-menu-item>
+	    [ERROR ->]<mat-icon>people</mat-icon>
+	    Contacts
+	  </button>
+	"): ng:///DynamicTestModule/SideMenuComponent.html@13:4
+	'mat-menu' is not a known element:
+	1. If 'mat-menu' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-menu' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	  <mat-icon>{{ iconName }}</mat-icon>
+	</button>
+	[ERROR ->]<mat-menu #menu="matMenu" (closed)="switchIcon()">
+	  <button mat-menu-item>
+	    <mat-icon>home</mat"): ng:///DynamicTestModule/SideMenuComponent.html@3:0
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Expected undefined to be truthy.
+	    at UserContext.eval (./src/app/headerbar/side-menu/side-menu.component.spec.ts?:21:27)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:387:26)
+	    at ProxyZoneSpec.onInvoke (./node_modules/zone.js/dist/zone-testing.js?:287:39)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:386:32)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 6 of 26 (4 FAILED) (0 secs / 0.97 secs)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0) HomeFormComponent  should create FAILED
+
+=======================================>
+
+	Can't bind to 'formGroup' since it isn't a known property of 'form'. ("
+	</header> -->
+	<section>
+	  <form class="form-container" (ngSubmit)="register(userForm)" [ERROR ->][formGroup]="userForm">
+	    <h3 class="form-title">{{formTitle}}</h3>
+	
+	"): ng:///DynamicTestModule/HomeFormComponent.html@4:63
+	Can't bind to 'errorStateMatcher' since it isn't a known property of 'input'. ("
+	             name="username"
+	             formControlName="username"
+	             [ERROR ->][errorStateMatcher]="userMatcher"
+	             required>
+	      <mat-error *ngIf="userForm.get('user"): ng:///DynamicTestModule/HomeFormComponent.html@12:13
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             [errorStateMatcher]="userMatcher"
+	             required>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('username').hasError('minLenght')">
+	        nom trop court
+	      </m"): ng:///DynamicTestModule/HomeFormComponent.html@14:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        nom trop court
+	      </mat-error>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('username').hasError('required')">
+	        le nom d'utilisateur <stro"): ng:///DynamicTestModule/HomeFormComponent.html@17:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        le nom d'utilisateur <strong>est requis</strong>
+	      </mat-error>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('username').hasError('pattern')">
+	        erreur de syntax, ne pas co"): ng:///DynamicTestModule/HomeFormComponent.html@20:6
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    <h3 class="form-title">{{formTitle}}</h3>
+	
+	    [ERROR ->]<mat-form-field>
+	      <input matInput
+	             placeholder="Nom d'utilsateur"
+	"): ng:///DynamicTestModule/HomeFormComponent.html@7:4
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             [type]="hidePassword ?  'password' : 'text'"
+	             required>
+	      [ERROR ->]<mat-icon matSuffix
+	                (click)="hidePassword = !hidePassword">
+	        {{hidePassword "): ng:///DynamicTestModule/HomeFormComponent.html@50:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        {{hidePassword ? 'visibility_hoff' : 'visibility'}}
+	      </mat-icon>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('passForm').hasError('password')">Le passwordsd requise
+	        le pa"): ng:///DynamicTestModule/HomeFormComponent.html@54:6
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             [type]="hidePassword ?  'password' : 'text'"
+	             required>
+	      [ERROR ->]<mat-icon matSuffix
+	                (click)="hidePassword = !hidePassword">
+	        {{hidePassword "): ng:///DynamicTestModule/HomeFormComponent.html@64:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        {{hidePassword ? 'visibility_hoff' : 'visibility'}}
+	      </mat-icon>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('passForm').hasError('noMatch')"></mat-error>
+	    </fieldset>
+	
+	"): ng:///DynamicTestModule/HomeFormComponent.html@68:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             formControlName="email"
+	             required>
+	      [ERROR ->]<mat-error *ngIf="emailControl.hasError('required')">Veuillez renseigner votre email</mat-error>
+	   "): ng:///DynamicTestModule/HomeFormComponent.html@78:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("-error *ngIf="emailControl.hasError('required')">Veuillez renseigner votre email</mat-error>
+	      [ERROR ->]<mat-error *ngIf="emailControl.hasError('email')">Email invalid ( <strong>monemail@servermail.extensi"): ng:///DynamicTestModule/HomeFormComponent.html@79:6
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    </fieldset>
+	
+	    [ERROR ->]<mat-form-field>
+	      <input matInput
+	             type="email"
+	"): ng:///DynamicTestModule/HomeFormComponent.html@71:4
+	Can't bind to 'matAutocomplete' since it isn't a known property of 'input'. ("
+	             name="commune"
+	             placeholder="commune"
+	             [ERROR ->][matAutocomplete]="auto"
+	             formControlName="cityName"
+	      >
+	"): ng:///DynamicTestModule/HomeFormComponent.html@88:13
+	There is no directive with "exportAs" set to "matAutocomplete" ("
+	             formControlName="cityName"
+	      >
+	      <mat-autocomplete [ERROR ->]#auto="matAutocomplete">
+	        <mat-option *ngFor="let commune of datas" name="commune" [value]="c"): ng:///DynamicTestModule/HomeFormComponent.html@91:24
+	Can't bind to 'value' since it isn't a known property of 'mat-option'.
+	1. If 'mat-option' is an Angular component and it has 'value' input, then verify that it is part of this module.
+	2. If 'mat-option' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+	3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. ("complete #auto="matAutocomplete">
+	        <mat-option *ngFor="let commune of datas" name="commune" [ERROR ->][value]="commune?.nom +' '+ commune?.codesPostaux[0]" required>
+	          {{commune?.nom}}
+	        "): ng:///DynamicTestModule/HomeFormComponent.html@92:65
+	'mat-option' is not a known element:
+	1. If 'mat-option' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-option' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	      >
+	      <mat-autocomplete #auto="matAutocomplete">
+	        [ERROR ->]<mat-option *ngFor="let commune of datas" name="commune" [value]="commune?.nom +' '+ commune?.codesPo"): ng:///DynamicTestModule/HomeFormComponent.html@92:8
+	'mat-autocomplete' is not a known element:
+	1. If 'mat-autocomplete' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-autocomplete' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             formControlName="cityName"
+	      >
+	      [ERROR ->]<mat-autocomplete #auto="matAutocomplete">
+	        <mat-option *ngFor="let commune of datas" name="c"): ng:///DynamicTestModule/HomeFormComponent.html@91:6
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    </mat-form-field>
+	
+	    [ERROR ->]<mat-form-field>
+	      <input matInput
+	             type="text"
+	"): ng:///DynamicTestModule/HomeFormComponent.html@83:4
+	Can't bind to 'ngModel' since it isn't a known property of 'mat-checkbox'.
+	1. If 'mat-checkbox' is an Angular component and it has 'ngModel' input, then verify that it is part of this module.
+	2. If 'mat-checkbox' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+	3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. ("
+	            name="isartist"
+	            formControlName="isArtist"
+	            [ERROR ->][(ngModel)]="checkedBoxModel"
+	            (change)="toggleChecked()">
+	      <span>Vous êtes artiste"): ng:///DynamicTestModule/HomeFormComponent.html@104:12
+	'mat-checkbox' is not a known element:
+	1. If 'mat-checkbox' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-checkbox' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    </mat-form-field>
+	
+	    [ERROR ->]<mat-checkbox
+	            data-md-icheck
+	            type="checkbox"
+	"): ng:///DynamicTestModule/HomeFormComponent.html@99:4
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             required>
+	
+	      [ERROR ->]<mat-error *ngIf="artistForm.get('artistName').hasError('required')">
+	        le nom du group est re"): ng:///DynamicTestModule/HomeFormComponent.html@116:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        le nom du group est requis <strong>est requis</strong>
+	      </mat-error>
+	      [ERROR ->]<mat-error *ngIf="artistForm.get('artistName').hasError('minLenght')">
+	        nom trop court
+	     "): ng:///DynamicTestModule/HomeFormComponent.html@119:6
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    </mat-checkbox>
+	
+	    [ERROR ->]<mat-form-field *ngIf="markedCheck">
+	      <input matInput
+	             placeholder="Artist name"
+	"): ng:///DynamicTestModule/HomeFormComponent.html@109:4
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    </mat-form-field>
+	
+	    [ERROR ->]<mat-form-field *ngIf="markedCheck">
+	      <textarea matInput
+	                class="form-long-desc"): ng:///DynamicTestModule/HomeFormComponent.html@124:4
+	Error: Template parse errors:
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Error: Template parse errors:
+	Can't bind to 'formGroup' since it isn't a known property of 'form'. ("
+	</header> -->
+	<section>
+	  <form class="form-container" (ngSubmit)="register(userForm)" [ERROR ->][formGroup]="userForm">
+	    <h3 class="form-title">{{formTitle}}</h3>
+	
+	"): ng:///DynamicTestModule/HomeFormComponent.html@4:63
+	Can't bind to 'errorStateMatcher' since it isn't a known property of 'input'. ("
+	             name="username"
+	             formControlName="username"
+	             [ERROR ->][errorStateMatcher]="userMatcher"
+	             required>
+	      <mat-error *ngIf="userForm.get('user"): ng:///DynamicTestModule/HomeFormComponent.html@12:13
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             [errorStateMatcher]="userMatcher"
+	             required>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('username').hasError('minLenght')">
+	        nom trop court
+	      </m"): ng:///DynamicTestModule/HomeFormComponent.html@14:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        nom trop court
+	      </mat-error>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('username').hasError('required')">
+	        le nom d'utilisateur <stro"): ng:///DynamicTestModule/HomeFormComponent.html@17:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        le nom d'utilisateur <strong>est requis</strong>
+	      </mat-error>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('username').hasError('pattern')">
+	        erreur de syntax, ne pas co"): ng:///DynamicTestModule/HomeFormComponent.html@20:6
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    <h3 class="form-title">{{formTitle}}</h3>
+	
+	    [ERROR ->]<mat-form-field>
+	      <input matInput
+	             placeholder="Nom d'utilsateur"
+	"): ng:///DynamicTestModule/HomeFormComponent.html@7:4
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             [type]="hidePassword ?  'password' : 'text'"
+	             required>
+	      [ERROR ->]<mat-icon matSuffix
+	                (click)="hidePassword = !hidePassword">
+	        {{hidePassword "): ng:///DynamicTestModule/HomeFormComponent.html@50:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        {{hidePassword ? 'visibility_hoff' : 'visibility'}}
+	      </mat-icon>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('passForm').hasError('password')">Le passwordsd requise
+	        le pa"): ng:///DynamicTestModule/HomeFormComponent.html@54:6
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             [type]="hidePassword ?  'password' : 'text'"
+	             required>
+	      [ERROR ->]<mat-icon matSuffix
+	                (click)="hidePassword = !hidePassword">
+	        {{hidePassword "): ng:///DynamicTestModule/HomeFormComponent.html@64:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        {{hidePassword ? 'visibility_hoff' : 'visibility'}}
+	      </mat-icon>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('passForm').hasError('noMatch')"></mat-error>
+	    </fieldset>
+	
+	"): ng:///DynamicTestModule/HomeFormComponent.html@68:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             formControlName="email"
+	             required>
+	      [ERROR ->]<mat-error *ngIf="emailControl.hasError('required')">Veuillez renseigner votre email</mat-error>
+	   "): ng:///DynamicTestModule/HomeFormComponent.html@78:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("-error *ngIf="emailControl.hasError('required')">Veuillez renseigner votre email</mat-error>
+	      [ERROR ->]<mat-error *ngIf="emailControl.hasError('email')">Email invalid ( <strong>monemail@servermail.extensi"): ng:///DynamicTestModule/HomeFormComponent.html@79:6
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    </fieldset>
+	
+	    [ERROR ->]<mat-form-field>
+	      <input matInput
+	             type="email"
+	"): ng:///DynamicTestModule/HomeFormComponent.html@71:4
+	Can't bind to 'matAutocomplete' since it isn't a known property of 'input'. ("
+	             name="commune"
+	             placeholder="commune"
+	             [ERROR ->][matAutocomplete]="auto"
+	             formControlName="cityName"
+	      >
+	"): ng:///DynamicTestModule/HomeFormComponent.html@88:13
+	There is no directive with "exportAs" set to "matAutocomplete" ("
+	             formControlName="cityName"
+	      >
+	      <mat-autocomplete [ERROR ->]#auto="matAutocomplete">
+	        <mat-option *ngFor="let commune of datas" name="commune" [value]="c"): ng:///DynamicTestModule/HomeFormComponent.html@91:24
+	Can't bind to 'value' since it isn't a known property of 'mat-option'.
+	1. If 'mat-option' is an Angular component and it has 'value' input, then verify that it is part of this module.
+	2. If 'mat-option' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+	3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. ("complete #auto="matAutocomplete">
+	        <mat-option *ngFor="let commune of datas" name="commune" [ERROR ->][value]="commune?.nom +' '+ commune?.codesPostaux[0]" required>
+	          {{commune?.nom}}
+	        "): ng:///DynamicTestModule/HomeFormComponent.html@92:65
+	'mat-option' is not a known element:
+	1. If 'mat-option' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-option' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	      >
+	      <mat-autocomplete #auto="matAutocomplete">
+	        [ERROR ->]<mat-option *ngFor="let commune of datas" name="commune" [value]="commune?.nom +' '+ commune?.codesPo"): ng:///DynamicTestModule/HomeFormComponent.html@92:8
+	'mat-autocomplete' is not a known element:
+	1. If 'mat-autocomplete' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-autocomplete' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             formControlName="cityName"
+	      >
+	      [ERROR ->]<mat-autocomplete #auto="matAutocomplete">
+	        <mat-option *ngFor="let commune of datas" name="c"): ng:///DynamicTestModule/HomeFormComponent.html@91:6
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    </mat-form-field>
+	
+	    [ERROR ->]<mat-form-field>
+	      <input matInput
+	             type="text"
+	"): ng:///DynamicTestModule/HomeFormComponent.html@83:4
+	Can't bind to 'ngModel' since it isn't a known property of 'mat-checkbox'.
+	1. If 'mat-checkbox' is an Angular component and it has 'ngModel' input, then verify that it is part of this module.
+	2. If 'mat-checkbox' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+	3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. ("
+	            name="isartist"
+	            formControlName="isArtist"
+	            [ERROR ->][(ngModel)]="checkedBoxModel"
+	            (change)="toggleChecked()">
+	      <span>Vous êtes artiste"): ng:///DynamicTestModule/HomeFormComponent.html@104:12
+	'mat-checkbox' is not a known element:
+	1. If 'mat-checkbox' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-checkbox' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    </mat-form-field>
+	
+	    [ERROR ->]<mat-checkbox
+	            data-md-icheck
+	            type="checkbox"
+	"): ng:///DynamicTestModule/HomeFormComponent.html@99:4
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             required>
+	
+	      [ERROR ->]<mat-error *ngIf="artistForm.get('artistName').hasError('required')">
+	        le nom du group est re"): ng:///DynamicTestModule/HomeFormComponent.html@116:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        le nom du group est requis <strong>est requis</strong>
+	      </mat-error>
+	      [ERROR ->]<mat-error *ngIf="artistForm.get('artistName').hasError('minLenght')">
+	        nom trop court
+	     "): ng:///DynamicTestModule/HomeFormComponent.html@119:6
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    </mat-checkbox>
+	
+	    [ERROR ->]<mat-form-field *ngIf="markedCheck">
+	      <input matInput
+	             placeholder="Artist name"
+	"): ng:///DynamicTestModule/HomeFormComponent.html@109:4
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    </mat-form-field>
+	
+	    [ERROR ->]<mat-form-field *ngIf="markedCheck">
+	      <textarea matInput
+	                class="form-long-desc"): ng:///DynamicTestModule/HomeFormComponent.html@124:4
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Expected undefined to be truthy.
+	    at UserContext.eval (./src/app/home-form/home-form.component.spec.ts?:21:27)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:387:26)
+	    at ProxyZoneSpec.onInvoke (./node_modules/zone.js/dist/zone-testing.js?:287:39)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:386:32)
+HeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 7 of 26 (5 FAILED) (0 secs / 0.994 secs)
+HeadlessChrome 0.0.0 (Windows 10 0.0.0) HomeFormComponent  should create FAILED
+
+=======================================>
+
+	Can't bind to 'formGroup' since it isn't a known property of 'form'. ("
+	</header> -->
+	<section>
+	  <form class="form-container" (ngSubmit)="register(userForm)" [ERROR ->][formGroup]="userForm">
+	    <h3 class="form-title">{{formTitle}}</h3>
+	
+	"): ng:///DynamicTestModule/HomeFormComponent.html@4:63
+	Can't bind to 'errorStateMatcher' since it isn't a known property of 'input'. ("
+	             name="username"
+	             formControlName="username"
+	             [ERROR ->][errorStateMatcher]="userMatcher"
+	             required>
+	      <mat-error *ngIf="userForm.get('user"): ng:///DynamicTestModule/HomeFormComponent.html@12:13
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             [errorStateMatcher]="userMatcher"
+	             required>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('username').hasError('minLenght')">
+	        nom trop court
+	      </m"): ng:///DynamicTestModule/HomeFormComponent.html@14:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        nom trop court
+	      </mat-error>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('username').hasError('required')">
+	        le nom d'utilisateur <stro"): ng:///DynamicTestModule/HomeFormComponent.html@17:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        le nom d'utilisateur <strong>est requis</strong>
+	      </mat-error>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('username').hasError('pattern')">
+	        erreur de syntax, ne pas co"): ng:///DynamicTestModule/HomeFormComponent.html@20:6
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    <h3 class="form-title">{{formTitle}}</h3>
+	
+	    [ERROR ->]<mat-form-field>
+	      <input matInput
+	             placeholder="Nom d'utilsateur"
+	"): ng:///DynamicTestModule/HomeFormComponent.html@7:4
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             [type]="hidePassword ?  'password' : 'text'"
+	             required>
+	      [ERROR ->]<mat-icon matSuffix
+	                (click)="hidePassword = !hidePassword">
+	        {{hidePassword "): ng:///DynamicTestModule/HomeFormComponent.html@50:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        {{hidePassword ? 'visibility_hoff' : 'visibility'}}
+	      </mat-icon>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('passForm').hasError('password')">Le passwordsd requise
+	        le pa"): ng:///DynamicTestModule/HomeFormComponent.html@54:6
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             [type]="hidePassword ?  'password' : 'text'"
+	             required>
+	      [ERROR ->]<mat-icon matSuffix
+	                (click)="hidePassword = !hidePassword">
+	        {{hidePassword "): ng:///DynamicTestModule/HomeFormComponent.html@64:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        {{hidePassword ? 'visibility_hoff' : 'visibility'}}
+	      </mat-icon>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('passForm').hasError('noMatch')"></mat-error>
+	    </fieldset>
+	
+	"): ng:///DynamicTestModule/HomeFormComponent.html@68:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             formControlName="email"
+	             required>
+	      [ERROR ->]<mat-error *ngIf="emailControl.hasError('required')">Veuillez renseigner votre email</mat-error>
+	   "): ng:///DynamicTestModule/HomeFormComponent.html@78:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("-error *ngIf="emailControl.hasError('required')">Veuillez renseigner votre email</mat-error>
+	      [ERROR ->]<mat-error *ngIf="emailControl.hasError('email')">Email invalid ( <strong>monemail@servermail.extensi"): ng:///DynamicTestModule/HomeFormComponent.html@79:6
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    </fieldset>
+	
+	    [ERROR ->]<mat-form-field>
+	      <input matInput
+	             type="email"
+	"): ng:///DynamicTestModule/HomeFormComponent.html@71:4
+	Can't bind to 'matAutocomplete' since it isn't a known property of 'input'. ("
+	             name="commune"
+	             placeholder="commune"
+	             [ERROR ->][matAutocomplete]="auto"
+	             formControlName="cityName"
+	      >
+	"): ng:///DynamicTestModule/HomeFormComponent.html@88:13
+	There is no directive with "exportAs" set to "matAutocomplete" ("
+	             formControlName="cityName"
+	      >
+	      <mat-autocomplete [ERROR ->]#auto="matAutocomplete">
+	        <mat-option *ngFor="let commune of datas" name="commune" [value]="c"): ng:///DynamicTestModule/HomeFormComponent.html@91:24
+	Can't bind to 'value' since it isn't a known property of 'mat-option'.
+	1. If 'mat-option' is an Angular component and it has 'value' input, then verify that it is part of this module.
+	2. If 'mat-option' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+	3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. ("complete #auto="matAutocomplete">
+	        <mat-option *ngFor="let commune of datas" name="commune" [ERROR ->][value]="commune?.nom +' '+ commune?.codesPostaux[0]" required>
+	          {{commune?.nom}}
+	        "): ng:///DynamicTestModule/HomeFormComponent.html@92:65
+	'mat-option' is not a known element:
+	1. If 'mat-option' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-option' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	      >
+	      <mat-autocomplete #auto="matAutocomplete">
+	        [ERROR ->]<mat-option *ngFor="let commune of datas" name="commune" [value]="commune?.nom +' '+ commune?.codesPo"): ng:///DynamicTestModule/HomeFormComponent.html@92:8
+	'mat-autocomplete' is not a known element:
+	1. If 'mat-autocomplete' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-autocomplete' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             formControlName="cityName"
+	      >
+	      [ERROR ->]<mat-autocomplete #auto="matAutocomplete">
+	        <mat-option *ngFor="let commune of datas" name="c"): ng:///DynamicTestModule/HomeFormComponent.html@91:6
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    </mat-form-field>
+	
+	    [ERROR ->]<mat-form-field>
+	      <input matInput
+	             type="text"
+	"): ng:///DynamicTestModule/HomeFormComponent.html@83:4
+	Can't bind to 'ngModel' since it isn't a known property of 'mat-checkbox'.
+	1. If 'mat-checkbox' is an Angular component and it has 'ngModel' input, then verify that it is part of this module.
+	2. If 'mat-checkbox' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+	3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. ("
+	            name="isartist"
+	            formControlName="isArtist"
+	            [ERROR ->][(ngModel)]="checkedBoxModel"
+	            (change)="toggleChecked()">
+	      <span>Vous êtes artiste"): ng:///DynamicTestModule/HomeFormComponent.html@104:12
+	'mat-checkbox' is not a known element:
+	1. If 'mat-checkbox' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-checkbox' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    </mat-form-field>
+	
+	    [ERROR ->]<mat-checkbox
+	            data-md-icheck
+	            type="checkbox"
+	"): ng:///DynamicTestModule/HomeFormComponent.html@99:4
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             required>
+	
+	      [ERROR ->]<mat-error *ngIf="artistForm.get('artistName').hasError('required')">
+	        le nom du group est re"): ng:///DynamicTestModule/HomeFormComponent.html@116:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        le nom du group est requis <strong>est requis</strong>
+	      </mat-error>
+	      [ERROR ->]<mat-error *ngIf="artistForm.get('artistName').hasError('minLenght')">
+	        nom trop court
+	     "): ng:///DynamicTestModule/HomeFormComponent.html@119:6
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    </mat-checkbox>
+	
+	    [ERROR ->]<mat-form-field *ngIf="markedCheck">
+	      <input matInput
+	             placeholder="Artist name"
+	"): ng:///DynamicTestModule/HomeFormComponent.html@109:4
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    </mat-form-field>
+	
+	    [ERROR ->]<mat-form-field *ngIf="markedCheck">
+	      <textarea matInput
+	                class="form-long-desc"): ng:///DynamicTestModule/HomeFormComponent.html@124:4
+	Error: Template parse errors:
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Error: Template parse errors:
+	Can't bind to 'formGroup' since it isn't a known property of 'form'. ("
+	</header> -->
+	<section>
+	  <form class="form-container" (ngSubmit)="register(userForm)" [ERROR ->][formGroup]="userForm">
+	    <h3 class="form-title">{{formTitle}}</h3>
+	
+	"): ng:///DynamicTestModule/HomeFormComponent.html@4:63
+	Can't bind to 'errorStateMatcher' since it isn't a known property of 'input'. ("
+	             name="username"
+	             formControlName="username"
+	             [ERROR ->][errorStateMatcher]="userMatcher"
+	             required>
+	      <mat-error *ngIf="userForm.get('user"): ng:///DynamicTestModule/HomeFormComponent.html@12:13
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             [errorStateMatcher]="userMatcher"
+	             required>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('username').hasError('minLenght')">
+	        nom trop court
+	      </m"): ng:///DynamicTestModule/HomeFormComponent.html@14:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        nom trop court
+	      </mat-error>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('username').hasError('required')">
+	        le nom d'utilisateur <stro"): ng:///DynamicTestModule/HomeFormComponent.html@17:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        le nom d'utilisateur <strong>est requis</strong>
+	      </mat-error>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('username').hasError('pattern')">
+	        erreur de syntax, ne pas co"): ng:///DynamicTestModule/HomeFormComponent.html@20:6
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    <h3 class="form-title">{{formTitle}}</h3>
+	
+	    [ERROR ->]<mat-form-field>
+	      <input matInput
+	             placeholder="Nom d'utilsateur"
+	"): ng:///DynamicTestModule/HomeFormComponent.html@7:4
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             [type]="hidePassword ?  'password' : 'text'"
+	             required>
+	      [ERROR ->]<mat-icon matSuffix
+	                (click)="hidePassword = !hidePassword">
+	        {{hidePassword "): ng:///DynamicTestModule/HomeFormComponent.html@50:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        {{hidePassword ? 'visibility_hoff' : 'visibility'}}
+	      </mat-icon>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('passForm').hasError('password')">Le passwordsd requise
+	        le pa"): ng:///DynamicTestModule/HomeFormComponent.html@54:6
+	'mat-icon' is not a known element:
+	1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             [type]="hidePassword ?  'password' : 'text'"
+	             required>
+	      [ERROR ->]<mat-icon matSuffix
+	                (click)="hidePassword = !hidePassword">
+	        {{hidePassword "): ng:///DynamicTestModule/HomeFormComponent.html@64:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        {{hidePassword ? 'visibility_hoff' : 'visibility'}}
+	      </mat-icon>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('passForm').hasError('noMatch')"></mat-error>
+	    </fieldset>
+	
+	"): ng:///DynamicTestModule/HomeFormComponent.html@68:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             formControlName="email"
+	             required>
+	      [ERROR ->]<mat-error *ngIf="emailControl.hasError('required')">Veuillez renseigner votre email</mat-error>
+	   "): ng:///DynamicTestModule/HomeFormComponent.html@78:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("-error *ngIf="emailControl.hasError('required')">Veuillez renseigner votre email</mat-error>
+	      [ERROR ->]<mat-error *ngIf="emailControl.hasError('email')">Email invalid ( <strong>monemail@servermail.extensi"): ng:///DynamicTestModule/HomeFormComponent.html@79:6
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    </fieldset>
+	
+	    [ERROR ->]<mat-form-field>
+	      <input matInput
+	             type="email"
+	"): ng:///DynamicTestModule/HomeFormComponent.html@71:4
+	Can't bind to 'matAutocomplete' since it isn't a known property of 'input'. ("
+	             name="commune"
+	             placeholder="commune"
+	             [ERROR ->][matAutocomplete]="auto"
+	             formControlName="cityName"
+	      >
+	"): ng:///DynamicTestModule/HomeFormComponent.html@88:13
+	There is no directive with "exportAs" set to "matAutocomplete" ("
+	             formControlName="cityName"
+	      >
+	      <mat-autocomplete [ERROR ->]#auto="matAutocomplete">
+	        <mat-option *ngFor="let commune of datas" name="commune" [value]="c"): ng:///DynamicTestModule/HomeFormComponent.html@91:24
+	Can't bind to 'value' since it isn't a known property of 'mat-option'.
+	1. If 'mat-option' is an Angular component and it has 'value' input, then verify that it is part of this module.
+	2. If 'mat-option' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+	3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. ("complete #auto="matAutocomplete">
+	        <mat-option *ngFor="let commune of datas" name="commune" [ERROR ->][value]="commune?.nom +' '+ commune?.codesPostaux[0]" required>
+	          {{commune?.nom}}
+	        "): ng:///DynamicTestModule/HomeFormComponent.html@92:65
+	'mat-option' is not a known element:
+	1. If 'mat-option' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-option' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	      >
+	      <mat-autocomplete #auto="matAutocomplete">
+	        [ERROR ->]<mat-option *ngFor="let commune of datas" name="commune" [value]="commune?.nom +' '+ commune?.codesPo"): ng:///DynamicTestModule/HomeFormComponent.html@92:8
+	'mat-autocomplete' is not a known element:
+	1. If 'mat-autocomplete' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-autocomplete' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             formControlName="cityName"
+	      >
+	      [ERROR ->]<mat-autocomplete #auto="matAutocomplete">
+	        <mat-option *ngFor="let commune of datas" name="c"): ng:///DynamicTestModule/HomeFormComponent.html@91:6
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    </mat-form-field>
+	
+	    [ERROR ->]<mat-form-field>
+	      <input matInput
+	             type="text"
+	"): ng:///DynamicTestModule/HomeFormComponent.html@83:4
+	Can't bind to 'ngModel' since it isn't a known property of 'mat-checkbox'.
+	1. If 'mat-checkbox' is an Angular component and it has 'ngModel' input, then verify that it is part of this module.
+	2. If 'mat-checkbox' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+	3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. ("
+	            name="isartist"
+	            formControlName="isArtist"
+	            [ERROR ->][(ngModel)]="checkedBoxModel"
+	            (change)="toggleChecked()">
+	      <span>Vous êtes artiste"): ng:///DynamicTestModule/HomeFormComponent.html@104:12
+	'mat-checkbox' is not a known element:
+	1. If 'mat-checkbox' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-checkbox' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    </mat-form-field>
+	
+	    [ERROR ->]<mat-checkbox
+	            data-md-icheck
+	            type="checkbox"
+	"): ng:///DynamicTestModule/HomeFormComponent.html@99:4
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             required>
+	
+	      [ERROR ->]<mat-error *ngIf="artistForm.get('artistName').hasError('required')">
+	        le nom du group est re"): ng:///DynamicTestModule/HomeFormComponent.html@116:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        le nom du group est requis <strong>est requis</strong>
+	      </mat-error>
+	      [ERROR ->]<mat-error *ngIf="artistForm.get('artistName').hasError('minLenght')">
+	        nom trop court
+	     "): ng:///DynamicTestModule/HomeFormComponent.html@119:6
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    </mat-checkbox>
+	
+	    [ERROR ->]<mat-form-field *ngIf="markedCheck">
+	      <input matInput
+	             placeholder="Artist name"
+	"): ng:///DynamicTestModule/HomeFormComponent.html@109:4
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    </mat-form-field>
+	
+	    [ERROR ->]<mat-form-field *ngIf="markedCheck">
+	      <textarea matInput
+	                class="form-long-desc"): ng:///DynamicTestModule/HomeFormComponent.html@124:4
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Expected undefined to be truthy.
+	    at UserContext.eval (./src/app/home-form/home-form.component.spec.ts?:21:27)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:387:26)
+	    at ProxyZoneSpec.onInvoke (./node_modules/zone.js/dist/zone-testing.js?:287:39)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:386:32)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0) HomeToolbarComponent  should create FAILED
+
+=======================================>
+
+	'mat-toolbar' is not a known element:
+	1. If 'mat-toolbar' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("[ERROR ->]<mat-toolbar>
+	  <h1>Private ShowCase</h1>
+	  <div _ngcontent-c1="" class="flex-spacer"></div> 
+	"): ng:///DynamicTestModule/HomeToolbarComponent.html@0:0
+	Error: Template parse errors:
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Error: Template parse errors:
+	'mat-toolbar' is not a known element:
+	1. If 'mat-toolbar' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("[ERROR ->]<mat-toolbar>
+	  <h1>Private ShowCase</h1>
+	  <div _ngcontent-c1="" class="flex-spacer"></div> 
+	"): ng:///DynamicTestModule/HomeToolbarComponent.html@0:0
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Expected undefined to be truthy.
+	    at UserContext.eval (./src/app/home-toolbar/home-toolbar.component.spec.ts?:21:27)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:387:26)
+	    at ProxyZoneSpec.onInvoke (./node_modules/zone.js/dist/zone-testing.js?:287:39)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:386:32)
+HeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 8 of 26 (6 FAILED) (0 secs / 1.005 secs)
+HeadlessChrome 0.0.0 (Windows 10 0.0.0) HomeToolbarComponent  should create FAILED
+
+=======================================>
+
+	'mat-toolbar' is not a known element:
+	1. If 'mat-toolbar' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("[ERROR ->]<mat-toolbar>
+	  <h1>Private ShowCase</h1>
+	  <div _ngcontent-c1="" class="flex-spacer"></div> 
+	"): ng:///DynamicTestModule/HomeToolbarComponent.html@0:0
+	Error: Template parse errors:
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Error: Template parse errors:
+	'mat-toolbar' is not a known element:
+	1. If 'mat-toolbar' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("[ERROR ->]<mat-toolbar>
+	  <h1>Private ShowCase</h1>
+	  <div _ngcontent-c1="" class="flex-spacer"></div> 
+	"): ng:///DynamicTestModule/HomeToolbarComponent.html@0:0
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Expected undefined to be truthy.
+	    at UserContext.eval (./src/app/home-toolbar/home-toolbar.component.spec.ts?:21:27)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:387:26)
+	    at ProxyZoneSpec.onInvoke (./node_modules/zone.js/dist/zone-testing.js?:287:39)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:386:32)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0) HomeComponent  should create FAILED
+
+=======================================>
+
+	'app-home-toolbar' is not a known element:
+	1. If 'app-home-toolbar' is an Angular component, then verify that it is part of this module.
+	2. If 'app-home-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("[ERROR ->]<app-home-toolbar></app-home-toolbar>
+	
+	<section id="home">
+	"): ng:///DynamicTestModule/HomeComponent.html@0:0
+	'mat-card-title' is not a known element:
+	1. If 'mat-card-title' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-card-title' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    </div>
+	    <mat-card-header>
+	      [ERROR ->]<mat-card-title> <p>{{card.title}}</p>
+	      </mat-card-title>
+	    </mat-card-header>
+	"): ng:///DynamicTestModule/HomeComponent.html@13:6
+	'mat-card-header' is not a known element:
+	1. If 'mat-card-header' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-card-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	      <img mat-card-image src={{card.img}} alt="Photo of a Shiba Inu">
+	    </div>
+	    [ERROR ->]<mat-card-header>
+	      <mat-card-title> <p>{{card.title}}</p>
+	      </mat-card-title>
+	"): ng:///DynamicTestModule/HomeComponent.html@12:4
+	'mat-card-content' is not a known element:
+	1. If 'mat-card-content' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-card-content' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	      </mat-card-title>
+	    </mat-card-header>
+	    [ERROR ->]<mat-card-content>
+	      <p>{{card.description}}</p>
+	    </mat-card-content>
+	"): ng:///DynamicTestModule/HomeComponent.html@16:4
+	'mat-card' is not a known element:
+	1. If 'mat-card' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	<mat-list>
+	  <mat-list-item *ngFor="let card of homeCards">
+	  [ERROR ->]<mat-card class="example-card" >
+	    <div class="img-container">
+	      <img mat-card-image src={{ca"): ng:///DynamicTestModule/HomeComponent.html@8:2
+	'mat-list-item' is not a known element:
+	1. If 'mat-list-item' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-list-item' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	
+	<mat-list>
+	  [ERROR ->]<mat-list-item *ngFor="let card of homeCards">
+	  <mat-card class="example-card" >
+	    <div class="i"): ng:///DynamicTestModule/HomeComponent.html@7:2
+	'mat-list' is not a known element:
+	1. If 'mat-list' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-list' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	<p>{{homeDescription}}</p>
+	
+	[ERROR ->]<mat-list>
+	  <mat-list-item *ngFor="let card of homeCards">
+	  <mat-card class="example-card" >
+	"): ng:///DynamicTestModule/HomeComponent.html@6:0
+	Error: Template parse errors:
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Error: Template parse errors:
+	'app-home-toolbar' is not a known element:
+	1. If 'app-home-toolbar' is an Angular component, then verify that it is part of this module.
+	2. If 'app-home-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("[ERROR ->]<app-home-toolbar></app-home-toolbar>
+	
+	<section id="home">
+	"): ng:///DynamicTestModule/HomeComponent.html@0:0
+	'mat-card-title' is not a known element:
+	1. If 'mat-card-title' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-card-title' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    </div>
+	    <mat-card-header>
+	      [ERROR ->]<mat-card-title> <p>{{card.title}}</p>
+	      </mat-card-title>
+	    </mat-card-header>
+	"): ng:///DynamicTestModule/HomeComponent.html@13:6
+	'mat-card-header' is not a known element:
+	1. If 'mat-card-header' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-card-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	      <img mat-card-image src={{card.img}} alt="Photo of a Shiba Inu">
+	    </div>
+	    [ERROR ->]<mat-card-header>
+	      <mat-card-title> <p>{{card.title}}</p>
+	      </mat-card-title>
+	"): ng:///DynamicTestModule/HomeComponent.html@12:4
+	'mat-card-content' is not a known element:
+	1. If 'mat-card-content' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-card-content' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	      </mat-card-title>
+	    </mat-card-header>
+	    [ERROR ->]<mat-card-content>
+	      <p>{{card.description}}</p>
+	    </mat-card-content>
+	"): ng:///DynamicTestModule/HomeComponent.html@16:4
+	'mat-card' is not a known element:
+	1. If 'mat-card' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	<mat-list>
+	  <mat-list-item *ngFor="let card of homeCards">
+	  [ERROR ->]<mat-card class="example-card" >
+	    <div class="img-container">
+	      <img mat-card-image src={{ca"): ng:///DynamicTestModule/HomeComponent.html@8:2
+	'mat-list-item' is not a known element:
+	1. If 'mat-list-item' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-list-item' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	
+	<mat-list>
+	  [ERROR ->]<mat-list-item *ngFor="let card of homeCards">
+	  <mat-card class="example-card" >
+	    <div class="i"): ng:///DynamicTestModule/HomeComponent.html@7:2
+	'mat-list' is not a known element:
+	1. If 'mat-list' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-list' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	<p>{{homeDescription}}</p>
+	
+	[ERROR ->]<mat-list>
+	  <mat-list-item *ngFor="let card of homeCards">
+	  <mat-card class="example-card" >
+	"): ng:///DynamicTestModule/HomeComponent.html@6:0
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Expected undefined to be truthy.
+	    at UserContext.eval (./src/app/home/home.component.spec.ts?:21:27)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:387:26)
+	    at ProxyZoneSpec.onInvoke (./node_modules/zone.js/dist/zone-testing.js?:287:39)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:386:32)
+HeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 9 of 26 (7 FAILED) (0 secs / 1.017 secs)
+HeadlessChrome 0.0.0 (Windows 10 0.0.0) HomeComponent  should create FAILED
+
+=======================================>
+
+	'app-home-toolbar' is not a known element:
+	1. If 'app-home-toolbar' is an Angular component, then verify that it is part of this module.
+	2. If 'app-home-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("[ERROR ->]<app-home-toolbar></app-home-toolbar>
+	
+	<section id="home">
+	"): ng:///DynamicTestModule/HomeComponent.html@0:0
+	'mat-card-title' is not a known element:
+	1. If 'mat-card-title' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-card-title' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    </div>
+	    <mat-card-header>
+	      [ERROR ->]<mat-card-title> <p>{{card.title}}</p>
+	      </mat-card-title>
+	    </mat-card-header>
+	"): ng:///DynamicTestModule/HomeComponent.html@13:6
+	'mat-card-header' is not a known element:
+	1. If 'mat-card-header' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-card-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	      <img mat-card-image src={{card.img}} alt="Photo of a Shiba Inu">
+	    </div>
+	    [ERROR ->]<mat-card-header>
+	      <mat-card-title> <p>{{card.title}}</p>
+	      </mat-card-title>
+	"): ng:///DynamicTestModule/HomeComponent.html@12:4
+	'mat-card-content' is not a known element:
+	1. If 'mat-card-content' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-card-content' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	      </mat-card-title>
+	    </mat-card-header>
+	    [ERROR ->]<mat-card-content>
+	      <p>{{card.description}}</p>
+	    </mat-card-content>
+	"): ng:///DynamicTestModule/HomeComponent.html@16:4
+	'mat-card' is not a known element:
+	1. If 'mat-card' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	<mat-list>
+	  <mat-list-item *ngFor="let card of homeCards">
+	  [ERROR ->]<mat-card class="example-card" >
+	    <div class="img-container">
+	      <img mat-card-image src={{ca"): ng:///DynamicTestModule/HomeComponent.html@8:2
+	'mat-list-item' is not a known element:
+	1. If 'mat-list-item' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-list-item' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	
+	<mat-list>
+	  [ERROR ->]<mat-list-item *ngFor="let card of homeCards">
+	  <mat-card class="example-card" >
+	    <div class="i"): ng:///DynamicTestModule/HomeComponent.html@7:2
+	'mat-list' is not a known element:
+	1. If 'mat-list' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-list' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	<p>{{homeDescription}}</p>
+	
+	[ERROR ->]<mat-list>
+	  <mat-list-item *ngFor="let card of homeCards">
+	  <mat-card class="example-card" >
+	"): ng:///DynamicTestModule/HomeComponent.html@6:0
+	Error: Template parse errors:
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Error: Template parse errors:
+	'app-home-toolbar' is not a known element:
+	1. If 'app-home-toolbar' is an Angular component, then verify that it is part of this module.
+	2. If 'app-home-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("[ERROR ->]<app-home-toolbar></app-home-toolbar>
+	
+	<section id="home">
+	"): ng:///DynamicTestModule/HomeComponent.html@0:0
+	'mat-card-title' is not a known element:
+	1. If 'mat-card-title' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-card-title' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    </div>
+	    <mat-card-header>
+	      [ERROR ->]<mat-card-title> <p>{{card.title}}</p>
+	      </mat-card-title>
+	    </mat-card-header>
+	"): ng:///DynamicTestModule/HomeComponent.html@13:6
+	'mat-card-header' is not a known element:
+	1. If 'mat-card-header' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-card-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	      <img mat-card-image src={{card.img}} alt="Photo of a Shiba Inu">
+	    </div>
+	    [ERROR ->]<mat-card-header>
+	      <mat-card-title> <p>{{card.title}}</p>
+	      </mat-card-title>
+	"): ng:///DynamicTestModule/HomeComponent.html@12:4
+	'mat-card-content' is not a known element:
+	1. If 'mat-card-content' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-card-content' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	      </mat-card-title>
+	    </mat-card-header>
+	    [ERROR ->]<mat-card-content>
+	      <p>{{card.description}}</p>
+	    </mat-card-content>
+	"): ng:///DynamicTestModule/HomeComponent.html@16:4
+	'mat-card' is not a known element:
+	1. If 'mat-card' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	<mat-list>
+	  <mat-list-item *ngFor="let card of homeCards">
+	  [ERROR ->]<mat-card class="example-card" >
+	    <div class="img-container">
+	      <img mat-card-image src={{ca"): ng:///DynamicTestModule/HomeComponent.html@8:2
+	'mat-list-item' is not a known element:
+	1. If 'mat-list-item' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-list-item' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	
+	<mat-list>
+	  [ERROR ->]<mat-list-item *ngFor="let card of homeCards">
+	  <mat-card class="example-card" >
+	    <div class="i"): ng:///DynamicTestModule/HomeComponent.html@7:2
+	'mat-list' is not a known element:
+	1. If 'mat-list' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-list' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	<p>{{homeDescription}}</p>
+	
+	[ERROR ->]<mat-list>
+	  <mat-list-item *ngFor="let card of homeCards">
+	  <mat-card class="example-card" >
+	"): ng:///DynamicTestModule/HomeComponent.html@6:0
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Expected undefined to be truthy.
+	    at UserContext.eval (./src/app/home/home.component.spec.ts?:21:27)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:387:26)
+	    at ProxyZoneSpec.onInvoke (./node_modules/zone.js/dist/zone-testing.js?:287:39)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:386:32)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0) HomebackToolbarComponent  should create FAILED
+
+=======================================>
+
+	'app-back-button' is not a known element:
+	1. If 'app-back-button' is an Angular component, then verify that it is part of this module.
+	2. If 'app-back-button' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("<mat-toolbar>
+	  [ERROR ->]<app-back-button></app-back-button>
+	  <h1>Private ShowCase</h1>
+	</mat-toolbar>
+	"): ng:///DynamicTestModule/HomebackToolbarComponent.html@1:2
+	'mat-toolbar' is not a known element:
+	1. If 'mat-toolbar' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("[ERROR ->]<mat-toolbar>
+	  <app-back-button></app-back-button>
+	  <h1>Private ShowCase</h1>
+	"): ng:///DynamicTestModule/HomebackToolbarComponent.html@0:0
+	Error: Template parse errors:
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Error: Template parse errors:
+	'app-back-button' is not a known element:
+	1. If 'app-back-button' is an Angular component, then verify that it is part of this module.
+	2. If 'app-back-button' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("<mat-toolbar>
+	  [ERROR ->]<app-back-button></app-back-button>
+	  <h1>Private ShowCase</h1>
+	</mat-toolbar>
+	"): ng:///DynamicTestModule/HomebackToolbarComponent.html@1:2
+	'mat-toolbar' is not a known element:
+	1. If 'mat-toolbar' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("[ERROR ->]<mat-toolbar>
+	  <app-back-button></app-back-button>
+	  <h1>Private ShowCase</h1>
+	"): ng:///DynamicTestModule/HomebackToolbarComponent.html@0:0
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Expected undefined to be truthy.
+	    at UserContext.eval (./src/app/homeback-toolbar/homeback-toolbar.component.spec.ts?:21:27)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:387:26)
+	    at ProxyZoneSpec.onInvoke (./node_modules/zone.js/dist/zone-testing.js?:287:39)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:386:32)
+HeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 10 of 26 (8 FAILED) (0 secs / 1.025 secs)
+HeadlessChrome 0.0.0 (Windows 10 0.0.0) HomebackToolbarComponent  should create FAILED
+
+=======================================>
+
+	'app-back-button' is not a known element:
+	1. If 'app-back-button' is an Angular component, then verify that it is part of this module.
+	2. If 'app-back-button' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("<mat-toolbar>
+	  [ERROR ->]<app-back-button></app-back-button>
+	  <h1>Private ShowCase</h1>
+	</mat-toolbar>
+	"): ng:///DynamicTestModule/HomebackToolbarComponent.html@1:2
+	'mat-toolbar' is not a known element:
+	1. If 'mat-toolbar' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("[ERROR ->]<mat-toolbar>
+	  <app-back-button></app-back-button>
+	  <h1>Private ShowCase</h1>
+	"): ng:///DynamicTestModule/HomebackToolbarComponent.html@0:0
+	Error: Template parse errors:
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Error: Template parse errors:
+	'app-back-button' is not a known element:
+	1. If 'app-back-button' is an Angular component, then verify that it is part of this module.
+	2. If 'app-back-button' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("<mat-toolbar>
+	  [ERROR ->]<app-back-button></app-back-button>
+	  <h1>Private ShowCase</h1>
+	</mat-toolbar>
+	"): ng:///DynamicTestModule/HomebackToolbarComponent.html@1:2
+	'mat-toolbar' is not a known element:
+	1. If 'mat-toolbar' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("[ERROR ->]<mat-toolbar>
+	  <app-back-button></app-back-button>
+	  <h1>Private ShowCase</h1>
+	"): ng:///DynamicTestModule/HomebackToolbarComponent.html@0:0
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Expected undefined to be truthy.
+	    at UserContext.eval (./src/app/homeback-toolbar/homeback-toolbar.component.spec.ts?:21:27)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:387:26)
+	    at ProxyZoneSpec.onInvoke (./node_modules/zone.js/dist/zone-testing.js?:287:39)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:386:32)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0) LoginFormComponent  should create FAILED
+
+=======================================>
+
+	'app-homeback-toolbar' is not a known element:
+	1. If 'app-homeback-toolbar' is an Angular component, then verify that it is part of this module.
+	2. If 'app-homeback-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("[ERROR ->]<app-homeback-toolbar></app-homeback-toolbar>
+	<!-- <header>
+	<img src="../../assets/img/header_bjork"): ng:///DynamicTestModule/LoginFormComponent.html@0:0
+	Can't bind to 'formGroup' since it isn't a known property of 'form'. ("
+	</header> -->
+	<section>
+	  <form class="form-container" (ngSubmit)="register()" [ERROR ->][formGroup]="userForm">
+	    <h3 class="form-title">{{formTitle}}</h3>
+	
+	"): ng:///DynamicTestModule/LoginFormComponent.html@5:55
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             formControlName="usernameCtrl"
+	             required>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('usernameCtrl').hasError('required')">
+	        le nom d'utilisateur <"): ng:///DynamicTestModule/LoginFormComponent.html@14:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        le nom d'utilisateur <strong>est requis</strong>
+	      </mat-error>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('usernameCtrl').hasError('minLenght')">
+	        nom trop court
+	     "): ng:///DynamicTestModule/LoginFormComponent.html@17:6
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    <h3 class="form-title">{{formTitle}}</h3>
+	
+	    [ERROR ->]<mat-form-field>
+	      <input matInput
+	             placeholder="Nom d'utilsateur"
+	"): ng:///DynamicTestModule/LoginFormComponent.html@8:4
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	
+	             required>
+	      [ERROR ->]<mat-error *ngIf=" userForm.get('passwordCtrl').dirty && userForm.get('passwordCtrl').hasError('requi"): ng:///DynamicTestModule/LoginFormComponent.html@31:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        le password est requis <strong>est requis</strong>
+	      </mat-error>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('passwordCtrl').hasError('minLength')">
+	        mot de passe trop cou"): ng:///DynamicTestModule/LoginFormComponent.html@34:6
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	
+	
+	    [ERROR ->]<mat-form-field>
+	      <input matInput
+	             placeholder="Password"
+	"): ng:///DynamicTestModule/LoginFormComponent.html@23:4
+	Error: Template parse errors:
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Error: Template parse errors:
+	'app-homeback-toolbar' is not a known element:
+	1. If 'app-homeback-toolbar' is an Angular component, then verify that it is part of this module.
+	2. If 'app-homeback-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("[ERROR ->]<app-homeback-toolbar></app-homeback-toolbar>
+	<!-- <header>
+	<img src="../../assets/img/header_bjork"): ng:///DynamicTestModule/LoginFormComponent.html@0:0
+	Can't bind to 'formGroup' since it isn't a known property of 'form'. ("
+	</header> -->
+	<section>
+	  <form class="form-container" (ngSubmit)="register()" [ERROR ->][formGroup]="userForm">
+	    <h3 class="form-title">{{formTitle}}</h3>
+	
+	"): ng:///DynamicTestModule/LoginFormComponent.html@5:55
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             formControlName="usernameCtrl"
+	             required>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('usernameCtrl').hasError('required')">
+	        le nom d'utilisateur <"): ng:///DynamicTestModule/LoginFormComponent.html@14:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        le nom d'utilisateur <strong>est requis</strong>
+	      </mat-error>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('usernameCtrl').hasError('minLenght')">
+	        nom trop court
+	     "): ng:///DynamicTestModule/LoginFormComponent.html@17:6
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    <h3 class="form-title">{{formTitle}}</h3>
+	
+	    [ERROR ->]<mat-form-field>
+	      <input matInput
+	             placeholder="Nom d'utilsateur"
+	"): ng:///DynamicTestModule/LoginFormComponent.html@8:4
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	
+	             required>
+	      [ERROR ->]<mat-error *ngIf=" userForm.get('passwordCtrl').dirty && userForm.get('passwordCtrl').hasError('requi"): ng:///DynamicTestModule/LoginFormComponent.html@31:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        le password est requis <strong>est requis</strong>
+	      </mat-error>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('passwordCtrl').hasError('minLength')">
+	        mot de passe trop cou"): ng:///DynamicTestModule/LoginFormComponent.html@34:6
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	
+	
+	    [ERROR ->]<mat-form-field>
+	      <input matInput
+	             placeholder="Password"
+	"): ng:///DynamicTestModule/LoginFormComponent.html@23:4
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Expected undefined to be truthy.
+	    at UserContext.eval (./src/app/login-form/login-form.component.spec.ts?:21:27)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:387:26)
+	    at ProxyZoneSpec.onInvoke (./node_modules/zone.js/dist/zone-testing.js?:287:39)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:386:32)
+HeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 11 of 26 (9 FAILED) (0 secs / 1.04 secs)
+HeadlessChrome 0.0.0 (Windows 10 0.0.0) LoginFormComponent  should create FAILED
+
+=======================================>
+
+	'app-homeback-toolbar' is not a known element:
+	1. If 'app-homeback-toolbar' is an Angular component, then verify that it is part of this module.
+	2. If 'app-homeback-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("[ERROR ->]<app-homeback-toolbar></app-homeback-toolbar>
+	<!-- <header>
+	<img src="../../assets/img/header_bjork"): ng:///DynamicTestModule/LoginFormComponent.html@0:0
+	Can't bind to 'formGroup' since it isn't a known property of 'form'. ("
+	</header> -->
+	<section>
+	  <form class="form-container" (ngSubmit)="register()" [ERROR ->][formGroup]="userForm">
+	    <h3 class="form-title">{{formTitle}}</h3>
+	
+	"): ng:///DynamicTestModule/LoginFormComponent.html@5:55
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             formControlName="usernameCtrl"
+	             required>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('usernameCtrl').hasError('required')">
+	        le nom d'utilisateur <"): ng:///DynamicTestModule/LoginFormComponent.html@14:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        le nom d'utilisateur <strong>est requis</strong>
+	      </mat-error>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('usernameCtrl').hasError('minLenght')">
+	        nom trop court
+	     "): ng:///DynamicTestModule/LoginFormComponent.html@17:6
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    <h3 class="form-title">{{formTitle}}</h3>
+	
+	    [ERROR ->]<mat-form-field>
+	      <input matInput
+	             placeholder="Nom d'utilsateur"
+	"): ng:///DynamicTestModule/LoginFormComponent.html@8:4
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	
+	             required>
+	      [ERROR ->]<mat-error *ngIf=" userForm.get('passwordCtrl').dirty && userForm.get('passwordCtrl').hasError('requi"): ng:///DynamicTestModule/LoginFormComponent.html@31:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        le password est requis <strong>est requis</strong>
+	      </mat-error>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('passwordCtrl').hasError('minLength')">
+	        mot de passe trop cou"): ng:///DynamicTestModule/LoginFormComponent.html@34:6
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	
+	
+	    [ERROR ->]<mat-form-field>
+	      <input matInput
+	             placeholder="Password"
+	"): ng:///DynamicTestModule/LoginFormComponent.html@23:4
+	Error: Template parse errors:
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Error: Template parse errors:
+	'app-homeback-toolbar' is not a known element:
+	1. If 'app-homeback-toolbar' is an Angular component, then verify that it is part of this module.
+	2. If 'app-homeback-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("[ERROR ->]<app-homeback-toolbar></app-homeback-toolbar>
+	<!-- <header>
+	<img src="../../assets/img/header_bjork"): ng:///DynamicTestModule/LoginFormComponent.html@0:0
+	Can't bind to 'formGroup' since it isn't a known property of 'form'. ("
+	</header> -->
+	<section>
+	  <form class="form-container" (ngSubmit)="register()" [ERROR ->][formGroup]="userForm">
+	    <h3 class="form-title">{{formTitle}}</h3>
+	
+	"): ng:///DynamicTestModule/LoginFormComponent.html@5:55
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	             formControlName="usernameCtrl"
+	             required>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('usernameCtrl').hasError('required')">
+	        le nom d'utilisateur <"): ng:///DynamicTestModule/LoginFormComponent.html@14:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        le nom d'utilisateur <strong>est requis</strong>
+	      </mat-error>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('usernameCtrl').hasError('minLenght')">
+	        nom trop court
+	     "): ng:///DynamicTestModule/LoginFormComponent.html@17:6
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	    <h3 class="form-title">{{formTitle}}</h3>
+	
+	    [ERROR ->]<mat-form-field>
+	      <input matInput
+	             placeholder="Nom d'utilsateur"
+	"): ng:///DynamicTestModule/LoginFormComponent.html@8:4
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	
+	             required>
+	      [ERROR ->]<mat-error *ngIf=" userForm.get('passwordCtrl').dirty && userForm.get('passwordCtrl').hasError('requi"): ng:///DynamicTestModule/LoginFormComponent.html@31:6
+	'mat-error' is not a known element:
+	1. If 'mat-error' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-error' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	        le password est requis <strong>est requis</strong>
+	      </mat-error>
+	      [ERROR ->]<mat-error *ngIf="userForm.get('passwordCtrl').hasError('minLength')">
+	        mot de passe trop cou"): ng:///DynamicTestModule/LoginFormComponent.html@34:6
+	'mat-form-field' is not a known element:
+	1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+	2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+	
+	
+	    [ERROR ->]<mat-form-field>
+	      <input matInput
+	             placeholder="Password"
+	"): ng:///DynamicTestModule/LoginFormComponent.html@23:4
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Expected undefined to be truthy.
+	    at UserContext.eval (./src/app/login-form/login-form.component.spec.ts?:21:27)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:387:26)
+	    at ProxyZoneSpec.onInvoke (./node_modules/zone.js/dist/zone-testing.js?:287:39)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:386:32)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 12 of 26 (9 FAILED) (0 secs / 1.04 secs)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 13 of 26 (9 FAILED) (0 secs / 1.045 secs)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 14 of 26 (9 FAILED) (0 secs / 1.05 secs)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 15 of 26 (9 FAILED) (0 secs / 1.054 secs)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 16 of 26 (9 FAILED) (0 secs / 1.059 secs)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 17 of 26 (9 FAILED) (0 secs / 1.065 secs)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 18 of 26 (9 FAILED) (0 secs / 1.07 secs)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 19 of 26 (9 FAILED) (0 secs / 1.076 secs)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0) PrivateshowcaseApiService should be created FAILED
+	Error: StaticInjectorError(DynamicTestModule)[HttpClient]: 
+	  StaticInjectorError(Platform: core)[HttpClient]: 
+	    NullInjectorError: No provider for HttpClient!
+	    at NullInjector.get (./node_modules/@angular/core/fesm5/core.js?:1360:19)
+	    at resolveToken (./node_modules/@angular/core/fesm5/core.js?:1598:24)
+	    at tryResolveToken (./node_modules/@angular/core/fesm5/core.js?:1542:16)
+	    at StaticInjector.get (./node_modules/@angular/core/fesm5/core.js?:1439:20)
+	    at resolveToken (./node_modules/@angular/core/fesm5/core.js?:1598:24)
+	    at tryResolveToken (./node_modules/@angular/core/fesm5/core.js?:1542:16)
+	    at StaticInjector.get (./node_modules/@angular/core/fesm5/core.js?:1439:20)
+	    at resolveNgModuleDep (./node_modules/@angular/core/fesm5/core.js?:8667:29)
+	    at NgModuleRef_.get (./node_modules/@angular/core/fesm5/core.js?:9355:16)
+	    at inject (./node_modules/@angular/core/fesm5/core.js?:1701:33)
+HeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 20 of 26 (10 FAILED) (0 secs / 1.083 secs)
+HeadlessChrome 0.0.0 (Windows 10 0.0.0) PrivateshowcaseApiService should be created FAILED
+	Error: StaticInjectorError(DynamicTestModule)[HttpClient]: 
+	  StaticInjectorError(Platform: core)[HttpClient]: 
+	    NullInjectorError: No provider for HttpClient!
+	    at NullInjector.get (./node_modules/@angular/core/fesm5/core.js?:1360:19)
+	    at resolveToken (./node_modules/@angular/core/fesm5/core.js?:1598:24)
+	    at tryResolveToken (./node_modules/@angular/core/fesm5/core.js?:1542:16)
+	    at StaticInjector.get (./node_modules/@angular/core/fesm5/core.js?:1439:20)
+	    at resolveToken (./node_modules/@angular/core/fesm5/core.js?:1598:24)
+	    at tryResolveToken (./node_modules/@angular/core/fesm5/core.js?:1542:16)
+	    at StaticInjector.get (./node_modules/@angular/core/fesm5/core.js?:1439:20)
+	    at resolveNgModuleDep (./node_modules/@angular/core/fesm5/core.js?:8667:29)
+	    at NgModuleRef_.get (./node_modules/@angular/core/fesm5/core.js?:9355:16)
+	    at inject (./node_modules/@angular/core/fesm5/core.js?:1701:33)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0) DialogConfirmSuscribeComponent  should create FAILED
+
+=======================================>
+
+	Can't bind to 'mat-dialog-close' since it isn't a known property of 'button'. ("at-dialog-actions>
+	  <button mat-button (click)="onNoClick()">Cancel </button>
+	  <button mat-button [ERROR ->][mat-dialog-close]="data.dialConfirm" cdkFocusInitial>Confirmer mon insc</button>
+	</div>
+	"): ng:///DynamicTestModule/DialogConfirmSuscribeComponent.html@7:21
+	Error: Template parse errors:
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Error: Template parse errors:
+	Can't bind to 'mat-dialog-close' since it isn't a known property of 'button'. ("at-dialog-actions>
+	  <button mat-button (click)="onNoClick()">Cancel </button>
+	  <button mat-button [ERROR ->][mat-dialog-close]="data.dialConfirm" cdkFocusInitial>Confirmer mon insc</button>
+	</div>
+	"): ng:///DynamicTestModule/DialogConfirmSuscribeComponent.html@7:21
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Expected undefined to be truthy.
+	    at UserContext.eval (./src/app/subscribe/dialog-confirm-suscribe/dialog-confirm-suscribe.component.spec.ts?:21:27)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:387:26)
+	    at ProxyZoneSpec.onInvoke (./node_modules/zone.js/dist/zone-testing.js?:287:39)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:386:32)
+HeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 21 of 26 (11 FAILED) (0 secs / 1.094 secs)
+HeadlessChrome 0.0.0 (Windows 10 0.0.0) DialogConfirmSuscribeComponent  should create FAILED
+
+=======================================>
+
+	Can't bind to 'mat-dialog-close' since it isn't a known property of 'button'. ("at-dialog-actions>
+	  <button mat-button (click)="onNoClick()">Cancel </button>
+	  <button mat-button [ERROR ->][mat-dialog-close]="data.dialConfirm" cdkFocusInitial>Confirmer mon insc</button>
+	</div>
+	"): ng:///DynamicTestModule/DialogConfirmSuscribeComponent.html@7:21
+	Error: Template parse errors:
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Error: Template parse errors:
+	Can't bind to 'mat-dialog-close' since it isn't a known property of 'button'. ("at-dialog-actions>
+	  <button mat-button (click)="onNoClick()">Cancel </button>
+	  <button mat-button [ERROR ->][mat-dialog-close]="data.dialConfirm" cdkFocusInitial>Confirmer mon insc</button>
+	</div>
+	"): ng:///DynamicTestModule/DialogConfirmSuscribeComponent.html@7:21
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Expected undefined to be truthy.
+	    at UserContext.eval (./src/app/subscribe/dialog-confirm-suscribe/dialog-confirm-suscribe.component.spec.ts?:21:27)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:387:26)
+	    at ProxyZoneSpec.onInvoke (./node_modules/zone.js/dist/zone-testing.js?:287:39)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:386:32)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0) SubscribeComponent  should create FAILED
+
+=======================================>
+
+	'app-homeback-toolbar' is not a known element:
+	1. If 'app-homeback-toolbar' is an Angular component, then verify that it is part of this module.
+	2. If 'app-homeback-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("[ERROR ->]<app-homeback-toolbar></app-homeback-toolbar>
+	<section>
+	  <app-home-form ></app-home-form>
+	"): ng:///DynamicTestModule/SubscribeComponent.html@0:0
+	'app-home-form' is not a known element:
+	1. If 'app-home-form' is an Angular component, then verify that it is part of this module.
+	2. If 'app-home-form' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("<app-homeback-toolbar></app-homeback-toolbar>
+	<section>
+	  [ERROR ->]<app-home-form ></app-home-form>
+	</section>"): ng:///DynamicTestModule/SubscribeComponent.html@2:2
+	Error: Template parse errors:
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Error: Template parse errors:
+	'app-homeback-toolbar' is not a known element:
+	1. If 'app-homeback-toolbar' is an Angular component, then verify that it is part of this module.
+	2. If 'app-homeback-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("[ERROR ->]<app-homeback-toolbar></app-homeback-toolbar>
+	<section>
+	  <app-home-form ></app-home-form>
+	"): ng:///DynamicTestModule/SubscribeComponent.html@0:0
+	'app-home-form' is not a known element:
+	1. If 'app-home-form' is an Angular component, then verify that it is part of this module.
+	2. If 'app-home-form' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("<app-homeback-toolbar></app-homeback-toolbar>
+	<section>
+	  [ERROR ->]<app-home-form ></app-home-form>
+	</section>"): ng:///DynamicTestModule/SubscribeComponent.html@2:2
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Expected undefined to be truthy.
+	    at UserContext.eval (./src/app/subscribe/subscribe.component.spec.ts?:21:27)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:387:26)
+	    at ProxyZoneSpec.onInvoke (./node_modules/zone.js/dist/zone-testing.js?:287:39)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:386:32)
+HeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 22 of 26 (12 FAILED) (0 secs / 1.111 secs)
+HeadlessChrome 0.0.0 (Windows 10 0.0.0) SubscribeComponent  should create FAILED
+
+=======================================>
+
+	'app-homeback-toolbar' is not a known element:
+	1. If 'app-homeback-toolbar' is an Angular component, then verify that it is part of this module.
+	2. If 'app-homeback-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("[ERROR ->]<app-homeback-toolbar></app-homeback-toolbar>
+	<section>
+	  <app-home-form ></app-home-form>
+	"): ng:///DynamicTestModule/SubscribeComponent.html@0:0
+	'app-home-form' is not a known element:
+	1. If 'app-home-form' is an Angular component, then verify that it is part of this module.
+	2. If 'app-home-form' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("<app-homeback-toolbar></app-homeback-toolbar>
+	<section>
+	  [ERROR ->]<app-home-form ></app-home-form>
+	</section>"): ng:///DynamicTestModule/SubscribeComponent.html@2:2
+	Error: Template parse errors:
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Error: Template parse errors:
+	'app-homeback-toolbar' is not a known element:
+	1. If 'app-homeback-toolbar' is an Angular component, then verify that it is part of this module.
+	2. If 'app-homeback-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("[ERROR ->]<app-homeback-toolbar></app-homeback-toolbar>
+	<section>
+	  <app-home-form ></app-home-form>
+	"): ng:///DynamicTestModule/SubscribeComponent.html@0:0
+	'app-home-form' is not a known element:
+	1. If 'app-home-form' is an Angular component, then verify that it is part of this module.
+	2. If 'app-home-form' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("<app-homeback-toolbar></app-homeback-toolbar>
+	<section>
+	  [ERROR ->]<app-home-form ></app-home-form>
+	</section>"): ng:///DynamicTestModule/SubscribeComponent.html@2:2
+	    at syntaxError (./node_modules/@angular/compiler/fesm5/compiler.js?:1275:17)
+	    at TemplateParser.parse (./node_modules/@angular/compiler/fesm5/compiler.js?:15084:19)
+	    at JitCompiler._parseTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24272:37)
+	    at JitCompiler._compileTemplate (./node_modules/@angular/compiler/fesm5/compiler.js?:24259:23)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:62)
+	    at Set.forEach (<anonymous>)
+	    at JitCompiler._compileComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24202:19)
+	    at eval (./node_modules/@angular/compiler/fesm5/compiler.js?:24120:19)
+	    at Object.then (./node_modules/@angular/compiler/fesm5/compiler.js?:1266:77)
+	    at JitCompiler._compileModuleAndAllComponents (./node_modules/@angular/compiler/fesm5/compiler.js?:24118:26)
+	Expected undefined to be truthy.
+	    at UserContext.eval (./src/app/subscribe/subscribe.component.spec.ts?:21:27)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:387:26)
+	    at ProxyZoneSpec.onInvoke (./node_modules/zone.js/dist/zone-testing.js?:287:39)
+	    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:386:32)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 23 of 26 (12 FAILED) (0 secs / 1.118 secs)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 24 of 26 (12 FAILED) (0 secs / 1.127 secs)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 25 of 26 (12 FAILED) (0 secs / 1.132 secs)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 26 of 26 (12 FAILED) (0 secs / 1.137 secs)
+[1A[2KHeadlessChrome 0.0.0 (Windows 10 0.0.0): Executed 26 of 26 (12 FAILED) (0.405 secs / 1.137 secs)
+TOTAL: 12 FAILED, 14 SUCCESS
+TOTAL: 12 FAILED, 14 SUCCESS
+TOTAL: 12 FAILED, 14 SUCCESS

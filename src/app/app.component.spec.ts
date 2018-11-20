@@ -1,19 +1,35 @@
-import {MaterialsModule} from './materials/materials.module';
-import { HomeComponent } from './home/home.component';
-import { MatButtonModule, MatToolbarModule } from '@angular/material/';
-import { HeaderComponent } from './headerbar/header/header.component';
+import {BrowserModule} from '@angular/platform-browser';
 import {async, TestBed} from '@angular/core/testing';
-import {AppComponent} from './app.component';
-import {HttpClientModule} from '@angular/common/http';
-import {APP_CONFIG} from './app.config';
-import {environment} from '../environments/environment';
-import { RouterModule } from '@angular/router';
-import { ROUTES } from './app.routes';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {APP_BASE_HREF} from '@angular/common';
+import {AppComponent} from './app.component';
+import {environment} from '../environments/environment';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {APP_CONFIG} from './app.config';
+import {TokenInterceptorService} from './services/interceptors/token-interceptor.service';
+import {ErrorInterceptorService} from './services/interceptors/error-interceptor.service';
+import {CommonHeadersInterceptorService} from './services/interceptors/common-headers-interceptor.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { RouterModule } from '@angular/router';
+//import { MatButtonModule, MatToolbarModule } from '@angular/material/';
 
+/**
+ * MCUSTOMS MODULES
+ */
+import {MaterialsModule} from './materials/materials.module';
+import { ROUTES } from './app.routes';
+
+/** HEADER NAVIGATION**/
+import { HeaderComponent } from './headerbar/header/header.component';
 import { SideMenuComponent } from './headerbar/side-menu/side-menu.component';
 import { PersonalMenuComponent } from './headerbar/personal-menu/personal-menu.component';
 import { BackButtonComponent } from './headerbar/back-button/back-button.component';
+import { HomeToolbarComponent } from './home-toolbar/home-toolbar.component';
+import { HomebackToolbarComponent } from './homeback-toolbar/homeback-toolbar.component';
+
+/** PAGES **/
+import { HomeComponent } from './home/home.component';
 import { HomeFormComponent } from './home-form/home-form.component';
 import { SubscribeComponent} from './subscribe/subscribe.component';
 import { DialogConfirmSuscribeComponent} from './subscribe/dialog-confirm-suscribe/dialog-confirm-suscribe.component';
@@ -32,17 +48,30 @@ describe('AppComponent', () => {
         BackButtonComponent,
         HomeFormComponent,
         DialogConfirmSuscribeComponent,
-        LoginFormComponent
+        LoginFormComponent,
+        HomeToolbarComponent,
+        HomebackToolbarComponent,
+        DialogConfirmSuscribeComponent,
+
       ],
       imports: [
+        BrowserModule,
         HttpClientModule,
+        BrowserAnimationsModule,
+        FormsModule,
+        ReactiveFormsModule,
         MaterialsModule,
+
         RouterModule.forRoot(ROUTES),
       ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
       providers: [
-        {provide: APP_CONFIG, useValue: environment},
         {provide: APP_BASE_HREF, useValue: '/'},
-      ]
+        {provide: APP_CONFIG, useValue: environment},
+        {provide : HTTP_INTERCEPTORS, useClass : CommonHeadersInterceptorService, multi: true},
+        {provide : HTTP_INTERCEPTORS, useClass : TokenInterceptorService, multi: true},
+        {provide : HTTP_INTERCEPTORS, useClass : ErrorInterceptorService, multi: true},
+      ],
     }).compileComponents();
   }));
   it('should create the app', async(() => {

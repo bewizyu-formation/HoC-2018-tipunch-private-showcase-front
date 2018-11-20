@@ -6,13 +6,17 @@ import {
     Validators,
     FormGroupDirective,
     NgForm,
-    AbstractControl
+    AbstractControl,
+    REACTIVE_FORM_DIRECTIVES
 } from '@angular/forms';
+
+
 import {ErrorStateMatcher, MatDialog} from '@angular/material';
 import { DialogConfirmSuscribeComponent } from '../subscribe/dialog-confirm-suscribe/dialog-confirm-suscribe.component';
 import {Observable} from 'rxjs/index';
 
 export const TownTestURL = 'https://geo.api.gouv.fr/communes?nom=';
+const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
     isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -25,7 +29,8 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 @Component({
     selector: 'app-home-form',
     templateUrl: './home-form.component.html',
-    styleUrls: ['./home-form.component.css']
+    styleUrls: ['./home-form.component.css'],
+    //directives: ''
 })
 
 export class HomeFormComponent implements OnInit {
@@ -127,6 +132,7 @@ export class HomeFormComponent implements OnInit {
         console.log(password.value);
         console.log(confirm.value);
         console.log(password.value === confirm.value);
+
         return password.value === confirm.value ? null : { noMatch: true };
     }
 
@@ -135,7 +141,7 @@ export class HomeFormComponent implements OnInit {
         this.townControl.valueChanges.subscribe(
             (value) => {
 
-                this.getJson(`${this.jsonTest}${value}`)
+                this.getJson(`${this.jsonTowns}${value}`)
                     .subscribe((data: any[]) => {
                         if (value.length >= 1) {
                             data.length = 10;
@@ -185,4 +191,10 @@ export class HomeFormComponent implements OnInit {
         this.reset();
         this.setTownName();
     }
+
+  private  getErrorMsg() {
+
+        return this.emailControl.hasError('required') ? 'Veuillez renseigner votre email'
+           : this.emailControl.hasError('email') ? 'Mauvais format d\'email' : '';
+  }
 }

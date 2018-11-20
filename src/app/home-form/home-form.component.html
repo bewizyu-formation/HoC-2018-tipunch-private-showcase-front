@@ -1,6 +1,6 @@
-<header>
+<!-- <header>
   <img src="../../assets/img/header_bjork.jpg">
-</header>
+</header> -->
 <section>
   <form class="form-container" (ngSubmit)="register(userForm)" [formGroup]="userForm">
     <h3 class="form-title">{{formTitle}}</h3>
@@ -59,7 +59,8 @@
       <input matInput
              placeholder="Confirm Password"
              type="password"
-             name="comfirmpassword"
+             name="coNfirmpassword"
+             formControlName="passwordConfirm"
              [type]="hidePassword ?  'password' : 'text'"
              required>
       <mat-icon matSuffix
@@ -96,7 +97,6 @@
         </mat-option>
       </mat-autocomplete>
     </mat-form-field>
-
     <mat-checkbox
             data-md-icheck
             type="checkbox"
@@ -106,12 +106,12 @@
             (change)="toggleChecked()">
       <span>Vous êtes artistes / groupes</span>
     </mat-checkbox>
-
+<div formGroupName="artistForm">
     <mat-form-field *ngIf="markedCheck">
       <input matInput
              placeholder="Artist name"
              name="artisname"
-             formControlName="artistNameControl"
+             formControlName="artistName"
              required>
 
       <mat-error *ngIf="artistForm.get('artistName').hasError('required')">
@@ -130,7 +130,7 @@
       >
       </textarea>
     </mat-form-field>
-
+</div>
     <div class="confirm-container">
       <button mat-button class="cancel"
               (click)="reset()">Annuler</button>
