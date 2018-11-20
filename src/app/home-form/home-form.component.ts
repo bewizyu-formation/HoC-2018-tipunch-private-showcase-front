@@ -1,17 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import {FormControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {MatDialog, MatInput} from '@angular/material';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {
+    FormControl,
+    FormBuilder, FormGroup,
+    Validators,
+    FormGroupDirective,
+    NgForm,
+    AbstractControl
+} from '@angular/forms';
+import {ErrorStateMatcher, MatDialog} from '@angular/material';
 import { DialogConfirmSuscribeComponent } from '../subscribe/dialog-confirm-suscribe/dialog-confirm-suscribe.component';
 import {Observable} from 'rxjs/index';
-import {startWith, map} from 'rxjs/operators';
 
 export const TownTestURL = 'https://geo.api.gouv.fr/communes?nom=';
 
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+    isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+        const isSubmitted = form && form.submitted;
+
+        return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+    }
+}
+
 @Component({
-  selector: 'app-home-form',
-  templateUrl: './home-form.component.html',
-  styleUrls: ['./home-form.component.css']
+    selector: 'app-home-form',
+    templateUrl: './home-form.component.html',
+    styleUrls: ['./home-form.component.css']
 })
 
 export class HomeFormComponent implements OnInit {
@@ -23,23 +37,24 @@ export class HomeFormComponent implements OnInit {
     dialTitle: 'Votre inscripton est réussie';
     dialConfirm: true;
     dialContent: 'Vous recevrez un email de confirmation pour pouvoir vous connecter';
-
-    pathMatchCtrl: string;
     checkedBoxModel = false;
     markedCheck = false;
     hidePassword = true;
 
-    jsonTowns = 'http://localhost:8080/public/communes?nom=';
+    jsonTowns = 'http://localhost:8080/public/communes/nom?value=';
     jsonTest = TownTestURL;
 
+    userMatcher = new MyErrorStateMatcher();
 
     /**partie user*/
     userForm: FormGroup;
     emailControl: FormControl;
     usernameControl: FormControl;
+    passForm:  FormGroup;
     passwordControl: FormControl;
     passwordConfirmControl: FormControl;
     townControl: FormControl;
+    cityCodeControl: FormControl;
     isArtistControl:  FormControl;
     /** partie artist */
     artistForm: FormGroup;
@@ -47,135 +62,127 @@ export class HomeFormComponent implements OnInit {
     artistShortDescControl: FormControl;
     artistLongDescControl: FormControl;
 
-  constructor(
-      private http: HttpClient,
-      public dialogPopup: MatDialog,
-      subsCribeForm: FormBuilder
-  ) {
-      this.usernameControl = subsCribeForm.control('',
+    constructor(
+        private http: HttpClient,
+        public dialogPopup: MatDialog,
+        fb: FormBuilder
+    ) {
+        this.usernameControl = fb.control('',
+            [Validators.required, Validators.pattern('[a-zA-Z0-9\-]*'), Validators.minLength(3)]);
+        this.emailControl = fb.control('', [Validators.required, Validators.email]);
+        this.passwordControl = fb.control('', [Validators.required, Validators.minLength(8)]);
+        this.passwordConfirmControl = fb.control('');
+        this.townControl = fb.control('', [Validators.required, Validators.minLength(3)]);
+        this.cityCodeControl = fb.control('');
+        this.isArtistControl = fb.control(true);
+        this.artistNameControl  = fb.control('', [Validators.required, Validators.pattern('[a-zA-Z0-9\-]*')]);
+        this.artistShortDescControl  = fb.control('', [Validators.required, Validators.minLength(20)]);
+        this.artistLongDescControl  = fb.control('', [Validators.required, Validators.minLength(150)]);
 
-        [Validators.required, Validators.pattern('[a-zA-Z0-9\-]*'), Validators.minLength(3)]);
-      this.emailControl = subsCribeForm.control('', [Validators.required, Validators.email]);
-      this.passwordControl = subsCribeForm.control('', [Validators.required, Validators.minLength(8)]);
+        this.userForm = fb.group({
+            username: this.usernameControl,
+            email: this.emailControl,
+            cityName: this.townControl,
+            cityCode: this.cityCodeControl,
+            isArtist: this.isArtistControl,
+            passForm : fb.group({
+                    password: this.passwordControl,
+                    passwordConfirm: this.passwordConfirmControl},
+                { validator: [this.matchingPasswords]}),
+        });
 
-      this.passwordConfirmControl = subsCribeForm.control('', Validators.required);
+        this.artistForm = fb.group({
+            artistName: this.artistNameControl,
+            ShortDesc: this.artistShortDescControl,
+            artistLongDes: this.artistLongDescControl
+        });
 
-      this.townControl = subsCribeForm.control('', [Validators.required, Validators.minLength(3)]);
-
-      this.isArtistControl = subsCribeForm.control(true);
-      this.userForm = subsCribeForm.group({
-          usernameCtrl: this.usernameControl,
-          emailCtrl: this.emailControl,
-          passwordCtrl: this.passwordControl,
-          passwordConfirmCtrl: this.passwordConfirmControl,
-          townCtrl: this.townControl,
-          isArtistCtrl: this.isArtistControl
-      });
-
-      this.artistNameControl  = subsCribeForm.control('',
-          [Validators.required, Validators.pattern('[a-zA-Z0-9\-]*')]);
-      this.artistShortDescControl  = subsCribeForm.control('',
-          [Validators.required, Validators.minLength(20)]);
-      this.artistLongDescControl  = subsCribeForm.control('',
-          [Validators.required, Validators.minLength(150)]);
-      this.artistForm = subsCribeForm.group({
-          artistNameCtrl: this.artistNameControl,
-          ShortDescCtrl: this.artistShortDescControl,
-          artistLongDesCtrl: this.artistLongDescControl
-      });
-      const control = new FormControl('ng', Validators.minLength(3));
-  }
-
-  reset() {
-      this.emailControl.setValue('');
-      this.usernameControl.setValue('');
-      this.passwordControl.setValue('');
-      this.townControl.setValue('');
-      this.isArtistControl.setValue('');
-      this.artistNameControl .setValue('');
-      this.artistShortDescControl .setValue('');
-      this.artistLongDescControl .setValue('');
-  }
-
-  private getJson(datas) {
-        return this.http.get(datas);
-  }
-
-  private setTownName(): any {
-      // this.datasFilters = this.townControl.valueChanges
-      //     .pipe(
-      //         startWith(''),
-      //         map(value => this.townFilter(value))
-      //     );
-
-       // console.log( this.datasFilters);
-       // this.getJson(this.jsonTowns + this.datasFilters)
-       //     .subscribe(data =>{
-       //         this.datas = data;
-       //     });
-  }
-
-  private townFilter(value: string): string[] {
-        const filterValue = value['nom'].toLowerCase();
-        return this.setTownName().filter(commune => commune.toLowerCase().includes(filterValue));
-  }
-
-  toggleChecked() {
-      this.markedCheck  = !this.markedCheck ;
-  }
-  /*
-    hidePasswordModel = false;
-    typePassword = 'password';
-    passswordValue : string;
-    togglePassword() {
-        this.hidePassword = !this.hidePassword;
-        this.hidePassword ? 'visibility_hoff' : 'visibility';
-        this.hidePassword ? 'password' : 'texte';
+        const control = new FormControl('ng', Validators.minLength(3));
     }
-  */
-  private getPasswordPath(pathCompare: string) {
-      return pathCompare;
-  }
+    reset() {
+        this.emailControl.setValue('');
+        this.usernameControl.setValue('');
+        this.passwordControl.setValue('');
+        this.townControl.setValue('');
+        this.isArtistControl.setValue('');
+        this.artistNameControl .setValue('');
+        this.artistShortDescControl .setValue('');
+        this.artistLongDescControl .setValue('');
+    }
 
-  private  getErroMsg() {
+    private getJson(datas) {
+        return this.http.get(datas);
+    }
 
-        return this.emailControl.hasError('required') ? 'Veuillez renseigner votre email'
-           : this.emailControl.hasError('email') ? 'Mauvais format d\'email' : '';
-  }
+    private matchingPasswords( control: AbstractControl ) {
+        const password = control.get( 'password' );
+        const confirm = control.get( 'passwordConfirm' );
 
+        if ( !password || !confirm ) {
+            return null;
+        }
+        if (password.invalid) {
+            return {invalidPassword : true};
+        }
+        console.log(password.value);
+        console.log(confirm.value);
+        console.log(password.value === confirm.value);
+        return password.value === confirm.value ? null : { noMatch: true };
+    }
 
-  openPopupConfirm(): void {
-      const dialConfirmRef = this.dialogPopup.open(DialogConfirmSuscribeComponent, {
-          width: '300px',
-          height: '300px',
-          data: {title: this.dialTitle, content: this.dialContent, confirm: this.dialConfirm}});
+    private setTownName(): any {
+        console.log(this.getJson(`${this.jsonTowns}`));
+        this.townControl.valueChanges.subscribe(
+            (value) => {
 
-      dialConfirmRef.afterClosed()
-          .subscribe(res => {
-              this.dialConfirm = res;
-              console.log(this.dialConfirm);
-          });
-  }
-  register() {
-      console.log(this.userForm.value);
-      console.log(this.artistForm.value);
-  }
+                this.getJson(`${this.jsonTest}${value}`)
+                    .subscribe((data: any[]) => {
+                        if (value.length >= 1) {
+                            data.length = 10;
+                            this.datas = data;
+                            this.datas.length = data.length;
+                        }
+                    });
+            },
+        );
+    }
 
-    /**
-     *
-     */
+    private townFilter(value: string): string[] {
+        const filterValue = value['nom'].toLowerCase();
 
-  ngOnInit() {
-    this.townControl.valueChanges.subscribe(
-        (value) => {
-            /*this.getJson(${this.jsonTowns}${value}`)*/
-            this.getJson(`${this.jsonTest}${value}`)
-                .subscribe(data => {
-                    console.log(value);
-                    this.datas = data;
-                    console.log(this.datas);
-                });
-        },
-    );
-  }
+        return this.setTownName().filter(commune => commune.toLowerCase().includes(filterValue));
+    }
+
+    toggleChecked() {
+        this.markedCheck  = !this.markedCheck ;
+    }
+
+    openPopupConfirm(): void {
+        const dialConfirmRef = this.dialogPopup.open(DialogConfirmSuscribeComponent, {
+            width: '300px',
+            height: '300px',
+            data: {title: this.dialTitle, content: this.dialContent, confirm: this.dialConfirm}});
+
+        dialConfirmRef.afterClosed()
+            .subscribe(res => {
+                this.dialConfirm = res;
+                console.log(this.dialConfirm);
+            });
+    }
+    register() {
+        const baseUri = 'http://localhost:8080/public/';
+        const uri = baseUri +
+            'users/add?username=' + this.usernameControl.value +
+            '&password=' +  this.passwordControl.value +
+            '&email=' + this.emailControl.value +
+            '&cityName=' + this.townControl.value +
+            '&cityCode=' + this.cityCodeControl.value;
+        // console.log(uri);
+        console.log(this.passForm);
+    }
+
+    ngOnInit() {
+        this.reset();
+        this.setTownName();
+    }
 }
