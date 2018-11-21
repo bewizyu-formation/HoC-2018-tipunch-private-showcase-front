@@ -12,6 +12,11 @@ h1 {
     }
 }
 
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
 mat-toolbar {
     background-color: rgb(74, 74, 74);
     color: white;

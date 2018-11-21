@@ -1,0 +1,23 @@
+{
+	"home": {
+		"introduction":"est une plateforme de partage permettant la mise en relation de musiciens avec des particuliers qui souhaitent organiser des concerts chez eux.",
+		"description":"Les spectateurs sont directements invités par l'organisateur, une participation pourra être demandée pour le cachet des artistes.",
+		"cards":[
+			{
+				"img": "../assets/img/musician.jpg",
+				"title":"Musiciens",
+				"description": "Proposez des concerts privés"
+			},
+			{
+				"img": "../assets/img/spectator.jpg",
+				"title":"Spectateur",
+				"description": "Vivez une expérience unique"
+			},
+			{
+				"img": "../assets/img/organisator.jpg",
+				"title":"Organisateurs",
+				"description": "Partagez vos coups de coeurs"
+			}
+		]
+	}
+}

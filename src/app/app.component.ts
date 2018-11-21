@@ -1,7 +1,6 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 import {UserService} from './user/user.service';
 import {HelloRepository} from './hello/hello.repository';
-import {HttpErrorResponse} from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -28,14 +27,14 @@ export class AppComponent {
   handleCheckUserRole() {
     this.hello.testApiWithUserRole()
       .subscribe(
-        response => console.log('Check USER ROLE : ', response.message),
+        response => console.log('Check USER ROLE: ', response.message),
       );
   }
 
   handleCheckAdminRole() {
     this.hello.testApiWithAdminRole()
       .subscribe(
-        response => console.log('Check ADMIN ROLE : ', response.message),
+        response => console.log('Check ADMIN ROLE: ', response.message),
         error => console.log('ERROR ', error)
       );
   }

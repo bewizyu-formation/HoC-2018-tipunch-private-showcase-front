@@ -1,0 +1,45 @@
+header {
+    background: url("../../assets/img/header_bjork.jpg") no-repeat;
+    -webkit-filter: grayscale(70%);
+    filter: grayscale(70%);
+    background-size: cover;
+    height: 270px;
+    overflow: hidden;
+}
+
+section{
+    flex-direction: column;
+    padding: 60px 20%;
+}
+
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #b9b8b8;
+    border-radius: 20px;
+    padding: 60px 10%;
+    color: #616161;
+}
+
+.form-container > * {
+    width: 100%;
+}
+
+.form-title{
+    text-align: center;
+}
+
+/*
+BUTTON FORMS
+ */
+.cancel{
+    background-color: #616161;
+}
+.confirm-container button.mat-button.confirm{
+    background-color: #00897b;
+}
+
+mat-error{
+    padding-bottom: 20px;
+}

@@ -5,3 +5,15 @@ body {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+#home,
+#subscribe,
+#login{
+    padding: 0 20px;
+}
+@media only screen and (min-width: 780px){
+    #home,
+    #subscribe,
+    #login{
+        padding: 0 20%;
+    }
+}

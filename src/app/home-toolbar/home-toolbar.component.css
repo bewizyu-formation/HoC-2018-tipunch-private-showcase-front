@@ -1,0 +1,19 @@
+mat-toolbar{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: rgb(65, 65, 65);
+}
+
+.flex-spacer[_ngcontent-c1] {
+    flex-grow: 1;
+}
+
+h1{
+    margin-left: calc(50% - 81px);
+}
+
+img {
+    width: 100%;
+    height: 235px;
+    object-fit: cover;
+}
