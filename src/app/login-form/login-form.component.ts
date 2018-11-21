@@ -1,8 +1,9 @@
-import { ActivatedRoute, UrlSegment } from '@angular/router';
+import { PATH_HOME, PATH_WELCOME } from './../app.routes.constantes';
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
-import {HttpClient} from '@angular/common/http';
-import {PrivateshowcaseApiService} from '../services/privateshowcase-api.service';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { UserService } from '../user/user.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login-form',
@@ -19,30 +20,37 @@ export class LoginFormComponent implements OnInit {
   emailControl: FormControl;
   usernameControl: FormControl;
   passwordControl: FormControl;
-  routeName: string;
+  userToken: string;
 
   constructor(
-    private http: HttpClient,
-    private pscApi: PrivateshowcaseApiService,
-    subsCribeForm: FormBuilder
+    subscribeForm: FormBuilder,
+    private userService: UserService,
+    private router: Router
   ) {
-    this.usernameControl = subsCribeForm.control('', [Validators.required]);
-    this.emailControl = subsCribeForm.control('', [Validators.required, Validators.email]);
-    this.passwordControl = subsCribeForm.control('', [Validators.required]);
-    this.userForm = subsCribeForm.group({
-      usernameCtrl: this.usernameControl,
-      passwordCtrl: this.passwordControl
+    this.usernameControl = subscribeForm.control('', [Validators.required]);
+    this.emailControl = subscribeForm.control('', [Validators.required, Validators.email]);
+    this.passwordControl = subscribeForm.control('', [Validators.required]);
+    this.userForm = subscribeForm.group({
+      username: this.usernameControl,
+      password: this.passwordControl
     });
+
   }
 
   reset() {
-    this.emailControl.setValue('');
-    this.usernameControl.setValue('');
-    this.passwordControl.setValue('');
+      this.router.navigate([PATH_HOME]);
   }
 
-  register() {
-    this.pscApi.getUser();
+  register(loginForm) {
+    this.userService.login(loginForm.username, loginForm.password);
+    setTimeout(() => {
+      this.userToken = this.userService.token;
+      if (this.userToken === undefined) {
+        alert('Nom d\'utilisateur et/ou mot de passe incorrect(s).');
+      } else {
+          this.router.navigate([PATH_WELCOME]);
+      }
+    }, 300);
   }
 
   ngOnInit() {

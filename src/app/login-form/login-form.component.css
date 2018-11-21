@@ -43,3 +43,7 @@ BUTTON FORMS
 mat-error{
     padding-bottom: 20px;
 }
+
+button {
+    color: rgb(255, 255, 255);
+}

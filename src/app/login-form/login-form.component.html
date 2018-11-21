@@ -3,19 +3,19 @@
 <img src="../../assets/img/header_bjork.jpg">
 </header> -->
 <section>
-  <form class="form-container" (ngSubmit)="register()" [formGroup]="userForm">
+  <form class="form-container" [formGroup]="userForm">
     <h3 class="form-title">{{formTitle}}</h3>
 
     <mat-form-field>
       <input matInput
              placeholder="Nom d'utilsateur"
              name="username"
-             formControlName="usernameCtrl"
+             formControlName="username"
              required>
-      <mat-error *ngIf="userForm.get('usernameCtrl').hasError('required')">
-        le nom d'utilisateur <strong>est requis</strong>
+      <mat-error *ngIf="userForm.get('username').hasError('required')">
+        Nom d'utilisateur requis.
       </mat-error>
-      <mat-error *ngIf="userForm.get('usernameCtrl').hasError('minLenght')">
+      <mat-error *ngIf="userForm.get('username').hasError('minLenght')">
         nom trop court
       </mat-error>
     </mat-form-field>
@@ -26,23 +26,25 @@
              placeholder="Password"
              type="password"
              name="password"
-             formControlName="passwordCtrl"
+             formControlName="password"
 
              required>
-      <mat-error *ngIf=" userForm.get('passwordCtrl').dirty && userForm.get('passwordCtrl').hasError('required')">
-        le password est requis <strong>est requis</strong>
+      <mat-error *ngIf=" userForm.get('password').dirty && userForm.get('password').hasError('required')">
+        Mot de passe requis.
       </mat-error>
-      <mat-error *ngIf="userForm.get('passwordCtrl').hasError('minLength')">
-        mot de passe trop court
+      <mat-error *ngIf="userForm.get('password').hasError('minLength')">
+        Mot de passe trop court.
       </mat-error>
     </mat-form-field>
 
     <div class="confirm-container">
       <button mat-button class="cancel"
               (click)="reset()">Annuler</button>
+      
+      <!-- [disabled]="userForm.invalid" -->
       <button mat-button class="confirm"
               type="submit"
-              [disabled]="userForm.invalid">Valider</button>
+              (click)="register(userForm.value)">Valider</button>
     </div>
 
   </form>
