@@ -2,7 +2,7 @@ import { ActivatedRoute, UrlSegment } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {HttpClient} from '@angular/common/http';
-import {MatDialog} from '@angular/material';
+import {PrivateshowcaseApiService} from '../services/privateshowcase-api.service';
 
 @Component({
   selector: 'app-login-form',
@@ -22,10 +22,9 @@ export class LoginFormComponent implements OnInit {
   routeName: string;
 
   constructor(
-      private http: HttpClient,
-      private activRoute: ActivatedRoute,
-      public dialogPopup: MatDialog,
-      subsCribeForm: FormBuilder
+    private http: HttpClient,
+    private pscApi: PrivateshowcaseApiService,
+    subsCribeForm: FormBuilder
   ) {
     this.usernameControl = subsCribeForm.control('', [Validators.required]);
     this.emailControl = subsCribeForm.control('', [Validators.required, Validators.email]);
@@ -43,11 +42,9 @@ export class LoginFormComponent implements OnInit {
   }
 
   register() {
-    console.log(this.userForm.value);
+    this.pscApi.getUser();
   }
 
   ngOnInit() {
-    // console.log(this.userForm.value);
   }
-
 }

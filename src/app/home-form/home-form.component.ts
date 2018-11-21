@@ -27,7 +27,6 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
     templateUrl: './home-form.component.html',
     styleUrls: ['./home-form.component.css']
 })
-
 export class HomeFormComponent implements OnInit {
     formTitle = 'Formulaire d\'inscription';
     datas: any;
