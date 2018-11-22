@@ -46,68 +46,6 @@
                 </mat-error>
             </mat-form-field>
         </div>
-
-
-        <!--
-            <div class="passwords" formGroupName="passForm">
-              <mat-form-field>
-                <input matInput placeholder="Mot de passe" type="password" formControlName="password"
-                       [type]="hide ? 'password' : 'text'">
-                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                <mat-error *ngIf="password.invalid"></mat-error>
-              </mat-form-field>
-
-              <mat-form-field>
-                <input matInput placeholder="Confirmez le mot de passe" formControlName="confirmPassword"
-                       [type]="hide ? 'password' : 'text'">
-                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                <mat-error *ngIf="confirmPassword.getError('required')">La confirmation du mot de passe est requise</mat-error>
-                <div class="noMatch" *ngIf="userForm.get('passwords').getError('nomatch')">Les mots de passes ne sont pas compatibles</div>
-              </mat-form-field>
-            </div>
-
-
-            <fieldset formGroupName="passForm">
-              <input matInput
-                     placeholder="Password"
-                     name="password"
-                     [type]="hidePassword ?  'password' : 'text'"
-                     required>
-              <mat-icon matSuffix
-                        (click)="hidePassword = !hidePassword">
-                {{hidePassword ? 'visibility_hoff' : 'visibility'}}
-              </mat-icon>
-              <mat-error *ngIf="userForm.get('passForm').hasError('password')">Le passwordsd requise
-                le password est requis <strong>est requis</strong>
-              </mat-error>
-
-              <input matInput
-                     placeholder="Confirm Password"
-                     type="password"
-                     name="coNfirmpassword"
-                     formControlName="passwordConfirm"
-                     [type]="hidePassword ?  'password' : 'text'"
-                     required>
-              <mat-icon matSuffix
-                        (click)="hidePassword = !hidePassword">
-                {{hidePassword ? 'visibility_hoff' : 'visibility'}}
-              </mat-icon>
-              <mat-error *ngIf="userForm.get('passForm').hasError('noMatch')"></mat-error>
-            </fieldset>
-
-            <mat-form-field>
-              <input matInput
-                     type="email"
-                     name="email"
-                     placeholder="Email"
-                     formControlName="email"
-                     required>
-              <mat-error *ngIf="emailControl.hasError('required')">Veuillez renseigner votre email</mat-error>
-              <mat-error *ngIf="emailControl.hasError('email')">Email invalid ( <strong>monemail@servermail.extension</strong>)</mat-error>
-
-            </mat-form-field>
-        -->
-
         <mat-form-field>
             <input matInput
                    type="text"
@@ -138,7 +76,6 @@
             <span>Vous êtes artistes / groupes</span>
         </mat-checkbox>
 
-
         <div formGroupName="artistForm">
             <mat-form-field *ngIf="markedCheck">
                 <input matInput placeholder="Nom d'artiste" formControlName="artistName" [errorStateMatcher]="parentErrorStateMatcher" >
@@ -165,8 +102,6 @@
             <button mat-button class="confirm"
                     type="submit"
             >Valider</button>
-
         </div>
-
     </form>
 </section>

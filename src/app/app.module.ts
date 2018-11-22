@@ -1,4 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
+import {MaterialsModule} from './materials/materials.module';
 import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {APP_BASE_HREF} from '@angular/common';
 import {AppComponent} from './app.component';
@@ -18,6 +19,8 @@ import { RouterModule } from '@angular/router';
 import {MaterialsModule} from './materials/materials.module';
 import { ROUTES } from './app.routes';
 
+import { WelcomeComponent } from './welcome/welcome.component';
+import { Error404Component } from './error404/error404.component';
 /** HEADER NAVIGATION**/
 import { HeaderComponent } from './headerbar/header/header.component';
 import { SideMenuComponent } from './headerbar/side-menu/side-menu.component';
@@ -48,6 +51,8 @@ import { LoginFormComponent } from './login-form/login-form.component';
     LoginFormComponent,
     HomeToolbarComponent,
     HomebackToolbarComponent,
+    WelcomeComponent,
+    Error404Component,
   ],
   entryComponents: [
     DialogConfirmSuscribeComponent,
