@@ -28,6 +28,9 @@ import { HomeToolbarComponent } from './home-toolbar/home-toolbar.component';
 import { HomebackToolbarComponent } from './homeback-toolbar/homeback-toolbar.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { Error404Component } from './error404/error404.component';
+import { WelcomeToolbarComponent } from './welcome-toolbar/welcome-toolbar.component';
+import { EventsComponent } from './events/events.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
 
 @NgModule({
@@ -46,6 +49,9 @@ import { Error404Component } from './error404/error404.component';
     HomebackToolbarComponent,
     WelcomeComponent,
     Error404Component,
+    WelcomeToolbarComponent,
+    EventsComponent,
+    ContactsComponent,
   ],
   entryComponents: [
     DialogConfirmSuscribeComponent,

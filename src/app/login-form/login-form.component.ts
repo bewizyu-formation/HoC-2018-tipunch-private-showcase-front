@@ -44,8 +44,8 @@ export class LoginFormComponent implements OnInit {
   register(loginForm) {
     this.userService.login(loginForm.username, loginForm.password);
     setTimeout(() => {
-      this.userToken = this.userService.token;
-      if (this.userToken === undefined) {
+      // this.userToken = this.userService.token;
+      if (!this.userService.token) {
         alert('Nom d\'utilisateur et/ou mot de passe incorrect(s).');
       } else {
           this.router.navigate([PATH_WELCOME]);

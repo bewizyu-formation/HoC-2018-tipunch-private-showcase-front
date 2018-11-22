@@ -2,15 +2,15 @@
   <mat-icon>{{ iconName }}</mat-icon>
 </button>
 <mat-menu #menu="matMenu" (closed)="switchIcon()">
-  <button mat-menu-item>
+  <button mat-menu-item (click)="navigateToHome()">
     <mat-icon>home</mat-icon>
     Accueil
   </button>
-  <button mat-menu-item>
+  <button mat-menu-item (click)="navigateToEvents()">
     <mat-icon>send</mat-icon>
     Évènements
   </button>
-  <button mat-menu-item>
+  <button mat-menu-item (click)="navigateToContacts()">
     <mat-icon>people</mat-icon>
     Contacts
   </button>

@@ -1,4 +1,6 @@
+import { PATH_HOME, PATH_EVENTS, PATH_CONTACTS } from './../../app.routes.constantes';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-side-menu',
@@ -9,7 +11,7 @@ export class SideMenuComponent implements OnInit {
 
   iconName = 'menu';
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -20,5 +22,17 @@ export class SideMenuComponent implements OnInit {
     } else {
       this.iconName = 'menu';
     }
+  }
+
+  navigateToHome() {
+    this.router.navigate([PATH_HOME]);
+  }
+
+  navigateToEvents() {
+    this.router.navigate([PATH_EVENTS]);
+  }
+
+  navigateToContacts() {
+    this.router.navigate([PATH_CONTACTS]);
   }
 }

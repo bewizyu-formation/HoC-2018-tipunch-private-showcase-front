@@ -1,0 +1,50 @@
+mat-grid-list, h2 {
+    margin: 25px 200px;
+}
+
+.description-welcome {
+    margin: 25px 200px;
+}
+
+h2, p {
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+h2 {
+    font-size: 22px;
+}
+
+p {
+    font-size: 16px;
+}
+
+mat-card{
+    text-align: center;
+  }
+  
+.welcome-card {
+    width: 240px;
+    height: 265px;
+    margin-top: 30px;
+    background-color: rgb(195, 195, 195);
+    color: white; 
+}
+
+img[_ngcontent-c1] {
+    border-radius: 100%;
+}
+
+.header-image {
+    border-radius: 0% !important;
+}
+  
+.mat-card-image {
+    height: 168px;
+    width: 168px;
+    padding: 16px;  
+}
+  
+h3 {
+    font-size: 22px;
+}
