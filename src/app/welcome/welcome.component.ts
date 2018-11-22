@@ -1,6 +1,5 @@
 import { ArtistService } from './../artist/artist.service';
 import { Component, OnInit } from '@angular/core';
-import { forEach } from '@angular/router/src/utils/collection';
 
 @Component({
   selector: 'app-welcome',
@@ -17,5 +16,13 @@ export class WelcomeComponent implements OnInit {
     this.artistService.getArtistList()
     .then((artists: any[]) => this.artists = artists)
     .catch(error => console.log(error));
+  }
+
+  navigateToArtist(artist) {
+    console.log(artist);
+  }
+
+  navigateToBooking(artist) {
+    console.log(artist);
   }
 }

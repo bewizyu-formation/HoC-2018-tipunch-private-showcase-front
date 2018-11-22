@@ -12,7 +12,6 @@ export class LoggedInGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-      console.log('GUARD', this.user.token);
     if (this.user.token) {
       return true;
     } else {

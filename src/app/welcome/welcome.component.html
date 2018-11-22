@@ -9,6 +9,14 @@
             <p>
                 {{artist.shortDescription}}
             </p>
+            <button mat-menu-item (click)="navigateToArtist(artist.artistName)">
+                <mat-icon>remove_red_eye</mat-icon>
+                VOIR
+            </button>
+            <button mat-menu-item (click)="navigateToBooking(artist.artistName)">
+                <mat-icon>calendar_today</mat-icon>
+                BOOKER
+            </button>
             </mat-card-content>
         </mat-card>
     </mat-grid-tile>
