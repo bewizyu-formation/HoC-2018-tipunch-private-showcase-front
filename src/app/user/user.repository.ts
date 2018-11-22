@@ -54,23 +54,27 @@ export class UserRepository {
 
     const params: HttpParams = new HttpParams({
       encoder : new HttpUrlEncodingCodec(),
-    });
-
-    params.set('username', username);
-    params.set('password', password);
-    params.set('email', email);
-    params.set('cityName', cityName);
-    params.set('cityCode', cityCode);
-    params.set('deptCode', deptCode);
+    })
+      .set('username', username)
+      .set('password', password)
+      .set('email', email)
+      .set('cityName', cityName)
+      .set('cityCode', cityCode)
+      .set('deptCode', deptCode);
     if (artistName && artistShortDesc) {
-      params.set('artistName', artistName);
-      params.set('shortDesc', artistShortDesc);
+      params
+      .set('artistName', artistName)
+      .set('shortDesc', artistShortDesc);
     }
+
+    console.log('Params', params);
+
+    console.log('STRING', params.toString());
 
     return this.http.put(
         `${this.env.getPrivateShowcaseApiConfig().uri}${RESOURCES_SUBSCRIPTION}`,
         null,
         {params}
-    )
+    );
   }
 }
