@@ -2,6 +2,8 @@ import {Injectable} from '@angular/core';
 import {UserRepository} from './user.repository';
 import {HttpResponse} from '@angular/common/http';
 
+const TOKEN_KEY = 'TOKEN_KEY';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -10,7 +12,19 @@ export class UserService {
   /**
    * Authentification JWT Token
    */
-  public token: string;
+  private _token: string;
+
+  public get token(): string {
+    if (this._token) {
+      return this._token;
+    }
+    return localStorage.getItem(TOKEN_KEY);
+  }
+
+  public set token(value: string) {
+   this._token = value;
+   localStorage.setItem(TOKEN_KEY, this._token);
+}
 
   constructor(private userRepository: UserRepository) {
   }

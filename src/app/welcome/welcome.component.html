@@ -1,3 +1,15 @@
-<p>
-  welcome works!
-</p>
+<app-welcome-toolbar></app-welcome-toolbar>
+
+<mat-grid-list cols="3" rowHeight="330px">
+    <mat-grid-tile *ngFor="let artist of artists">
+        <mat-card class="welcome-card">
+            <!-- <img mat-card-image src={{artist.image.img_path}}> -->
+            <mat-card-content>
+            <h3>{{artist.artistName}}</h3>
+            <p>
+                {{artist.shortDescription}}
+            </p>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
