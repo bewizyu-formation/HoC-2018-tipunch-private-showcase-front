@@ -37,12 +37,20 @@ mat-checkbox{
 /*
 BUTTON FORMS
  */
+
 .cancel{
     background-color: #616161;
-    color: #ffffff
 }
-.confirm{
+.confirm-container button.mat-button.confirm{
     background-color: #00897b;
+}
+
+mat-error{
+    padding-bottom: 20px;
+}
+
+button {
+    color: rgb(255, 255, 255);
 }
 /**
 suscribe

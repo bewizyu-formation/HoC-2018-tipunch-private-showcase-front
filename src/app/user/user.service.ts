@@ -33,28 +33,35 @@ export class UserService {
   }
 
 
-    /**
-     *
-     * @param username
-     * @param email
-     * @param password
-     * @param cityName
-     * @param cityCode
-     * @param deptCode
-     */
-/*
-  subscription(username: string, password: string, email: string, cityName: string, cityCode: string, deptCode: string) {
-      return new Promise((resolve) => {
+  /**
+   *
+   * @param username
+   * @param email
+   * @param password
+   * @param cityName
+   * @param cityCode
+   * @param deptCode
+   */
+  subscription(
+      username: string,
+      password: string,
+      email: string,
+      cityName: string,
+      cityCode: string,
+      deptCode: string,
+      artistName : string,
+      artistShortDesc: string
+  ) {
+      return new Promise((resolve, reject) => {
         this.userRepository
             .subscription(
-                paramsUrl
+                username, password, email, cityName, cityCode, deptCode, artistName, artistShortDesc
             )
-            .subscribe((response: HttpResponse<string>) => {
-              this.token = response.headers.get('Authorization');
-                console.log('Response Token : ', this.token);
-              resolve(this.token);
-            });
+            .subscribe(
+                () => resolve(),
+                error => reject(error)
+            );
     });
-  }*/
+  }
 
 }

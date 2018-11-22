@@ -1,5 +1,4 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {MaterialsModule} from './materials/materials.module';
 import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {APP_BASE_HREF} from '@angular/common';
 import {AppComponent} from './app.component';

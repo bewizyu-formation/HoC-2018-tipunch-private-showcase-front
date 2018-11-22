@@ -1,5 +1,5 @@
 <section>
-    <form class="form-container" (ngSubmit)="registerTest(userForm.value)" [formGroup]="userForm">
+    <form class="form-container" (ngSubmit)="register()" [formGroup]="userForm">
         <h3 class="form-title">{{formTitle}}</h3>
 
         <mat-form-field >
@@ -55,7 +55,7 @@
                    formControlName="cityName"
             >
             <mat-autocomplete #auto="matAutocomplete">
-                <mat-option *ngFor="let commune of datas" name="commune" [value]="commune?.nom +' '+ commune?.codesPostaux[0]">
+                <mat-option *ngFor="let commune of cities" name="commune" [value]="commune?.nom +' '+ commune?.codesPostaux[0]">
                     {{commune?.nom}}
                     {{commune?.codesPostaux[0]}}
                 </mat-option>
@@ -70,14 +70,12 @@
                 data-md-icheck
                 type="checkbox"
                 name="isartist"
-                formControlName="isArtist"
-                [(ngModel)]="checkedBoxModel"
-                (change)="toggleChecked()">
+                formControlName="isArtist">
             <span>Vous êtes artistes / groupes</span>
         </mat-checkbox>
 
-        <div formGroupName="artistForm">
-            <mat-form-field *ngIf="markedCheck">
+        <div formGroupName="artistForm" *ngIf="userForm.get('isArtist').value">
+            <mat-form-field >
                 <input matInput placeholder="Nom d'artiste" formControlName="artistName" [errorStateMatcher]="parentErrorStateMatcher" >
 
                 <mat-error *ngFor="let validation of subscribe_validation_messages.artistName">
@@ -86,7 +84,7 @@
                 </mat-error>
             </mat-form-field>
 
-            <mat-form-field *ngIf="markedCheck">
+            <mat-form-field>
                  <textarea matInput class="form-long-description" formControlName="artistShortDesc" placeholder="Votre description" name="shortDesc" [errorStateMatcher]="parentErrorStateMatcher">
                  </textarea>
 
