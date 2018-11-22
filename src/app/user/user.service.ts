@@ -31,4 +31,30 @@ export class UserService {
         });
     });
   }
+
+
+    /**
+     *
+     * @param username
+     * @param email
+     * @param password
+     * @param cityName
+     * @param cityCode
+     * @param deptCode
+     */
+/*
+  subscription(username: string, password: string, email: string, cityName: string, cityCode: string, deptCode: string) {
+      return new Promise((resolve) => {
+        this.userRepository
+            .subscription(
+                paramsUrl
+            )
+            .subscribe((response: HttpResponse<string>) => {
+              this.token = response.headers.get('Authorization');
+                console.log('Response Token : ', this.token);
+              resolve(this.token);
+            });
+    });
+  }*/
+
 }

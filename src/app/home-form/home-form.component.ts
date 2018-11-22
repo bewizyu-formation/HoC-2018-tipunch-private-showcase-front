@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {UserService} from './../user/user.service';
 import {
     FormControl,
     FormBuilder, FormGroup,
@@ -7,24 +8,26 @@ import {
     FormGroupDirective,
     NgForm,
     AbstractControl,
-    /** REACTIVE_FORM_DIRECTIVES**/
 } from '@angular/forms';
 
 
 import {ErrorStateMatcher, MatDialog} from '@angular/material';
 import { DialogConfirmSuscribeComponent } from '../subscribe/dialog-confirm-suscribe/dialog-confirm-suscribe.component';
 import {Observable} from 'rxjs/index';
-import {isNullOrUndefined} from "util";
+import {isNullOrUndefined} from 'util';
+import {EnvironmentService} from '../services/environment.service';
+import {StringValidator} from '../string-validator/string-validator.module';
+import {MatcherFormGroupValidatorModule} from '../matcher-form-group-validator/matcher-form-group-validator.module';
+import {delay, distinct, distinctUntilChanged} from "rxjs/internal/operators";
 
-export const TownTestURL = 'https://geo.api.gouv.fr/communes?nom=';
+//export const TestUri = 'https://geo.api.gouv.fr/communes?nom=';
+const JsonTowns ='/public/communes/nom?value=';
 
-
-//const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
+export const TestTown = 'https://geo.api.gouv.fr/communes?nom=';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
     isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
         const isSubmitted = form && form.submitted;
-
         return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
     }
 }
@@ -38,18 +41,16 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 export class HomeFormComponent implements OnInit {
     formTitle = 'Formulaire d\'inscription';
     datas: any;
-    datasFilters: Observable<string[]>;
-    checked = false;
+
     disabled = false;
     dialTitle: 'Votre inscripton est réussie';
     dialConfirm: true;
     dialContent: 'Vous recevrez un email de confirmation pour pouvoir vous connecter';
+
+    // MODEL VALUES
     checkedBoxModel = false;
     markedCheck = false;
     hidePassword = false;
-
-    jsonTowns = 'http://localhost:8080/public/communes/nom?value=';
-    jsonTest = TownTestURL;
 
     userMatcher = new MyErrorStateMatcher();
 
@@ -61,7 +62,7 @@ export class HomeFormComponent implements OnInit {
     passwordControl: FormControl;
     passwordConfirmControl: FormControl;
     townControl: FormControl;
-    cityCodeControl: FormControl;
+    deptCodeControl: FormControl;
     isArtistControl:  FormControl;
     /** partie artist */
     artistForm: FormGroup;
@@ -69,7 +70,6 @@ export class HomeFormComponent implements OnInit {
     artistShortDescControl: FormControl;
     artistLongDescControl: FormControl;
 
-    /** PASSWORD https://stackoverflow.com/questions/48350506/how-to-validate-password-strength-with-angular-5-validator-pattern **/
     /**
      * matError tag
      * @type {{username: [{type: string; message: string},{type: string; message: string},{type: string; message: string},{type: string; message: string}]; email: [{type: string; message: string},{type: string; message: string}]; password: [{type: string; message: string},{type: string; message: string},{type: string; message: string}]}}
@@ -89,13 +89,13 @@ export class HomeFormComponent implements OnInit {
         ],
         'password': [
             { type: 'required', message: 'Password requis' },
-            { type: 'minlength', message: 'Le password est trop court' },
-            { type: 'pattern', message: '8 caractères minimum, comporte au moins une majascule, une minuscule et un chiffre' }
+            { type: 'minlength', message: 'Le password est trop court 8 caractères minimum' },
+            { type: 'pattern', message: 'comporte au moins une majascule, une minuscule et un chiffre' }
         ],
         'passwordConfirm': [
             { type: 'required', message: 'Password requis' },
-            { type: 'minlength', message: 'Le password est trop court' },
-            { type: 'pattern', message: '8 caractères minimum, comporte au moins une majascule, une minuscule et un chiffre' }
+            { type: 'minlength', message: 'Le password est trop court 8 caractères minimum' },
+            { type: 'pattern', message: ' comporte au moins une majascule, une minuscule et un chiffre' }
         ],
         'cityName' : [
             { type: 'required', message: 'votre ville doit être renseigner'}
@@ -104,19 +104,19 @@ export class HomeFormComponent implements OnInit {
             {type: 'required', message: 'Le nom d\'artiste est requis'},
             {type: 'minlength', message: 'nom d\'artiste trop court'},
             {type: 'pattern', message: 'mauvais format de saisi'},
-            {type: 'validUsername', message: 'ce nom d\'artiste est déjà pris'}
+           // {type: 'validUsername', message: 'ce nom d\'artiste est déjà pris'}
         ],
         'artistShortDesc':[
             {type: 'minlength', message: '50 caractères minimum'},
         ]
     };
 
-
-
     constructor(
+        private env: EnvironmentService,
         private http: HttpClient,
         public dialogPopup: MatDialog,
-        fb: FormBuilder
+        fb: FormBuilder,
+        private addUser: UserService
     ) {
         this.usernameControl = fb.control('',
             Validators.compose([StringValidator.validStringMatch,
@@ -126,23 +126,22 @@ export class HomeFormComponent implements OnInit {
 
         this.passwordControl = fb.control('',
             Validators.compose([Validators.required, Validators.minLength(8),
-                Validators.pattern('((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9])+$')]));
+                Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$')]));
         this.passwordConfirmControl = fb.control('',
             Validators.compose([Validators.required, Validators.minLength(8),
-                Validators.pattern('((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9])+$')]));
-        //this.passwordConfirmControl = fb.control('');
+                Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$')]));
+
         this.townControl = fb.control('', [Validators.required]);
-        this.cityCodeControl = fb.control('');
+        this.deptCodeControl = fb.control('');
         this.isArtistControl = fb.control(true);
-        this.artistNameControl  = fb.control('pitou4_',  Validators.compose([Validators.required, Validators.pattern('[a-zA-Z0-9\-]*')]));
+        this.artistNameControl  = fb.control('',  Validators.compose([Validators.required, Validators.pattern('[a-zA-Z0-9\-]*')]));
         this.artistShortDescControl  = fb.control('', Validators.compose([Validators.required, Validators.minLength(50)]));
-        this.artistLongDescControl  = fb.control('', Validators.compose([Validators.required, Validators.minLength(150)]));
 
         this.userForm = fb.group({
             username: this.usernameControl,
             email: this.emailControl,
             cityName: this.townControl,
-            cityCode: this.cityCodeControl,
+            deptCode: this.deptCodeControl,
             isArtist: this.isArtistControl,
             passForm: fb.group(
                 {
@@ -150,17 +149,13 @@ export class HomeFormComponent implements OnInit {
                     passwordConfirm: this.passwordConfirmControl
                 },
                 (passForm: FormGroup) => {
-                    return MatcherValueFormGroup.matchMp(passForm);
-                })
+                    return MatcherFormGroupValidatorModule.matchMp(passForm);
+                }),
+            artistForm: fb.group({
+                artistName: this.artistNameControl,
+                artistShortDesc: this.artistShortDescControl
+            })
     });
-
-        this.artistForm = fb.group({
-            artistName: this.artistNameControl,
-            artistShortDesc: this.artistShortDescControl,
-            artistLongDes: this.artistLongDescControl
-        });
-
-        const control = new FormControl('ng', Validators.minLength(3));
     }
     reset() {
         this.emailControl.setValue('');
@@ -170,7 +165,6 @@ export class HomeFormComponent implements OnInit {
         this.isArtistControl.setValue('');
         this.artistNameControl .setValue('');
         this.artistShortDescControl .setValue('');
-        this.artistLongDescControl .setValue('');
     }
 
     private getJson(datas) {
@@ -178,27 +172,31 @@ export class HomeFormComponent implements OnInit {
     }
 
     private setTownName(): any {
-        console.log(this.getJson(`${this.jsonTowns}`));
-        this.townControl.valueChanges.subscribe(
+        this.townControl.valueChanges.pipe(
+            delay(300),
+            distinct(),
+        )
+            .subscribe(
             (value) => {
-
-                this.getJson(`${this.jsonTest}${value}`)
+                this.getJson(`${this.env.getPrivateShowcaseApiConfig().uri}${JsonTowns}${value}`)
+                // this.getJson(`${TestTown}${value}`)
                     .subscribe((data: any[]) => {
                         if (value.length >= 1) {
-                            data.length = 10;
+                            // data.length = 10;
                             this.datas = data;
-                            this.datas.length = data.length;
+                            // this.datas.length = data.length;
                         }
                     });
             },
         );
     }
 
-    private townFilter(value: string): string[] {
-        const filterValue = value['nom'].toLowerCase();
-        return this.setTownName().filter(commune => commune.toLowerCase().includes(filterValue));
-    }
-    toggleChecked() {this.markedCheck  = !this.markedCheck ;}
+
+    /**
+     * check si la le input est checked pour afficher le rest du formulaire
+     */
+    toggleChecked() {this.markedCheck  = !this.markedCheck; }
+
     openPopupConfirm(): void {
         const dialConfirmRef = this.dialogPopup.open(DialogConfirmSuscribeComponent, {
             width: '300px',
@@ -211,46 +209,64 @@ export class HomeFormComponent implements OnInit {
                 console.log(this.dialConfirm);
             });
     }
-    matching_passwords_group = new FormGroup({
-        password: new FormControl('', Validators.compose([
-            Validators.minLength(5),
-            Validators.required,
-            Validators.pattern('((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]\{8,\})+$') //this is for the letters (both uppercase and lowercase) and numbers validation
-        ])),
 
-        confirm_password: new FormControl('', Validators.required)
-    });
-
-    /**
-     *
-     * @param fc
-     * @returns {any}
-     */
+    registerTest(formParentGroup) {
 
 
-    /**
-     *
-     * @param formGrouformParentGroup
-     **/
-    register(formParentGroup) {
-        const baseUri = 'http://localhost:8080/public/';
-        const uri = baseUri +
+        // 1-
+
+
+        // 2-
+
+
+        // 3-
+
+
+
+
+
+
+
+
+
+        this.datas.forEach((city : any) => {
+            console.log('XXXXX' , `${city.nom} ${codesPostaux[0]}` === this.userForm.value.cityName);
+        })
+
+
+
+        const baseUri = 'http://localhost:8080/';
+
+        let uri = baseUri +
             'users/add?username=' + formParentGroup.username +
-            '&password=' +  formParentGroup.password +
+            '&password=' +  formParentGroup.passForm.password +
             '&email=' + formParentGroup.email +
-            '&cityName=' + formParentGroup.cityName +
-            '&cityCode=' + formParentGroup.cityCode;
-
+            '&cityName=' + ((formParentGroup.cityName).split('\ ')[0]) +
+            '&cityCode=' + ((formParentGroup.cityName).split('\ ')[1]) +
+            '&deptCode=' + ((formParentGroup.cityName).split('\ ')[1]).slice(0, -3);
         if (formParentGroup.isArtist) {
-            const artisUri = uri +
-                '&artistName=' + formParentGroup.artistName  +
-                '&artisDesc=' + formParentGroup.artistLongDes;
-            console.log('ARTIST URI:' + artisUri);
-
+            uri = uri +
+                '&artistName=' + formParentGroup.artistForm.artistName +
+                '&artistDesc=' + formParentGroup.artistForm.artistShortDesc;
         }
         console.log(uri);
-        console.log(formParentGroup);
+        return uri;
+    }
 
+    /**
+     * valeur attendu dans le service username: string, password: string, email: string, cityName: string,
+     * cityCode: string
+     * @param formParentGroup
+     **/
+    register(formParentGroup) {
+        /*this.addUser.subscription(
+            formParentGroup.username,
+            formParentGroup.passForm.password,
+            formParentGroup.email,
+            ((formParentGroup.cityName).split('\ ')[0]),
+            ((formParentGroup.cityName).split('\ ')[1]),
+            ((formParentGroup.cityName).split('\ ')[1]).slice(0, -3),
+        );*/
     }
 
     ngOnInit() {
@@ -260,69 +276,5 @@ export class HomeFormComponent implements OnInit {
 
     private compareUserName() {
         console.log(this.usernameControl);
-    }
-
-}
-
-
-
-
-export class StringValidator {
-    static validStringMatch(fc: FormControl){
-        if (fc.value.toLowerCase() === 'Minou' || fc.value.toLowerCase() === 'Minou') {
-            return ({validStringMatch: true});
-        } else {
-            return (null);
-        }
-    }
-}
-/*
-matchingPasswords( control: AbstractControl ) {
-    const password = control.get( 'password' );
-    const confirm = control.get( 'passwordConfirm' );
-
-    if ( !password || !confirm ) {
-        return null;
-    }
-    if (password.invalid) {
-        return {invalidPassword : true};
-    }
-    console.log(password.value);
-    console.log(confirm.value);
-    console.log(password.value === confirm.value);
-
-    return password.value === confirm.value ? null : { noMatch: true };
-}
-*/
-/**
- * dans le formGroup On verify si chaque form control est valid
- * si il est similaire on renvoie la valeur
- *
- *
- * sinon  faut
- * @param fg type Formgroup qui est le parent
- * @returns {any}
- */
-
-export class MatcherValueFormGroup {
-    static  matchMp(passForm: FormGroup) {
-        let value;
-        let valid = true;
-
-        for (let key in passForm.controls) {
-            if (passForm.controls.hasOwnProperty(key)) {
-                let control: FormControl = <FormControl>passForm.controls[key];
-                if (value === undefined) {
-                    value = control.value;
-                }
-                else {
-                    if (value !== control.value) {
-                        valid = false;
-                        break;
-                    }
-                }
-            }
-        }
-        return valid ? null : {matchMp: true};
     }
 }
