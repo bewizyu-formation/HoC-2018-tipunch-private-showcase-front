@@ -2,7 +2,7 @@
     <mat-icon>more_vert</mat-icon>
 </button>
 <mat-menu #menu="matMenu">
-  <button mat-menu-item (click)="navigateToArtist()" *ngIf="userId">
+  <button mat-menu-item (click)="navigateToArtist()" *ngIf="artistId">
     <mat-icon>music_note</mat-icon>
     Artiste
   </button>
@@ -10,7 +10,7 @@
   <mat-icon>settings</mat-icon>
     Profil
   </button>
-  <button mat-menu-item>
+  <button mat-menu-item (click)="deconnect()">
   <mat-icon>exit_to_app</mat-icon>
     Déconnexion
   </button>
