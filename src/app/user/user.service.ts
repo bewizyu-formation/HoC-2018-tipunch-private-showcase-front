@@ -3,6 +3,7 @@ import {UserRepository} from './user.repository';
 import {HttpResponse, HttpClient} from '@angular/common/http';
 import {EnvironmentService} from '../services/environment.service';
 
+
 const TOKEN_KEY = 'TOKEN_KEY';
 
 @Injectable({
@@ -27,7 +28,9 @@ export class UserService {
    localStorage.setItem(TOKEN_KEY, this._token);
 }
 
-  constructor(private userRepository: UserRepository, private http: HttpClient, private env: EnvironmentService) {
+  constructor(private userRepository: UserRepository,
+              private http: HttpClient,
+              private env: EnvironmentService) {
   }
 
   /**
@@ -50,4 +53,37 @@ export class UserService {
   clearToken() {
     localStorage.clear();
   }
+
+    /**
+     *
+     * @param username user
+     * @param password user
+     * @param email user
+     * @param cityName user
+     * @param cityCode user
+     * @param deptCode user
+     * @param artistName artiste
+     * @param artistShortDesc artiste
+     */
+    subscription(
+        username: string,
+        password: string,
+        email: string,
+        cityName: string,
+        cityCode: string,
+        deptCode: string,
+        artistName: string,
+        artistShortDesc: string
+    ) {
+        return new Promise((resolve, reject) => {
+            this.userRepository
+                .subscription(
+                    username, password, email, cityName, cityCode, deptCode, artistName, artistShortDesc
+                )
+                .subscribe(
+                    () => resolve(),
+                    error => reject(error)
+                );
+        });
+    }
 }

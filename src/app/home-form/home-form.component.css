@@ -1,14 +1,11 @@
 header {
-    background: url("../../assets/img/header_bjork.jpg") ;
+    background: url("../../assets/img/header_bjork.jpg") no-repeat;
     -webkit-filter: grayscale(70%);
     filter: grayscale(70%);
-    background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
     height: 270px;
     overflow: hidden;
 }
-
 section{
     flex-direction: column;
     padding: 60px 20%;
@@ -40,12 +37,20 @@ mat-checkbox{
 /*
 BUTTON FORMS
  */
+
 .cancel{
     background-color: #616161;
-    color: #ffffff
 }
-.confirm{
+.confirm-container button.mat-button.confirm{
     background-color: #00897b;
+}
+
+mat-error{
+    padding-bottom: 20px;
+}
+
+button {
+    color: rgb(255, 255, 255);
 }
 /**
 suscribe

@@ -13,8 +13,7 @@ export class PrivateshowcaseApiService {
   getUser() {
     this.http.get(`${API_BASE_URL}`).subscribe(data => console.log(data));
   }
-
+  // this.http.post(`${API_BASE_URL}`);
   postUser() {
-    // this.http.post(`${API_BASE_URL}`);
   }
 }
