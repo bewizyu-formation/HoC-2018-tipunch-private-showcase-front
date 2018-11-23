@@ -35,16 +35,18 @@ export class UserRepository {
     /**
      *  https://www.tektutorialshub.com/how-to-pass-url-parameters-query-strings-angular/
      * [users/add?]username=minou&password=azerty&email=minou@de.fr&cityName=lyon&cityCode=69004&deptCode=69
+     */
+    /**
      *
-     * @param username
-     * @param password
-     * @param email
-     * @param cityName
-     * @param cityCode
-     * @param deptCode
-     * @param artistName
-     * @param artistShortDesc
-     * @returns {Observable<Object>}
+     * @param username user
+     * @param password user
+     * @param email user
+     * @param cityName user
+     * @param cityCode user
+     * @param deptCode user
+     * @param artistName artiste
+     * @param artistShortDesc artiste
+     * sinon retourne none string
      */
     subscription(username: string,
                  password: string,

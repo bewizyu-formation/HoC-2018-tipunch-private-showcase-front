@@ -56,15 +56,14 @@ export class UserService {
 
     /**
      *
-     * @param username
-     * @param password
-     * @param email
-     * @param cityName
-     * @param cityCode
-     * @param deptCode
-     * @param artistName
-     * @param artistShortDesc
-     * @returns {Promise<T>}
+     * @param username user
+     * @param password user
+     * @param email user
+     * @param cityName user
+     * @param cityCode user
+     * @param deptCode user
+     * @param artistName artiste
+     * @param artistShortDesc artiste
      */
     subscription(
         username: string,

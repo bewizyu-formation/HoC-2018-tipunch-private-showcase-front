@@ -130,7 +130,8 @@ export class HomeFormComponent implements OnInit {
         // this.deptCodeControl = fb.control('');
         this.isArtistControl = fb.control(false);
         this.artistNameControl = fb.control('', Validators.compose([Validators.required, Validators.pattern('[a-zA-Z0-9\-]*')]));
-        this.artistShortDescControl = fb.control('', Validators.compose([Validators.required, Validators.minLength(15), Validators.maxLength(150)]));
+        this.artistShortDescControl = fb.control('',
+            Validators.compose([Validators.required, Validators.minLength(15), Validators.maxLength(150)]));
 
         this.userForm = fb.group({
             username: this.usernameControl,
