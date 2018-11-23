@@ -5,18 +5,20 @@
         <mat-card class="welcome-card">
             <!-- <img mat-card-image src={{artist.image.img_path}}> -->
             <mat-card-content>
-            <h3>{{artist.artistName}}</h3>
-            <p>
-                {{artist.shortDescription}}
-            </p>
-            <button mat-menu-item (click)="navigateToArtist(artist.artistName)">
-                <mat-icon>remove_red_eye</mat-icon>
-                VOIR
-            </button>
-            <button mat-menu-item (click)="navigateToBooking(artist.artistName)">
-                <mat-icon>calendar_today</mat-icon>
-                BOOKER
-            </button>
+                <h3>{{artist.artistName}}</h3>
+                <p>
+                    {{artist.shortDescription}}
+                </p>
+                <section class="cardButtonSection">
+                    <button class="cardButton" mat-menu-item (click)="navigateToArtist(artist.artistName)">
+                        <mat-icon>remove_red_eye</mat-icon>
+                        VOIR
+                    </button>
+                    <button class="cardButton" mat-menu-item (click)="navigateToBooking(artist.artistName)">
+                        <mat-icon>calendar_today</mat-icon>
+                        BOOKER
+                    </button>
+                </section>
             </mat-card-content>
         </mat-card>
     </mat-grid-tile>
