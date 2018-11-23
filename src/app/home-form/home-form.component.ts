@@ -98,7 +98,9 @@ export class HomeFormComponent implements OnInit {
             // {type: 'validUsername', message: 'ce nom d\'artiste est déjà pris'}
         ],
         'artistShortDesc': [
-            {type: 'minlength', message: '50 caractères minimum'},
+            {type: 'required', message: 'Une description est requise'},
+            {type: 'minlength', message: '20 caractères minimum'},
+            {type: 'maxlength', message: '150 caractères maximum'},
         ]
     };
 
@@ -128,13 +130,12 @@ export class HomeFormComponent implements OnInit {
         // this.deptCodeControl = fb.control('');
         this.isArtistControl = fb.control(false);
         this.artistNameControl = fb.control('', Validators.compose([Validators.required, Validators.pattern('[a-zA-Z0-9\-]*')]));
-        this.artistShortDescControl = fb.control('', Validators.compose([Validators.required, Validators.minLength(50)]));
+        this.artistShortDescControl = fb.control('', Validators.compose([Validators.required, Validators.minLength(15), Validators.maxLength(150)]));
 
         this.userForm = fb.group({
             username: this.usernameControl,
             email: this.emailControl,
             cityName: this.townControl,
-            // deptCode: this.deptCodeControl,
             isArtist: this.isArtistControl,
             passForm: fb.group(
                 {
@@ -224,7 +225,8 @@ export class HomeFormComponent implements OnInit {
             userFormValue.artistForm.artistShortDesc,
         )
             .then(() => console.log('User inscrit'))
-            .catch(error => console.log('User error', error));
+            .catch(error => console.log('User error', error))
+            .catch(error => console.log('User error', error.error.message));
     }
 
     ngOnInit() {

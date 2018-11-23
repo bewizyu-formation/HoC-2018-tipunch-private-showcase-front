@@ -3,6 +3,7 @@ import {UserRepository} from './user.repository';
 import {HttpResponse, HttpClient} from '@angular/common/http';
 import {EnvironmentService} from '../services/environment.service';
 
+
 const TOKEN_KEY = 'TOKEN_KEY';
 
 @Injectable({
@@ -27,7 +28,9 @@ export class UserService {
    localStorage.setItem(TOKEN_KEY, this._token);
 }
 
-  constructor(private userRepository: UserRepository, private http: HttpClient, private env: EnvironmentService) {
+  constructor(private userRepository: UserRepository,
+              private http: HttpClient,
+              private env: EnvironmentService) {
   }
 
   /**
@@ -51,36 +54,37 @@ export class UserService {
     localStorage.clear();
   }
 
-
-  /**
-   *
-   * @param username
-   * @param email
-   * @param password
-   * @param cityName
-   * @param cityCode
-   * @param deptCode
-   */
-  subscription(
-      username: string,
-      password: string,
-      email: string,
-      cityName: string,
-      cityCode: string,
-      deptCode: string,
-      artistName : string,
-      artistShortDesc: string
-  ) {
-      return new Promise((resolve, reject) => {
-        this.userRepository
-            .subscription(
-                username, password, email, cityName, cityCode, deptCode, artistName, artistShortDesc
-            )
-            .subscribe(
-                () => resolve(),
-                error => reject(error)
-            );
-    });
-  }
-
+    /**
+     *
+     * @param username
+     * @param password
+     * @param email
+     * @param cityName
+     * @param cityCode
+     * @param deptCode
+     * @param artistName
+     * @param artistShortDesc
+     * @returns {Promise<T>}
+     */
+    subscription(
+        username: string,
+        password: string,
+        email: string,
+        cityName: string,
+        cityCode: string,
+        deptCode: string,
+        artistName: string,
+        artistShortDesc: string
+    ) {
+        return new Promise((resolve, reject) => {
+            this.userRepository
+                .subscription(
+                    username, password, email, cityName, cityCode, deptCode, artistName, artistShortDesc
+                )
+                .subscribe(
+                    () => resolve(),
+                    error => reject(error)
+                );
+        });
+    }
 }

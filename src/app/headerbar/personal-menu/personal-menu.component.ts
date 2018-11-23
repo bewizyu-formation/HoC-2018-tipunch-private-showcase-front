@@ -16,6 +16,7 @@ export class PersonalMenuComponent implements OnInit {
   constructor(private router: Router, private artistService: ArtistService, private userService: UserService) { }
 
   ngOnInit() {
+
     this.artistService.getUserInfos()
       .then((infos: any) => {
         this.artistId = infos.artistId;

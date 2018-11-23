@@ -29,7 +29,7 @@
                 <input matInput
                        [type]="hide ? 'password' : 'text'"
                        placeholder="Password" formControlName="password"  [errorStateMatcher]="parentErrorStateMatcher" >
-                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
                 <mat-error *ngFor="let validation of subscribe_validation_messages.password">
                     <mat-error class="error-message" *ngIf="userForm.get('passForm').get('password').hasError(validation.type) && (userForm.get('passForm').get('password').dirty || userForm.get('passForm').get('password').touched)">{{validation.message}}</mat-error>
                 </mat-error>
@@ -39,7 +39,7 @@
                 <input matInput
                        [type]="hide ? 'password' : 'text'"
                        placeholder="Confirm Password" formControlName="passwordConfirm"  [errorStateMatcher]="parentErrorStateMatcher">
-                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
 
                 <mat-error *ngFor="let validation of subscribe_validation_messages.passwordConfirm">
                     <mat-error class="error-message" *ngIf="(userForm.get('passForm').get('passwordConfirm').hasError(validation.type)|| userForm.get('passForm').hasError(validation.type)) && (userForm.get('passForm').get('passwordConfirm').dirty || userForm.get('passForm').get('passwordConfirm').touched)">{{validation.message}}</mat-error>

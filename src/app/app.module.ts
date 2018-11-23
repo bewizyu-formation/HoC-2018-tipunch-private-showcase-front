@@ -36,6 +36,7 @@ import { DialogConfirmSuscribeComponent} from './subscribe/dialog-confirm-suscri
 import { LoginFormComponent } from './login-form/login-form.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { EventsComponent } from './events/events.component';
+import {WelcomeToolbarComponent} from './welcome-toolbar/welcome-toolbar.component';
 
 
 @NgModule({
