@@ -12,7 +12,7 @@ export class LoggedInGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-    if (this.user.token != null) {
+    if (this.user.token) {
       return true;
     } else {
       this.route.navigate(['connexion']);

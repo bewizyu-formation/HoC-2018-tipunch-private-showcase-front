@@ -34,6 +34,8 @@ import { HomeFormComponent } from './home-form/home-form.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { DialogConfirmSuscribeComponent} from './subscribe/dialog-confirm-suscribe/dialog-confirm-suscribe.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { EventsComponent } from './events/events.component';
 
 
 @NgModule({
@@ -52,6 +54,9 @@ import { LoginFormComponent } from './login-form/login-form.component';
     HomebackToolbarComponent,
     WelcomeComponent,
     Error404Component,
+    WelcomeToolbarComponent,
+    EventsComponent,
+    ContactsComponent,
   ],
   entryComponents: [
     DialogConfirmSuscribeComponent,
