@@ -1,8 +1,6 @@
-import { Observable } from 'rxjs/index';
-import { HttpClient, HttpResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {EnvironmentService} from '../services/environment.service';
-import { reject } from 'q';
 
 export const RESOURCES_ARTIST_LIST = '/artist/list';
 

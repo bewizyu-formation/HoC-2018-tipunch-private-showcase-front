@@ -1,3 +1,4 @@
+import { UserService } from './../../user/user.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonalMenuComponent implements OnInit {
 
-  constructor() { }
+  userId: number;
+
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
+    this.userService.getUserInfos()
+      .then((infos: any) => {
+        this.userId = infos.artistId;
+        // console.log(this.userId);
+      })
+      .catch(error => console.log(error));
+  }
+
+  navigateToArtist() {
+    console.log(this.userId);
   }
 
 }

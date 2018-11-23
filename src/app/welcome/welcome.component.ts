@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomeComponent implements OnInit {
 
-  artists: any[];
+  public artists: any[];
 
   constructor(private artistService: ArtistService) { }
 
