@@ -4,7 +4,6 @@ import {HttpResponse, HttpClient} from '@angular/common/http';
 import {EnvironmentService} from '../services/environment.service';
 
 const TOKEN_KEY = 'TOKEN_KEY';
-export const RESOURCES_USER_INFOS = '/users/info';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +14,6 @@ export class UserService {
    * Authentification JWT Token
    */
   private _token: string;
-  public user_infos: any[];
 
   public get token(): string {
     if (this._token) {
@@ -49,16 +47,7 @@ export class UserService {
     });
   }
 
-  getUserInfos() {
-    return new Promise ((resolve, reject ) => {
-      this.http.get(`${this.env.getPrivateShowcaseApiConfig().uri}${RESOURCES_USER_INFOS}`)
-      .subscribe(
-        (response: any[]) => {
-          this.user_infos = response;
-          resolve(this.user_infos);
-        },
-        (error) => reject(error)
-      );
-    });
+  clearToken() {
+    localStorage.clear();
   }
 }
